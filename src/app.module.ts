@@ -5,12 +5,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { typeOrmConfig } from './config/typeorm.config';
+import { BusinessModule } from './business/business.module';
 
 @Module({
   imports: [
     AutomapperModule.withMapper(),
     TypeOrmModule.forRoot(typeOrmConfig),
-    AuthenticationModule
+    AuthenticationModule,
+    BusinessModule
   ],
   controllers: [AppController],
   providers: [AppService],
