@@ -1,9 +1,12 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { DeleteResultInterface } from 'src/interfaces/delete-result.interface';
 import { BusinessPartnerEntity } from 'src/entities/business/business-partner.entity';
 import { Repository } from 'typeorm';
 import { BpStatus } from '../enum/bp-status.enum';
 import { CreateBPDto } from './dto/create-business-partner.dto';
+import { GetBpsFilterDto } from './dto/filter-search-bp.dto';
+import { UpdateBPDto } from './dto/update-business-partner.dto';
 
 @Injectable()
 export class BusinessPartnerService {
@@ -18,6 +21,30 @@ export class BusinessPartnerService {
             throw new HttpException(`Business Partner with ID "${id}" not found!`, HttpStatus.NOT_FOUND);
         }
         return found;
+    }
+
+    async getBP(filterDto:GetBpsFilterDto): Promise<BusinessPartnerEntity[]> {
+        const {id, category, functions } = filterDto;
+        const query = this.BpRepository.createQueryBuilder('business-partner');
+
+        if(id) {
+            query.andWhere('business-partner.id = :id', { id });
+        }
+
+        if(category) {
+            query.andWhere('business-partner.category = :category', { category });
+        }
+
+        if(functions) {
+            query.andWhere('business-partner.function = :functions', { functions });
+        }
+    
+        try {
+            const bps = await query.getMany();
+            return bps;
+        } catch (error) {
+            throw new HttpException('Internal server error', HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     async getAll(): Promise<BusinessPartnerEntity[]> {
@@ -54,28 +81,30 @@ export class BusinessPartnerService {
         return Bp;
     }
 
-    async update(updateRoleDto: UpdateRoleDto): Promise<RoleEntity> {
-        const { id, name, description } = updateRoleDto;
+    async update(updateBPDto: UpdateBPDto): Promise<BusinessPartnerEntity> {
+        const { id, fullName, category, functions, status } = updateBPDto;
 
-        const role = await this.getById(id);
-        role.name = name;
-        role.description = description;
+        const Bp = await this.getById(id);
+        Bp.fullName = fullName;
+        Bp.category = category;
+        Bp.function = functions;
+        Bp.status = status;
 
         try {
-            await role.save();
+            await Bp.save();
         } catch(error) {
             throw new HttpException('Internal server error', HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
-        return role;
+        return Bp;
     }
 
     async delete(id: number): Promise<DeleteResultInterface> {
 
-        const result = await this.roleRepository.delete({id});
+        const result = await this.BpRepository.delete({id});
 
         if(result.affected === 0){
-            throw new HttpException(`Role with ID "${id}" not found!`, HttpStatus.NOT_FOUND);
+            throw new HttpException(`Business Partner with ID "${id}" not found!`, HttpStatus.NOT_FOUND);
         }
 
         return {

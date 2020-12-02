@@ -14,6 +14,7 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const authentication_module_1 = require("./authentication/authentication.module");
 const typeorm_config_1 = require("./config/typeorm.config");
+const business_module_1 = require("./business/business.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -21,7 +22,8 @@ AppModule = __decorate([
         imports: [
             nestjsx_automapper_1.AutomapperModule.withMapper(),
             typeorm_1.TypeOrmModule.forRoot(typeorm_config_1.typeOrmConfig),
-            authentication_module_1.AuthenticationModule
+            authentication_module_1.AuthenticationModule,
+            business_module_1.BusinessModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],

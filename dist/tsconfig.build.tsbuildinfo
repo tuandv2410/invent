@@ -3936,7 +3936,7 @@
         "signature": "42bbc32dfaa2b97e3a2fb9224c3288d8b8ffd3943007262331578c19469a098c",
         "affectsGlobalScope": false
       },
-      "../src/authentication/permission/interfaces/delete-result.interface.ts": {
+      "../src/interfaces/delete-result.interface.ts": {
         "version": "9da4265d0165d02a49f91dd14a5130531b5294f84ac0db9f045635ffaa260756",
         "signature": "ab6c3e292510bcc59b5acc94964efdb82bccc0bd2ea70f4142e9f607c3947a5d",
         "affectsGlobalScope": false
@@ -3952,8 +3952,8 @@
         "affectsGlobalScope": false
       },
       "../src/authentication/permission/permission.service.ts": {
-        "version": "17494853585740b8510aa56f2194aefc585743b785b1166ec101300eb15dc317",
-        "signature": "a1f0a51733dbac00952c8b2767f54b5aad428c06f65c12733c1670ce995df981",
+        "version": "ab96ea082444ddc8deeb71f69844e29deb00192b8cfe9c1965009d066b3b6ac4",
+        "signature": "aa1e622fc0870b57a17d5b913a1aa3fe1e85dae1e641edde73ae807cc5c0a840",
         "affectsGlobalScope": false
       },
       "../src/authentication/role/dto/add-permissions.dto.ts": {
@@ -3972,8 +3972,8 @@
         "affectsGlobalScope": false
       },
       "../src/authentication/role/role.service.ts": {
-        "version": "ae42c2578b292fda71e75e1b78bf3eb44a2bec7444571e0368a5abfb22834348",
-        "signature": "e952af06c4d952e1284a880256396232ca353302056ff99a36079ab7d8fc0951",
+        "version": "5c7783c1843a8b9c1da91bb910e73ecb93e6a7570c2d53bfa0a1311fcff1e309",
+        "signature": "cce91864ccd7c2e5ba77982d9347020713128c97737adca0eb87c16c28a5e2d9",
         "affectsGlobalScope": false
       },
       "../src/authentication/user/dto/change-password.dto.ts": {
@@ -4101,8 +4101,163 @@
         "signature": "6020afb586c5c099dc8978a19d43c895dcc5c7d2cc0ad799ca7d7337ee1bd6d1",
         "affectsGlobalScope": false
       },
+      "../src/business/enum/bp-category.enum.ts": {
+        "version": "3bbc72c607b993786934781cf88f4a65a2f10f0fe6e132de55d4f840080631f3",
+        "signature": "4efe2151c907f4fdbb0b4bb074c373bb0b2223067386aa8bd6b4eaf54ff3c45f",
+        "affectsGlobalScope": false
+      },
+      "../src/business/enum/bp-function.enum.ts": {
+        "version": "0d8dd549354a3a41c3f0d719639d03eb96234207a379bd6578030877b2bdfb73",
+        "signature": "2aaa667ab631af13a6c27aa65688c365da7c74dab0f2887b09a04924d32243fb",
+        "affectsGlobalScope": false
+      },
+      "../src/business/enum/bp-status.enum.ts": {
+        "version": "075ffadbf44b68a6a6e903f1be2a0af03a3f456dce90f69e8900cef22ede56a3",
+        "signature": "37d572cdabe4b625ab5bb26662eb3e20d41f948600d9209afb88e121aa0fb671",
+        "affectsGlobalScope": false
+      },
+      "../src/entities/business/business-partner.entity.ts": {
+        "version": "3688c61f718201d98df7a821782352cb5678008aad73062d85bc6be07d6fd4a5",
+        "signature": "8478fc223b4cfcd90be704445f123fa021993fc7f90687925ad4138f944c83da",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business-partner/dto/create-business-partner.dto.ts": {
+        "version": "930766b0743d47c676016fc5cbb91ea0231309adb085850b6ca70975675e7ba6",
+        "signature": "c0e7f9a1d9ee4c805a11c924f443d288c38f2c8dcbdb1f26ade2e5d56fe4dcda",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business-partner/dto/filter-search-bp.dto.ts": {
+        "version": "4e88e9287cbc0850c2e41de8bcbceaf6723e0b6214137c264c8195b0bd9c3892",
+        "signature": "1ae71fd8074a0364e0a91534c2a72c884f097af9bd4189e667b38b365e4e2964",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business-partner/dto/update-business-partner.dto.ts": {
+        "version": "ff65bca11986cf707f5a27d2b1044fa58ccbb70516c7a0f7e11ff8897babd556",
+        "signature": "62cc7333da07b65e3f50e495ebb0dc848adfc378f6bbe8f101064c4d08fb8392",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business-partner/business-partner.service.ts": {
+        "version": "0aaf2ef3d5e1d550a44a65b11cf8a632c9100ef38ff2cacbb1837ebcab57a62d",
+        "signature": "b96ad8111ae2021d601a0b487470c3c573ee2f0ab46827057d4cd7bc26cd75c9",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business-partner/dto/business-partner.dto.ts": {
+        "version": "c4ef8110f09f0270becc452e64f9e1a5948f6b44f1958027285624bc59580a6b",
+        "signature": "b38ed84dd8351b936c9b7903337d349f2b644d259309654fc21fab650da53197",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business-partner/business-partner.controller.ts": {
+        "version": "e935bdc279d68b7f99550d79e25540e156bec3840fa72b73651c84fb739d6e40",
+        "signature": "506f260dfc16236e3d38324d7f984179686b2435a7c0a67ee9fba4071498df4e",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business-partner/business-partner.module.ts": {
+        "version": "8be79f88dda6994a2925b4e3a9dc9608f2d43e58771f8375065e7ff338cd884d",
+        "signature": "07b01eeff1b52f2404e124459a38a92f67f1b00b1973d4b9d32500e9f8a54311",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business-contract/business-contract.controller.ts": {
+        "version": "b3a683797336757194c4554e5a3ae9bf11caef6916b1645dd14bba20ca1e3129",
+        "signature": "c1d766dce2968a6829d09ada62035cc6eee5254d7b232c515e66398ad55f2727",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business-contract/business-contract.service.ts": {
+        "version": "6dd8028bfa48d19cd5ac1807e6f9397737bfa64452505e66a2bedd0b7b86b337",
+        "signature": "d806376dc5b19198f5729f9aa9254f85afc5282033188167b46271ab12c21cc6",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business-contract/business-contract.module.ts": {
+        "version": "f891a9dbfacff6f8aa1c4d0039e0e9fb3f932b21cb1298c088d8e4d999968bdf",
+        "signature": "612a886899ab42f473109b4100878d3158608dbbc6a447945e188b6c4873f14c",
+        "affectsGlobalScope": false
+      },
+      "../src/entities/business/order.entity.ts": {
+        "version": "62ca994a5c6646b8b3cfe082b43d7057a457876edee3d88ee243b0f962edce4f",
+        "signature": "3e5cac6a16210ec5de03e50d93f2cff91ffa61be441cea9588c7d49723f678f4",
+        "affectsGlobalScope": false
+      },
+      "../src/business/order/dto/order.dto.ts": {
+        "version": "a5851c1c76474a2cd8644ae6e1801c3876c381dcbde93e310569fc66c30266bf",
+        "signature": "0c5f599c5025ffe415c7ef19586a2e516cb2ac7a30106d08103334ab5bc631a9",
+        "affectsGlobalScope": false
+      },
+      "../src/base/i.base.service.ts": {
+        "version": "6f602c19cc5b36b1b921c4db88bba3d9765be2396578975d2d8474464e0fb316",
+        "signature": "55926bc7aff8d82cfd073d536ceb1c797f17f338395498e2dc96ece9fd6860cf",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/typeorm/repository/EntityId.d.ts": {
+        "version": "9d0a0e2c998e369a7d7d6b668b2ecd49ab28ab66ec6da0079984704ce053b5a7",
+        "signature": "9d0a0e2c998e369a7d7d6b668b2ecd49ab28ab66ec6da0079984704ce053b5a7",
+        "affectsGlobalScope": false
+      },
+      "../src/base/base.service.ts": {
+        "version": "80c4fafe0acba0e081b92ccf876991e02d5af1abf145eda821c3c34836eb22ec",
+        "signature": "a4106ccac1dda2dc7d3b7af9853608b64d86a44632921ab18ba720a65b45e0ce",
+        "affectsGlobalScope": false
+      },
+      "../src/business/order/order.repository.ts": {
+        "version": "599a0a39b8f9eb3fc906c914435b33f8b186c6ace52210f9dfa68db2dbee5ae0",
+        "signature": "4fa77e13589f80500d765ff580e996b0fc8f2549353c061e9dd8986c0b4f3de7",
+        "affectsGlobalScope": false
+      },
+      "../src/business/order/order.service.ts": {
+        "version": "638f681084f7864ed91d634abebcb211ff26f8d0befcdc2acad83a2dd52beb4c",
+        "signature": "0e6308c74550cb4a3050aafa6780db7f53ae44709d64aa518fb3e7fc48bdd95e",
+        "affectsGlobalScope": false
+      },
+      "../src/business/order/dto/create-order.dto.ts": {
+        "version": "37a8920fcaa66606f07cc15ff596671ba02c7ae07f0089db510b92e7e958cd5e",
+        "signature": "09f055f44364dd73815b95d8f87061d60940ee8c93727fbe81cd3e0d92daa907",
+        "affectsGlobalScope": false
+      },
+      "../src/business/order/order.controller.ts": {
+        "version": "6968e787f04f27b534a6ef68bbb3dcce866f4ec9a0d8ca2ffa2eb4f401e5e07a",
+        "signature": "5729e749948fab897ee5995e4283958589049359377180bc4c5cf34053105917",
+        "affectsGlobalScope": false
+      },
+      "../src/business/order/order.module.ts": {
+        "version": "7495d0c70ce8bf15031ebaecaab0bd928ccbe0a70126e7e1795ac393d4c0dac1",
+        "signature": "9b2b198dbfcb909c95538f26f07ecfed022ca48dd8f81d8acacb0ba38aecc202",
+        "affectsGlobalScope": false
+      },
+      "../src/business/payment/payment.controller.ts": {
+        "version": "ee80f094a009ab9ef2cc5db962e5d00c545fdcb7f4c58a7a0f6a3983ca773555",
+        "signature": "5c63d77d4348fb05c6dcb06f63ee2226e2c769c904c9db754c0b074355d39c81",
+        "affectsGlobalScope": false
+      },
+      "../src/business/payment/payment.service.ts": {
+        "version": "7831c5cb28a706d753726b56d94d56d9e8213e9c9a53d3e2792f0e75a3585985",
+        "signature": "27d1c023302642387908aab2d9f32a1e10e85523c8441e9933d53ccced1f5636",
+        "affectsGlobalScope": false
+      },
+      "../src/business/payment/payment.module.ts": {
+        "version": "bb1de18f2bb3ce468732e635c4a2ff559fcca8cf31eb9d47c476fa20d8f4ef96",
+        "signature": "a3684909b502d2414d94ce06228f5d6dae72b658eac3f386843965e540b51834",
+        "affectsGlobalScope": false
+      },
+      "../src/business/shipment/shipment.controller.ts": {
+        "version": "bd428554f4e963b7acc9f79a109eca32fa8f4372d65a0456eb5fc7dbd6df2095",
+        "signature": "f5ae7fc5ec95dcf540b22c8f0b6630025efccebe009896e4b013999c570c84ee",
+        "affectsGlobalScope": false
+      },
+      "../src/business/shipment/shipment.service.ts": {
+        "version": "97a3fc572231eb755b707f98fbd26b04032158c01fb5161996cfe1095244a910",
+        "signature": "74fa24bffcde3b7f543ec75b98a8d0b4e2408e5f37e6518bfbe3fe2ff8a28bdc",
+        "affectsGlobalScope": false
+      },
+      "../src/business/shipment/shipment.module.ts": {
+        "version": "bc6d1ff48a41b428b1182980d4115885b782f33956ca824cd9fc76fd8afb03b0",
+        "signature": "8e2c724b21240a0d6909ff0e87a040c480baa36718696e12a91c9062d3a8b2e0",
+        "affectsGlobalScope": false
+      },
+      "../src/business/business.module.ts": {
+        "version": "57b1a4014477b205207be81f8031dea7c405db6848b38b29bfe26cdfcbb1c3e0",
+        "signature": "4c8b7028d7746232907f210471cfc9907821a99464da7163cd3d04aafb73f597",
+        "affectsGlobalScope": false
+      },
       "../src/app.module.ts": {
-        "version": "29fd9996d06c7391b4b834e260d0ff8e9907e3860658d27e3b42f042b6baf1b8",
+        "version": "040374ec4d149975a82db213027d57b3f575852958bdceb4ed418cd91f8f40ed",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644",
         "affectsGlobalScope": false
       },
@@ -4111,9 +4266,34 @@
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },
-      "../src/authentication/role/interfaces/delete-result.interface.ts": {
-        "version": "9da4265d0165d02a49f91dd14a5130531b5294f84ac0db9f045635ffaa260756",
-        "signature": "ab6c3e292510bcc59b5acc94964efdb82bccc0bd2ea70f4142e9f607c3947a5d",
+      "../src/business/enum/payment-status.enum.ts": {
+        "version": "e8f6c9b0aacbba14a6bc490e47618634701257a0640271cb10b454a96cf015c3",
+        "signature": "1ec4a5744c715af86f284ce81fd913c19dfbd4732776b774bb4d5ca9acb47d82",
+        "affectsGlobalScope": false
+      },
+      "../src/business/enum/shipment-status.enum.ts": {
+        "version": "c74b1287062597d3492e9f6f834b5f02bf7009315b9f1d73f4fe5477892e0b88",
+        "signature": "1983b8a6d58794669777f4a7a6afaff405d8bf15f3a03f0ad6925fd65aa05125",
+        "affectsGlobalScope": false
+      },
+      "../src/business/order/dto/update-order.dto.ts": {
+        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "affectsGlobalScope": false
+      },
+      "../src/entities/business/business-contract.entity.ts": {
+        "version": "1c7955bd541d3b80df6ae6caa4821999909d32240fbdd45720329be60af1ca32",
+        "signature": "f22cec7d81c628b6bda00cad9cd89928085bd3a4edd7be36a4e9b6b7e93f0672",
+        "affectsGlobalScope": false
+      },
+      "../src/entities/business/payment.entity.ts": {
+        "version": "333208ff2ae0c0b85def679cdedda4ef4a9cd552cfce30902ee399bdeb3d0fe9",
+        "signature": "31457dcd3e7712f10694e7656778b01378589e639e57b76b8c06df4e260b0384",
+        "affectsGlobalScope": false
+      },
+      "../src/entities/business/shipment.entity.ts": {
+        "version": "333208ff2ae0c0b85def679cdedda4ef4a9cd552cfce30902ee399bdeb3d0fe9",
+        "signature": "31457dcd3e7712f10694e7656778b01378589e639e57b76b8c06df4e260b0384",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -7378,6 +7558,9 @@
         "../node_modules/typeorm/repository/Repository.d.ts",
         "../node_modules/typeorm/repository/SaveOptions.d.ts"
       ],
+      "../node_modules/typeorm/repository/EntityId.d.ts": [
+        "../node_modules/typeorm/driver/mongodb/typings.d.ts"
+      ],
       "../node_modules/typeorm/repository/MongoRepository.d.ts": [
         "../node_modules/typeorm/common/ObjectLiteral.d.ts",
         "../node_modules/typeorm/driver/mongodb/typings.d.ts",
@@ -7532,6 +7715,7 @@
         "../src/app.controller.ts",
         "../src/app.service.ts",
         "../src/authentication/authentication.module.ts",
+        "../src/business/business.module.ts",
         "../src/config/typeorm.config.ts"
       ],
       "../src/app.service.ts": [
@@ -7624,8 +7808,8 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/authentication/permission/dto/create-permission.dto.ts",
         "../src/authentication/permission/dto/update-permission.dto.ts",
-        "../src/authentication/permission/interfaces/delete-result.interface.ts",
-        "../src/entities/authentication/permission.entity.ts"
+        "../src/entities/authentication/permission.entity.ts",
+        "../src/interfaces/delete-result.interface.ts"
       ],
       "../src/authentication/role/dto/add-permissions.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts"
@@ -7666,12 +7850,12 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/authentication/permission/interfaces/delete-result.interface.ts",
         "../src/authentication/permission/permission.service.ts",
         "../src/authentication/role/dto/add-permissions.dto.ts",
         "../src/authentication/role/dto/create-role.dto.ts",
         "../src/authentication/role/dto/update-role.dto.ts",
-        "../src/entities/authentication/role.entity.ts"
+        "../src/entities/authentication/role.entity.ts",
+        "../src/interfaces/delete-result.interface.ts"
       ],
       "../src/authentication/user/dto/add-permissions.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts"
@@ -7736,6 +7920,145 @@
         "../src/authentication/user/interfaces/change-password-result.interface.ts",
         "../src/entities/authentication/user.entity.ts"
       ],
+      "../src/base/base.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/typeorm/repository/EntityId.d.ts",
+        "../src/base/i.base.service.ts"
+      ],
+      "../src/base/i.base.service.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/business/business-contract/business-contract.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/business/business-contract/business-contract.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/business/business-contract/business-contract.controller.ts",
+        "../src/business/business-contract/business-contract.service.ts"
+      ],
+      "../src/business/business-contract/business-contract.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/business/business-partner/business-partner.controller.ts": [
+        "../node_modules/@nartc/automapper/dist/index.d.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/business/business-partner/business-partner.service.ts",
+        "../src/business/business-partner/dto/business-partner.dto.ts",
+        "../src/business/business-partner/dto/create-business-partner.dto.ts",
+        "../src/business/business-partner/dto/filter-search-bp.dto.ts",
+        "../src/business/business-partner/dto/update-business-partner.dto.ts"
+      ],
+      "../src/business/business-partner/business-partner.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/business/business-partner/business-partner.controller.ts",
+        "../src/business/business-partner/business-partner.service.ts",
+        "../src/entities/business/business-partner.entity.ts"
+      ],
+      "../src/business/business-partner/business-partner.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/business/business-partner/dto/create-business-partner.dto.ts",
+        "../src/business/business-partner/dto/filter-search-bp.dto.ts",
+        "../src/business/business-partner/dto/update-business-partner.dto.ts",
+        "../src/business/enum/bp-status.enum.ts",
+        "../src/entities/business/business-partner.entity.ts",
+        "../src/interfaces/delete-result.interface.ts"
+      ],
+      "../src/business/business-partner/dto/business-partner.dto.ts": [
+        "../node_modules/@nartc/automapper/dist/index.d.ts",
+        "../node_modules/class-validator/types/index.d.ts",
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts",
+        "../src/business/enum/bp-status.enum.ts",
+        "../src/entities/business/business-partner.entity.ts"
+      ],
+      "../src/business/business-partner/dto/create-business-partner.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts",
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts"
+      ],
+      "../src/business/business-partner/dto/filter-search-bp.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts",
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts"
+      ],
+      "../src/business/business-partner/dto/update-business-partner.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts",
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts",
+        "../src/business/enum/bp-status.enum.ts"
+      ],
+      "../src/business/business.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/business/business-contract/business-contract.module.ts",
+        "../src/business/business-partner/business-partner.module.ts",
+        "../src/business/order/order.module.ts",
+        "../src/business/payment/payment.module.ts",
+        "../src/business/shipment/shipment.module.ts"
+      ],
+      "../src/business/order/dto/create-order.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/business/order/dto/order.dto.ts": [
+        "../node_modules/@nartc/automapper/dist/index.d.ts",
+        "../node_modules/class-validator/types/index.d.ts",
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts",
+        "../src/business/enum/bp-status.enum.ts",
+        "../src/entities/business/business-partner.entity.ts",
+        "../src/entities/business/order.entity.ts"
+      ],
+      "../src/business/order/order.controller.ts": [
+        "../node_modules/@nartc/automapper/dist/index.d.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/business/order/dto/create-order.dto.ts",
+        "../src/business/order/dto/order.dto.ts",
+        "../src/business/order/order.service.ts"
+      ],
+      "../src/business/order/order.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/business/order/order.controller.ts",
+        "../src/business/order/order.repository.ts",
+        "../src/business/order/order.service.ts",
+        "../src/entities/business/order.entity.ts"
+      ],
+      "../src/business/order/order.repository.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/business/order.entity.ts"
+      ],
+      "../src/business/order/order.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/base/base.service.ts",
+        "../src/business/order/order.repository.ts",
+        "../src/entities/business/order.entity.ts"
+      ],
+      "../src/business/payment/payment.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/business/payment/payment.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/business/payment/payment.controller.ts",
+        "../src/business/payment/payment.service.ts"
+      ],
+      "../src/business/payment/payment.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/business/shipment/shipment.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/business/shipment/shipment.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/business/shipment/shipment.controller.ts",
+        "../src/business/shipment/shipment.service.ts"
+      ],
+      "../src/business/shipment/shipment.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts"
+      ],
       "../src/config/jwt.config.ts": [
         "../node_modules/@nestjs/jwt/index.d.ts",
         "../node_modules/dotenv/types/index.d.ts"
@@ -7762,6 +8085,31 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/entities/authentication/permission.entity.ts",
         "../src/entities/authentication/role.entity.ts"
+      ],
+      "../src/entities/business/business-contract.entity.ts": [
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/entities/business/business-partner.entity.ts": [
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts",
+        "../src/business/enum/bp-status.enum.ts"
+      ],
+      "../src/entities/business/order.entity.ts": [
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/entities/business/payment.entity.ts": [
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/business/enum/payment-status.enum.ts"
+      ],
+      "../src/entities/business/shipment.entity.ts": [
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/business/enum/payment-status.enum.ts"
       ],
       "../src/main.ts": [
         "../node_modules/@nestjs/core/index.d.ts",
@@ -10725,6 +11073,9 @@
         "../node_modules/typeorm/repository/Repository.d.ts",
         "../node_modules/typeorm/repository/SaveOptions.d.ts"
       ],
+      "../node_modules/typeorm/repository/EntityId.d.ts": [
+        "../node_modules/typeorm/driver/mongodb/typings.d.ts"
+      ],
       "../node_modules/typeorm/repository/MongoRepository.d.ts": [
         "../node_modules/typeorm/common/ObjectLiteral.d.ts",
         "../node_modules/typeorm/driver/mongodb/typings.d.ts",
@@ -10911,8 +11262,8 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/authentication/permission/dto/create-permission.dto.ts",
         "../src/authentication/permission/dto/update-permission.dto.ts",
-        "../src/authentication/permission/interfaces/delete-result.interface.ts",
-        "../src/entities/authentication/permission.entity.ts"
+        "../src/entities/authentication/permission.entity.ts",
+        "../src/interfaces/delete-result.interface.ts"
       ],
       "../src/authentication/role/dto/role.dto.ts": [
         "../src/authentication/permission/dto/permission.dto.ts"
@@ -10925,12 +11276,12 @@
       ],
       "../src/authentication/role/role.service.ts": [
         "../node_modules/typeorm/index.d.ts",
-        "../src/authentication/permission/interfaces/delete-result.interface.ts",
         "../src/authentication/permission/permission.service.ts",
         "../src/authentication/role/dto/add-permissions.dto.ts",
         "../src/authentication/role/dto/create-role.dto.ts",
         "../src/authentication/role/dto/update-role.dto.ts",
-        "../src/entities/authentication/role.entity.ts"
+        "../src/entities/authentication/role.entity.ts",
+        "../src/interfaces/delete-result.interface.ts"
       ],
       "../src/authentication/user/dto/user.dto.ts": [
         "../src/authentication/permission/dto/permission.dto.ts"
@@ -10956,6 +11307,61 @@
         "../src/authentication/user/interfaces/change-password-result.interface.ts",
         "../src/entities/authentication/user.entity.ts"
       ],
+      "../src/base/base.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/typeorm/repository/EntityId.d.ts",
+        "../src/base/i.base.service.ts"
+      ],
+      "../src/base/i.base.service.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/business/business-partner/business-partner.controller.ts": [
+        "../src/business/business-partner/business-partner.service.ts",
+        "../src/business/business-partner/dto/business-partner.dto.ts",
+        "../src/business/business-partner/dto/create-business-partner.dto.ts",
+        "../src/business/business-partner/dto/filter-search-bp.dto.ts",
+        "../src/business/business-partner/dto/update-business-partner.dto.ts"
+      ],
+      "../src/business/business-partner/business-partner.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/business/business-partner/dto/create-business-partner.dto.ts",
+        "../src/business/business-partner/dto/filter-search-bp.dto.ts",
+        "../src/business/business-partner/dto/update-business-partner.dto.ts",
+        "../src/entities/business/business-partner.entity.ts",
+        "../src/interfaces/delete-result.interface.ts"
+      ],
+      "../src/business/business-partner/dto/business-partner.dto.ts": [
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts",
+        "../src/business/enum/bp-status.enum.ts"
+      ],
+      "../src/business/business-partner/dto/create-business-partner.dto.ts": [
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts"
+      ],
+      "../src/business/business-partner/dto/filter-search-bp.dto.ts": [
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts"
+      ],
+      "../src/business/business-partner/dto/update-business-partner.dto.ts": [
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts",
+        "../src/business/enum/bp-status.enum.ts"
+      ],
+      "../src/business/order/order.controller.ts": [
+        "../src/business/order/dto/create-order.dto.ts",
+        "../src/business/order/dto/order.dto.ts",
+        "../src/business/order/order.service.ts"
+      ],
+      "../src/business/order/order.repository.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/business/order.entity.ts"
+      ],
+      "../src/business/order/order.service.ts": [
+        "../src/base/base.service.ts",
+        "../src/business/order/order.repository.ts",
+        "../src/entities/business/order.entity.ts"
+      ],
       "../src/config/jwt.config.ts": [
         "../node_modules/@nestjs/jwt/index.d.ts"
       ],
@@ -10976,6 +11382,26 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/entities/authentication/permission.entity.ts",
         "../src/entities/authentication/role.entity.ts"
+      ],
+      "../src/entities/business/business-contract.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/entities/business/business-partner.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/business/enum/bp-category.enum.ts",
+        "../src/business/enum/bp-function.enum.ts",
+        "../src/business/enum/bp-status.enum.ts"
+      ],
+      "../src/entities/business/order.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/entities/business/payment.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/business/enum/payment-status.enum.ts"
+      ],
+      "../src/entities/business/shipment.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/business/enum/payment-status.enum.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -11750,6 +12176,7 @@
       "../node_modules/typeorm/query-runner/QueryRunner.d.ts",
       "../node_modules/typeorm/repository/AbstractRepository.d.ts",
       "../node_modules/typeorm/repository/BaseEntity.d.ts",
+      "../node_modules/typeorm/repository/EntityId.d.ts",
       "../node_modules/typeorm/repository/MongoRepository.d.ts",
       "../node_modules/typeorm/repository/RemoveOptions.d.ts",
       "../node_modules/typeorm/repository/Repository.d.ts",
@@ -11831,7 +12258,6 @@
       "../src/authentication/permission/dto/create-permission.dto.ts",
       "../src/authentication/permission/dto/permission.dto.ts",
       "../src/authentication/permission/dto/update-permission.dto.ts",
-      "../src/authentication/permission/interfaces/delete-result.interface.ts",
       "../src/authentication/permission/permission.controller.ts",
       "../src/authentication/permission/permission.module.ts",
       "../src/authentication/permission/permission.service.ts",
@@ -11839,7 +12265,6 @@
       "../src/authentication/role/dto/create-role.dto.ts",
       "../src/authentication/role/dto/role.dto.ts",
       "../src/authentication/role/dto/update-role.dto.ts",
-      "../src/authentication/role/interfaces/delete-result.interface.ts",
       "../src/authentication/role/role.controller.ts",
       "../src/authentication/role/role.module.ts",
       "../src/authentication/role/role.service.ts",
@@ -11854,11 +12279,48 @@
       "../src/authentication/user/user.controller.ts",
       "../src/authentication/user/user.module.ts",
       "../src/authentication/user/user.service.ts",
+      "../src/base/base.service.ts",
+      "../src/base/i.base.service.ts",
+      "../src/business/business-contract/business-contract.controller.ts",
+      "../src/business/business-contract/business-contract.module.ts",
+      "../src/business/business-contract/business-contract.service.ts",
+      "../src/business/business-partner/business-partner.controller.ts",
+      "../src/business/business-partner/business-partner.module.ts",
+      "../src/business/business-partner/business-partner.service.ts",
+      "../src/business/business-partner/dto/business-partner.dto.ts",
+      "../src/business/business-partner/dto/create-business-partner.dto.ts",
+      "../src/business/business-partner/dto/filter-search-bp.dto.ts",
+      "../src/business/business-partner/dto/update-business-partner.dto.ts",
+      "../src/business/business.module.ts",
+      "../src/business/enum/bp-category.enum.ts",
+      "../src/business/enum/bp-function.enum.ts",
+      "../src/business/enum/bp-status.enum.ts",
+      "../src/business/enum/payment-status.enum.ts",
+      "../src/business/enum/shipment-status.enum.ts",
+      "../src/business/order/dto/create-order.dto.ts",
+      "../src/business/order/dto/order.dto.ts",
+      "../src/business/order/dto/update-order.dto.ts",
+      "../src/business/order/order.controller.ts",
+      "../src/business/order/order.module.ts",
+      "../src/business/order/order.repository.ts",
+      "../src/business/order/order.service.ts",
+      "../src/business/payment/payment.controller.ts",
+      "../src/business/payment/payment.module.ts",
+      "../src/business/payment/payment.service.ts",
+      "../src/business/shipment/shipment.controller.ts",
+      "../src/business/shipment/shipment.module.ts",
+      "../src/business/shipment/shipment.service.ts",
       "../src/config/jwt.config.ts",
       "../src/config/typeorm.config.ts",
       "../src/entities/authentication/permission.entity.ts",
       "../src/entities/authentication/role.entity.ts",
       "../src/entities/authentication/user.entity.ts",
+      "../src/entities/business/business-contract.entity.ts",
+      "../src/entities/business/business-partner.entity.ts",
+      "../src/entities/business/order.entity.ts",
+      "../src/entities/business/payment.entity.ts",
+      "../src/entities/business/shipment.entity.ts",
+      "../src/interfaces/delete-result.interface.ts",
       "../src/main.ts"
     ]
   },

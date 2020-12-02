@@ -2,7 +2,7 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { RoleEntity } from 'src/entities/authentication/role.entity';
 import { Repository } from 'typeorm';
-import { DeleteResultInterface } from '../permission/interfaces/delete-result.interface';
+import { DeleteResultInterface } from '../../interfaces/delete-result.interface';
 import { PermissionService } from '../permission/permission.service';
 import { AddPermissionsDto } from './dto/add-permissions.dto';
 import { CreateRoleDto } from './dto/create-role.dto';
