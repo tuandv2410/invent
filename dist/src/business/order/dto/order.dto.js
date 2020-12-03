@@ -13,23 +13,19 @@ exports.OrderDto = void 0;
 const class_validator_1 = require("class-validator");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
-const bp_category_enum_1 = require("../../enum/bp-category.enum");
-const bp_function_enum_1 = require("../../enum/bp-function.enum");
-const bp_status_enum_1 = require("../../enum/bp-status.enum");
-const business_partner_entity_1 = require("../../../entities/business/business-partner.entity");
 const order_entity_1 = require("../../../entities/business/order.entity");
 class OrderDto {
 }
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsNotEmpty(),
-    __metadata("design:type", String)
+    __metadata("design:type", Number)
 ], OrderDto.prototype, "id", void 0);
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
-], OrderDto.prototype, "create_date", void 0);
+], OrderDto.prototype, "createDate", void 0);
 exports.OrderDto = OrderDto;
 automapper_1.Mapper.createMap(order_entity_1.OrderEntity, OrderDto);
 //# sourceMappingURL=order.dto.js.map

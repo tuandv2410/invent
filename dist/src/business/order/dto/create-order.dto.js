@@ -16,6 +16,6 @@ class CreateOrderDto {
 __decorate([
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
-], CreateOrderDto.prototype, "create_date", void 0);
+], CreateOrderDto.prototype, "createDate", void 0);
 exports.CreateOrderDto = CreateOrderDto;
 //# sourceMappingURL=create-order.dto.js.map

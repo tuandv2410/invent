@@ -9,7 +9,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrderModule = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const order_entity_1 = require("../../entities/business/order.entity");
 const order_controller_1 = require("./order.controller");
 const order_repository_1 = require("./order.repository");
 const order_service_1 = require("./order.service");
@@ -18,10 +17,15 @@ let OrderModule = class OrderModule {
 OrderModule = __decorate([
     common_1.Module({
         imports: [
-            typeorm_1.TypeOrmModule.forFeature([order_entity_1.OrderEntity, order_repository_1.OrderRepository]),
+            typeorm_1.TypeOrmModule.forFeature([order_repository_1.OrderRepository]),
         ],
         controllers: [order_controller_1.OrderController],
-        providers: [order_service_1.OrderService]
+        providers: [
+            order_service_1.OrderService,
+        ],
+        exports: [
+            typeorm_1.TypeOrmModule,
+        ]
     })
 ], OrderModule);
 exports.OrderModule = OrderModule;

@@ -15,6 +15,7 @@ const app_service_1 = require("./app.service");
 const authentication_module_1 = require("./authentication/authentication.module");
 const typeorm_config_1 = require("./config/typeorm.config");
 const business_module_1 = require("./business/business.module");
+const warehouse_feat_module_1 = require("./warehouse-feat/warehouse-feat.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -23,10 +24,13 @@ AppModule = __decorate([
             nestjsx_automapper_1.AutomapperModule.withMapper(),
             typeorm_1.TypeOrmModule.forRoot(typeorm_config_1.typeOrmConfig),
             authentication_module_1.AuthenticationModule,
-            business_module_1.BusinessModule
+            business_module_1.BusinessModule,
+            warehouse_feat_module_1.WarehouseFeatModule
         ],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        providers: [
+            app_service_1.AppService
+        ],
     })
 ], AppModule);
 exports.AppModule = AppModule;

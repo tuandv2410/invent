@@ -5,24 +5,21 @@ class BaseService {
     constructor(repository) {
         this.repository = repository;
     }
-    async index() {
-        return await this.repository.find();
+    findByIds(ids) {
+        return this.repository.findByIds(ids);
     }
-    async findById(id) {
-        return await this.repository.findOne(id);
+    get(data) {
+        return this.repository.find({ where: data });
     }
-    async findByIds(ids) {
-        return await this.repository.findByIds(ids);
+    store(data) {
+        return this.repository.save(data);
     }
-    async store(data) {
-        return await this.repository.save(data);
+    update(id, data) {
+        this.repository.update(id, data);
+        return this.repository.findOne(id);
     }
-    async update(id, data) {
-        await this.repository.update(id, data);
-        return await this.findById(id);
-    }
-    async delete(id) {
-        return await this.repository.delete(id);
+    delete(id) {
+        return this.repository.delete(id);
     }
 }
 exports.BaseService = BaseService;

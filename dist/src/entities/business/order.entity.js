@@ -21,9 +21,12 @@ __decorate([
 ], OrderEntity.prototype, "id", void 0);
 __decorate([
     nestjsx_automapper_1.AutoMap(),
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: false,
+    }),
     __metadata("design:type", String)
-], OrderEntity.prototype, "create_date", void 0);
+], OrderEntity.prototype, "createDate", void 0);
 OrderEntity = __decorate([
     typeorm_1.Entity('order')
 ], OrderEntity);

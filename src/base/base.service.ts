@@ -1,6 +1,5 @@
-import { BaseEntity, DeleteResult, Repository } from 'typeorm'
+import { BaseEntity, DeleteResult, InsertResult, Repository } from 'typeorm'
 import { IBaseService } from './i.base.service'
-import { EntityId } from 'typeorm/repository/EntityId'
 
 export class BaseService<T extends BaseEntity, R extends Repository<T>> implements IBaseService<T> {
     protected readonly repository: R
@@ -9,28 +8,24 @@ export class BaseService<T extends BaseEntity, R extends Repository<T>> implemen
         this.repository = repository
     }
 
-    async index(): Promise<T[]> {
-        return await this.repository.find()
+    findByIds(ids: [number]): Promise<T[]> {
+        return this.repository.findByIds(ids)
     }
 
-    async findById(id: EntityId): Promise<T> {
-        return await this.repository.findOne(id)
+    get(data: any): Promise<T[]> {
+        return this.repository.find({where:data})
     }
 
-    async findByIds(ids: [EntityId]): Promise<T[]> {
-        return await this.repository.findByIds(ids)
+    store(data: any): Promise<InsertResult> {
+        return  this.repository.save(data)
     }
 
-    async store(data: any): Promise<T> {
-        return await this.repository.save(data)
+    update(id: number, data: any): Promise<T> {
+        this.repository.update(id, data)
+        return this.repository.findOne(id)
     }
 
-    async update(id: EntityId, data: any): Promise<T> {
-        await this.repository.update(id, data)
-        return await this.findById(id)
-    }
-
-    async delete(id: EntityId): Promise<DeleteResult> {
-        return await this.repository.delete(id)
+    delete(id: number): Promise<DeleteResult> {
+        return this.repository.delete(id)
     }
 }

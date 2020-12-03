@@ -1,11 +1,11 @@
-import { BaseEntity, Column, Entity, ObjectIdColumn } from "typeorm";
+import { BaseEntity, Column, Entity, ObjectIdColumn, PrimaryGeneratedColumn } from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
 import { PaymentStatus } from "src/business/enum/payment-status.enum";
 
 @Entity('payment')
 export class PaymentEntity extends BaseEntity {
     @AutoMap()
-    @ObjectIdColumn()
+    @PrimaryGeneratedColumn()
     id: number;
 
     @AutoMap()

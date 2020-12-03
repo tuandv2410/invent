@@ -8,4 +8,6 @@ export class OrderService extends BaseService<OrderEntity, OrderRepository>{
     constructor(repository: OrderRepository) {
         super(repository)
     }
+
+    
 }

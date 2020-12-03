@@ -8,6 +8,9 @@ export class OrderEntity extends BaseEntity {
     id: number;
 
     @AutoMap()
-    @Column()
-    create_date: string;
+    @Column({
+        type: 'varchar',
+        nullable: false,
+    })
+    createDate: string;
 }

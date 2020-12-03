@@ -17,7 +17,7 @@ let PaymentEntity = class PaymentEntity extends typeorm_1.BaseEntity {
 };
 __decorate([
     nestjsx_automapper_1.AutoMap(),
-    typeorm_1.ObjectIdColumn(),
+    typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
 ], PaymentEntity.prototype, "id", void 0);
 __decorate([

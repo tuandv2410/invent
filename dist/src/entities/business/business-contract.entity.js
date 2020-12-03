@@ -16,7 +16,7 @@ let BusinessContractEntity = class BusinessContractEntity extends typeorm_1.Base
 };
 __decorate([
     nestjsx_automapper_1.AutoMap(),
-    typeorm_1.ObjectIdColumn(),
+    typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
 ], BusinessContractEntity.prototype, "id", void 0);
 __decorate([

@@ -1,10 +1,10 @@
-import { BaseEntity, Column, Entity, ObjectIdColumn } from "typeorm";
+import { BaseEntity, Column, Entity, ObjectIdColumn, PrimaryGeneratedColumn } from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
 
 @Entity('business-contract')
 export class BusinessContractEntity extends BaseEntity {
     @AutoMap()
-    @ObjectIdColumn()
+    @PrimaryGeneratedColumn()
     id: number;
 
     @AutoMap()

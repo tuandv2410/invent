@@ -18,39 +18,29 @@ const order_dto_1 = require("./dto/order.dto");
 const order_service_1 = require("./order.service");
 const automapper_1 = require("@nartc/automapper");
 const create_order_dto_1 = require("./dto/create-order.dto");
+const filter_get_order_dto_1 = require("./dto/filter-get-order.dto");
 let OrderController = class OrderController {
     constructor(orderService) {
         this.orderService = orderService;
     }
-    async index() {
-        const result = await this.orderService.index();
+    async get(filterDto) {
+        const result = await this.orderService.get(filterDto);
         return automapper_1.Mapper.mapArray(result, order_dto_1.OrderDto);
     }
-    async show(id) {
-        const order = await this.orderService.findById(id);
-        if (!order) {
-            throw new common_1.NotFoundException();
-        }
-        return automapper_1.Mapper.map(order, order_dto_1.OrderDto);
-    }
     async create(userData) {
-        const order = await this.orderService.store(userData);
-        return automapper_1.Mapper.map(order, order_dto_1.OrderDto);
+        return await this.orderService.store(userData);
+    }
+    async delete(id) {
+        return await this.orderService.delete(id);
     }
 };
 __decorate([
     common_1.Get(),
+    __param(0, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [filter_get_order_dto_1.FilterGetOrderDto]),
     __metadata("design:returntype", Promise)
-], OrderController.prototype, "index", null);
-__decorate([
-    common_1.Get('/:id'),
-    __param(0, common_1.Param('id')),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", Promise)
-], OrderController.prototype, "show", null);
+], OrderController.prototype, "get", null);
 __decorate([
     common_1.Post(),
     __param(0, common_1.Body()),
@@ -58,6 +48,13 @@ __decorate([
     __metadata("design:paramtypes", [create_order_dto_1.CreateOrderDto]),
     __metadata("design:returntype", Promise)
 ], OrderController.prototype, "create", null);
+__decorate([
+    common_1.Delete(),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", Promise)
+], OrderController.prototype, "delete", null);
 OrderController = __decorate([
     common_1.Controller('order'),
     __metadata("design:paramtypes", [order_service_1.OrderService])
