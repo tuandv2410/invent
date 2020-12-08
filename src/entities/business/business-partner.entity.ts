@@ -1,14 +1,16 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, OneToMany, PrimaryColumn} from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
 import { BpCategory } from "src/business/enum/bp-category.enum";
 import { BpFunction } from "src/business/enum/bp-function.enum";
 import { BpStatus } from "src/business/enum/bp-status.enum";
+import { OrderEntity } from "./order.entity";
+import { BusinessContractEntity } from "./business-contract.entity";
 
 @Entity('business-partner')
 export class BusinessPartnerEntity extends BaseEntity {
     @AutoMap()
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryColumn()
+    id: string;
 
     @AutoMap()
     @Column({
@@ -17,6 +19,41 @@ export class BusinessPartnerEntity extends BaseEntity {
         unique: true
     })
     fullName: string;
+
+    @AutoMap()
+    @Column({
+        type: 'varchar',
+        nullable: false,
+    })
+    address: string;
+
+    @AutoMap()
+    @Column({
+        type: 'varchar',
+        nullable: false,
+    })
+    taxInfo: string;
+
+    @AutoMap()
+    @Column({
+        type: 'varchar',
+        nullable: false,
+    })
+    phone: string;
+
+    @AutoMap()
+    @Column({
+        type: 'varchar',
+        nullable: false,
+    })
+    email: string;
+
+    @AutoMap()
+    @Column({
+        type: 'varchar',
+        nullable: false,
+    })
+    discount: number;
 
     @AutoMap()
     @Column({
@@ -38,5 +75,14 @@ export class BusinessPartnerEntity extends BaseEntity {
         nullable: false,
     })
     status: BpStatus;
+
+
+    @AutoMap(()=>OrderEntity)
+    @OneToMany(type => OrderEntity, order => order.businessPartner)
+    orders: OrderEntity[];
+
+    @AutoMap(()=>BusinessContractEntity)
+    @OneToMany(type => BusinessContractEntity, businessContract => businessContract.businessPartner)
+    businessContracts: BusinessContractEntity[];
 
 }

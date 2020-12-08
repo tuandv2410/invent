@@ -1,14 +1,15 @@
-import { DeleteResult, InsertResult } from 'typeorm'
+import { DeleteResultInterface } from 'src/interfaces/delete-result.interface';
+import { InsertResult } from 'typeorm'
 
 export interface IBaseService<T> {
 
-    findByIds(id: [number]): Promise<T[]>
+    findByIds(id: [string]): Promise<T[]>
 
     get(data: any): Promise<T[]>
 
     store(data: any): Promise<InsertResult>
 
-    update(id: number, data: any): Promise<T>
+    update(id: string, data: any): Promise<T>
 
-    delete(id: number): Promise<DeleteResult>
+    delete(id: string): Promise<DeleteResultInterface>
 }

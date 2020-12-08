@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { BusinessPartnerEntity } from 'src/entities/business/business-partner.entity';
 import { BusinessPartnerController } from './business-partner.controller';
 import { BusinessPartnerService } from './business-partner.service';
+import { BusinessPartnerRepository } from './business-partner.repository';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([BusinessPartnerEntity]),
+    TypeOrmModule.forFeature([BusinessPartnerRepository]),
   ],
   controllers: [BusinessPartnerController],
   providers: [BusinessPartnerService]

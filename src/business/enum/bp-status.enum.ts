@@ -1,4 +1,4 @@
 export enum BpStatus {
-    ACTIVE= "ACTIVE",
-    DEACTIVE = "DEACTIVE"
+    active,
+    deactivate
 }

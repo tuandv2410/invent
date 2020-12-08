@@ -1,3 +1,5 @@
+import { HttpException, HttpStatus } from '@nestjs/common'
+import { DeleteResultInterface } from 'src/interfaces/delete-result.interface'
 import { BaseEntity, DeleteResult, InsertResult, Repository } from 'typeorm'
 import { IBaseService } from './i.base.service'
 
@@ -8,24 +10,55 @@ export class BaseService<T extends BaseEntity, R extends Repository<T>> implemen
         this.repository = repository
     }
 
-    findByIds(ids: [number]): Promise<T[]> {
-        return this.repository.findByIds(ids)
+    findByIds(ids: [string]): Promise<T[]> {
+        try{
+            return this.repository.findByIds(ids)
+        }catch(error) {
+            throw new HttpException(`error: "${error}" `, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
-    get(data: any): Promise<T[]> {
-        return this.repository.find({where:data})
+    get(data: any): Promise<T[]> { 
+        try{
+            return this.repository.find({where:data})
+        }catch(error) {
+            throw new HttpException(`error: "${error}" `, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     store(data: any): Promise<InsertResult> {
-        return  this.repository.save(data)
+        try{
+            return  this.repository.save(data)
+        }catch(error) {
+            throw new HttpException(`error: "${error}" `, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
-    update(id: number, data: any): Promise<T> {
-        this.repository.update(id, data)
-        return this.repository.findOne(id)
+    async update(id: string, data: any): Promise<T> {
+        try{
+            this.repository.update(id, data)
+            return await this.repository.findOne(id)
+        }catch(error) {
+            throw new HttpException(`error: "${error}" `, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
-    delete(id: number): Promise<DeleteResult> {
-        return this.repository.delete(id)
+    async delete(id: string): Promise<DeleteResultInterface> {
+        let status: DeleteResultInterface = {
+            succes: true,
+            message: 'delete success',
+        };
+        try {
+            const result:DeleteResult = await this.repository.delete(id)
+            if(result.affected === 0){
+                throw new HttpException(`ID "${id}" not found!`, HttpStatus.NOT_FOUND);
+            }
+        } catch(error) {
+            status = {
+                succes: false,
+                message: error,
+            };
+        }
+        return status
     }
 }

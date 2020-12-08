@@ -2,7 +2,7 @@ import { IsOptional } from 'class-validator';
 
 export class FilterGetOrderDto {
     @IsOptional()
-    id: number;
+    id: string;
 
     @IsOptional()
     createDate: string;

@@ -8,6 +8,7 @@ import { typeOrmConfig } from './config/typeorm.config';
 import { BusinessModule } from './business/business.module';
 import { ElasticsearchModule } from '@nestjs/elasticsearch';
 import { WarehouseFeatModule } from './warehouse-feat/warehouse-feat.module';
+import { InventoryModule } from './inventory/inventory.module';
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { WarehouseFeatModule } from './warehouse-feat/warehouse-feat.module';
     TypeOrmModule.forRoot(typeOrmConfig),
     AuthenticationModule,
     BusinessModule,
-    WarehouseFeatModule
+    WarehouseFeatModule,
+    InventoryModule
   ],
   controllers: [AppController],
   providers: [

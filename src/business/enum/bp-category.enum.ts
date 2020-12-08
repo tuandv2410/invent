@@ -1,5 +1,5 @@
 export enum BpCategory {
-    PERSON = 'PERSON',
-    GROUP = 'GROUP',
-    ORGANIZATION = 'ORGANIZATION',
+    person,
+    group,
+    organization
 }
