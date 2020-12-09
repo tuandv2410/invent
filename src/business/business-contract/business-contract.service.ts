@@ -5,7 +5,10 @@ import { BusinessContractRepository } from './business-contract.repository';
 
 @Injectable()
 export class BusinessContractService extends BaseService<BusinessContractEntity, BusinessContractRepository>{
-    constructor(repository: BusinessContractRepository) {
+    constructor(
+        repository: BusinessContractRepository,
+    ) {
         super(repository)
     }
+
 }

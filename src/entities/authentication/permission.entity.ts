@@ -31,7 +31,7 @@ export class PermissionEntity extends BaseEntity {
             cascade: true
         }
     )
-    @JoinTable()
+    @JoinTable({ name: 'users-permissions'})
     users: UserEntity[]
 
     @AutoMap()
@@ -40,6 +40,6 @@ export class PermissionEntity extends BaseEntity {
             cascade: true
         }
     )
-    @JoinTable()
+    @JoinTable({ name: 'roles-permissions'})
     roles: RoleEntity[]
 }

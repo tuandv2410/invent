@@ -9,6 +9,7 @@ import { BusinessPartnerRepository } from './business-partner.repository';
     TypeOrmModule.forFeature([BusinessPartnerRepository]),
   ],
   controllers: [BusinessPartnerController],
-  providers: [BusinessPartnerService]
+  providers: [BusinessPartnerService],
+  exports: [BusinessPartnerService]
 })
 export class BusinessPartnerModule {}

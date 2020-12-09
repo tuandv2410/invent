@@ -35,7 +35,7 @@ export class RoleEntity extends BaseEntity {
             cascade: true
         }
     )
-    @JoinTable()
+    @JoinTable({ name: 'users-roles'})
     users: UserEntity[]
 
 }

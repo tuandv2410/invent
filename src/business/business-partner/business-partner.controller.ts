@@ -22,6 +22,14 @@ export class BusinessPartnerController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,BusinessPartnerDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetBusinessPartnerDto
+    ): Promise<BusinessPartnerDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,BusinessPartnerDto);
+    }
   
     @Post()
     async create(
