@@ -24,7 +24,7 @@ export class BusinessContractService extends BaseService<BusinessContractEntity,
         } catch (err) {
             result = {
                 message: err,
-                succes: true
+                succes: false
             }
         }
 

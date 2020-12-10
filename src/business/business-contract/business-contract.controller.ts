@@ -69,6 +69,13 @@ export class BusinessContractController {
         const bc = await this.service.findById(idBC);
         const bp = await this.bpService.findById(idBP);
 
-        return this.service.resignBCToBP(bc,bp);
+        if(bc && bp){
+            return this.service.resignBCToBP(bc,bp);
+        }else {
+            return {
+                message: "false",
+                succes: false
+            }
+        }
     }
 }
