@@ -22,6 +22,14 @@ export class StorageSectionController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,StorageSectionDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetStorageSectionDto
+    ): Promise<StorageSectionDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,StorageSectionDto);
+    }
   
     @Post()
     async create(

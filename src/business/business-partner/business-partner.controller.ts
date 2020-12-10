@@ -14,7 +14,7 @@ export class BusinessPartnerController {
     constructor(
         private readonly service: BusinessPartnerService
     ) {}
-  
+
     @Get()
     async get(
         @Body() filterDto: FilterGetBusinessPartnerDto
@@ -30,7 +30,7 @@ export class BusinessPartnerController {
         const result = await this.service.getWithRelations(filterDto)
         return Mapper.mapArray(result,BusinessPartnerDto);
     }
-  
+
     @Post()
     async create(
         @Body() userData: CreateBusinessPartnerDto
@@ -49,7 +49,7 @@ export class BusinessPartnerController {
         const result = await this.service.update(id, userData)
         return Mapper.map(result,BusinessPartnerDto);
     }
-  
+
     @Delete('/:id')
     async destroy(
         @Param('id') id: string

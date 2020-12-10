@@ -22,6 +22,14 @@ export class SkuController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,SkuDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetSkuDto
+    ): Promise<SkuDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,SkuDto);
+    }
   
     @Post()
     async create(

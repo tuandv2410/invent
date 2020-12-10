@@ -22,6 +22,14 @@ export class OrderController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,OrderDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetOrderDto
+    ): Promise<OrderDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,OrderDto);
+    }
   
     @Post()
     async create(

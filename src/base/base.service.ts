@@ -10,6 +10,15 @@ export class BaseService<T extends BaseEntity, R extends Repository<T>> implemen
         this.repository = repository
     }
 
+
+    findById(id: string): Promise<T> {
+        try{
+            return this.repository.findOne(id)
+        }catch(error) {
+            throw new HttpException(`error: "${error}" `, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
     findByIds(ids: [string]): Promise<T[]> {
         try{
             return this.repository.findByIds(ids)

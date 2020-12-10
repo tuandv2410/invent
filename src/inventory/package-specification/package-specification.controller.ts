@@ -23,6 +23,15 @@ export class PackageSpecificationController {
         return Mapper.mapArray(result,PackageSpecificationDto);
     }
   
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetPackageSpecificationDto
+    ): Promise<PackageSpecificationDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,PackageSpecificationDto);
+    }
+
     @Post()
     async create(
         @Body() userData: CreatePackageSpecificationDto

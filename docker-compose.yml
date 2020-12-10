@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  sqldb:
+  postgres:
     container_name: postgres
     image: postgres:12
     networks:
@@ -18,7 +18,7 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - sqldb
+      - postgres
 
     env_file:
       - .env
@@ -27,8 +27,8 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    command: "npm run start:dev"
-    restart: always
+    command: ["npm", "run","start:dev"]
+    restart: on-failure
     networks:
       - backend
 

@@ -22,6 +22,15 @@ export class StorageTypeController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,StorageTypeDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetStorageTypeDto
+    ): Promise<StorageTypeDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,StorageTypeDto);
+    }
+  
   
     @Post()
     async create(

@@ -22,6 +22,14 @@ export class PackgingMaterialController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,PackgingMaterialDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetPackgingMaterialDto
+    ): Promise<PackgingMaterialDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,PackgingMaterialDto);
+    }
   
     @Post()
     async create(

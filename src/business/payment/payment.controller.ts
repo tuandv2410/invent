@@ -22,6 +22,14 @@ export class PaymentController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,PaymentDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetPaymentDto
+    ): Promise<PaymentDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,PaymentDto);
+    }
   
     @Post()
     async create(

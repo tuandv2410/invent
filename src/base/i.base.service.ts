@@ -2,6 +2,7 @@ import { DeleteResultInterface } from 'src/interfaces/delete-result.interface';
 import { InsertResult } from 'typeorm'
 
 export interface IBaseService<T> {
+    findById(id: string): Promise<T> 
 
     findByIds(id: [string]): Promise<T[]>
 

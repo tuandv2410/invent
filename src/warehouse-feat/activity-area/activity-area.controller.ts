@@ -22,6 +22,14 @@ export class ActivityAreaController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,ActivityAreaDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetActivityAreaDto
+    ): Promise<ActivityAreaDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,ActivityAreaDto);
+    }
   
     @Post()
     async create(

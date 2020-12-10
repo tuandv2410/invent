@@ -8,11 +8,15 @@ import { CreateBusinessContractDto } from './dto/create-business-contract.dto';
 import { InsertResult } from 'typeorm';
 import { UpdateBusinessContractDto } from './dto/update-business-contract.dto';
 import { DeleteResultInterface } from 'src/interfaces/delete-result.interface';
+import { BusinessPartnerService } from '../business-partner/business-partner.service';
+import { ResignBCToBPDto } from './dto/relations/resign-bc-to-bp.dto';
+import { ResultInterface } from 'src/interfaces/result.interface';
 
 @Controller('business-contract')
 export class BusinessContractController {
     constructor(
-        private readonly service: BusinessContractService
+        private readonly service: BusinessContractService,
+        private readonly bpService: BusinessPartnerService
     ) {}
   
     @Get()
@@ -20,6 +24,14 @@ export class BusinessContractController {
         @Body() filterDto: FilterGetBusinessContractDto
     ): Promise<BusinessContractDto[]> {
         const result = await this.service.get(filterDto)
+        return Mapper.mapArray(result,BusinessContractDto);
+    }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetBusinessContractDto
+    ): Promise<BusinessContractDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
         return Mapper.mapArray(result,BusinessContractDto);
     }
   
@@ -47,5 +59,16 @@ export class BusinessContractController {
         @Param('id') id: string
     ): Promise<DeleteResultInterface> {
         return this.service.delete(id)
+    }
+
+    @Post('/resignBCToBP')
+    async resignBCToBP(
+        @Body() userData : ResignBCToBPDto
+    ): Promise<ResultInterface> {
+        const {idBC, idBP} = userData
+        const bc = await this.service.findById(idBC);
+        const bp = await this.bpService.findById(idBP);
+
+        return this.service.resignBCToBP(bc,bp);
     }
 }

@@ -22,6 +22,14 @@ export class ProductOrderController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,ProductOrderDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetProductOrderDto
+    ): Promise<ProductOrderDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,ProductOrderDto);
+    }
   
     @Post()
     async create(

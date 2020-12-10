@@ -22,6 +22,14 @@ export class StorageBinController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,StorageBinDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetStorageBinDto
+    ): Promise<StorageBinDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,StorageBinDto);
+    }
   
     @Post()
     async create(

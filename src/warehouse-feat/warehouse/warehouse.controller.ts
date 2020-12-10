@@ -22,6 +22,14 @@ export class WarehouseController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,WarehouseDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetWarehouseDto
+    ): Promise<WarehouseDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,WarehouseDto);
+    }
   
     @Post()
     async create(

@@ -22,6 +22,14 @@ export class HandlingUnitController {
         const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,HandlingUnitDto);
     }
+
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetHandlingUnitDto
+    ): Promise<HandlingUnitDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,HandlingUnitDto);
+    }
   
     @Post()
     async create(
