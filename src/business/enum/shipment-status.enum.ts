@@ -1,4 +1,4 @@
 export enum ShipmentStatus {
-    delivered,
-    on_going
+    delivered = "delivered",
+    on_going = "on_going"
 }

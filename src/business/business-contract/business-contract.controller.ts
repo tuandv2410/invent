@@ -9,7 +9,7 @@ import { InsertResult } from 'typeorm';
 import { UpdateBusinessContractDto } from './dto/update-business-contract.dto';
 import { DeleteResultInterface } from 'src/interfaces/delete-result.interface';
 import { BusinessPartnerService } from '../business-partner/business-partner.service';
-import { ResignBCToBPDto } from './dto/relations/resign-bc-to-bp.dto';
+import { AssignBCToBPDto } from './dto/relations/assign-bc-to-bp.dto';
 import { ResultInterface } from 'src/interfaces/result.interface';
 
 @Controller('business-contract')
@@ -61,16 +61,16 @@ export class BusinessContractController {
         return this.service.delete(id)
     }
 
-    @Post('/resignBCToBP')
-    async resignBCToBP(
-        @Body() userData : ResignBCToBPDto
+    @Post('/assignBCToBP')
+    async assignBCToBP(
+        @Body() userData : AssignBCToBPDto
     ): Promise<ResultInterface> {
         const {idBC, idBP} = userData
         const bc = await this.service.findById(idBC);
         const bp = await this.bpService.findById(idBP);
 
         if(bc && bp){
-            return this.service.resignBCToBP(bc,bp);
+            return this.service.assignBCToBP(bc,bp);
         }else {
             return {
                 message: "false",

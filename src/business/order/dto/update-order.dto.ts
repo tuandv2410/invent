@@ -1,7 +1,7 @@
-import { IsNotEmpty, IsIn } from 'class-validator';
+import { IsOptional } from "class-validator";
 
 export class UpdateOrderDto {
 
-    @IsNotEmpty()
+    @IsOptional()
     createDate: string;
 }

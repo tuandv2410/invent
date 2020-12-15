@@ -1,7 +1,45 @@
-import { IsNotEmpty } from 'class-validator';
+import { IsNotEmpty, IsOptional } from 'class-validator';
 import { AutoMap } from 'nestjsx-automapper';
-import { Mapper } from '@nartc/automapper'
+import { mapFrom, Mapper } from '@nartc/automapper'
 import { OrderEntity } from 'src/entities/business/order.entity';
+import { PaymentStatus } from 'src/business/enum/payment-status.enum';
+import { ShipmentStatus } from 'src/business/enum/shipment-status.enum';
+
+class shipment {
+  id: string;
+
+  value: number;
+
+  status: ShipmentStatus;
+
+  deliveryDate: string;
+
+  quantity: number;
+}
+
+class payment {
+  id: string;
+
+  value: number;
+
+  status: PaymentStatus;
+
+  date: string;
+}
+
+
+class productOrder {
+  id: string;
+
+  quantity: number;
+
+  totalPrice: number;
+
+  discount: number;
+
+  currency: string;
+}
+
 
 export class OrderDto {
   @AutoMap()
@@ -11,6 +49,28 @@ export class OrderDto {
   @AutoMap()
   @IsNotEmpty()
   createDate: string;
+
+  @AutoMap()
+  @IsOptional()
+  payments: payment[];
+
+  @AutoMap()
+  @IsOptional()
+  shipment: shipment;
+
+  @AutoMap()
+  @IsOptional()
+  productOrders: productOrder[];
 }
 
-Mapper.createMap(OrderEntity, OrderDto);
+Mapper.createMap(OrderEntity, OrderDto)
+.forMember(
+  d=>d.payments,
+  mapFrom(s=>s.payments)
+).forMember(
+  d=>d.shipment,
+  mapFrom(s=>s.shipment)
+).forMember(
+  d=>d.productOrders,
+  mapFrom(s=>s.productOrders)
+)

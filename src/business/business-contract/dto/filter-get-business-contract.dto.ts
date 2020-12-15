@@ -1,16 +1,16 @@
-import { IsNotEmpty } from 'class-validator';
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from "class-validator";
 
 export class FilterGetBusinessContractDto {
-    @AutoMap()
-    @IsNotEmpty()
+
+    @IsOptional()
     id: string;
   
-    @AutoMap()
-    @IsNotEmpty()
+    @IsOptional()
     createDate: string;
   
-    @AutoMap()
-    @IsNotEmpty()
+    @IsOptional()
     moneyValue: number;
+
+    @IsOptional()
+    businessPartner: string;
 }

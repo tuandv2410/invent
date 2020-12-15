@@ -1,13 +1,9 @@
-import { IsNotEmpty } from 'class-validator';
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from "class-validator";
 
 export class UpdateBusinessContractDto {
-
-    @AutoMap()
-    @IsNotEmpty()
+    @IsOptional()
     createDate: string;
-  
-    @AutoMap()
-    @IsNotEmpty()
+
+    @IsOptional()
     moneyValue: number;
 }

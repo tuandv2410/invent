@@ -1,5 +1,5 @@
 export enum PaymentStatus {
-    full_paid,
-    AR,
-    AP
+    full_paid = "full_paid",
+    AR = "AR",
+    AP = "AP"
 }

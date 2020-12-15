@@ -1,16 +1,22 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty } from 'class-validator';
 
 export class CreateProductOrderDto {
 
-    @AutoMap()
+    @IsNotEmpty()
     quantity: number;
   
-    @AutoMap()
+    @IsNotEmpty()
     totalPrice: number;
   
-    @AutoMap()
+    @IsNotEmpty()
     discount: number;
   
-    @AutoMap()
+    @IsNotEmpty()
     currency: string;
+
+    @IsNotEmpty()
+    order: string;
+
+    @IsNotEmpty()
+    sku: string;
 }

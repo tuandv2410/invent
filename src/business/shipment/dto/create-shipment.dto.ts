@@ -1,17 +1,20 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty } from 'class-validator';
 import { ShipmentStatus } from 'src/business/enum/shipment-status.enum';
 
 export class CreateShipmentDto {
 
-    @AutoMap()
+    @IsNotEmpty()
     value: number;
   
-    @AutoMap()
+    @IsNotEmpty()
     status: ShipmentStatus;
   
-    @AutoMap()
+    @IsNotEmpty()
     deliveryDate: string;
   
-    @AutoMap()
+    @IsNotEmpty()
     quantity: number;
+
+    @IsNotEmpty()
+    order: string;
 }

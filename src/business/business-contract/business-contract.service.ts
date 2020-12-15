@@ -13,7 +13,7 @@ export class BusinessContractService extends BaseService<BusinessContractEntity,
         super(repository)
     }
 
-    async resignBCToBP(bc:BusinessContractEntity, bp: BusinessPartnerEntity): Promise<ResultInterface> {
+    async assignBCToBP(bc:BusinessContractEntity, bp: BusinessPartnerEntity): Promise<ResultInterface> {
         let result: ResultInterface = {
             message: "succes",
             succes: true

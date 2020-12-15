@@ -1,16 +1,19 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 import { PaymentStatus } from 'src/business/enum/payment-status.enum';
 
 export class FilterGetPaymentDto {
-  @AutoMap()
+  @IsOptional()
   id: string;
 
-  @AutoMap()
+  @IsOptional()
   value: number;
 
-  @AutoMap()
+  @IsOptional()
   status: PaymentStatus;
 
-  @AutoMap()
+  @IsOptional()
   date: string;
+
+  @IsOptional()
+  order: string;
 }

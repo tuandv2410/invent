@@ -1,4 +1,4 @@
-export class ResignBCToBPDto {
+export class AssignBCToBPDto {
     idBC: string;
     idBP: string;
 }

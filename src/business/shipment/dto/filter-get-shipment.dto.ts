@@ -1,19 +1,22 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 import { ShipmentStatus } from 'src/business/enum/shipment-status.enum';
 
 export class FilterGetShipmentDto  {
-  @AutoMap()
+  @IsOptional()
   id: string;
 
-  @AutoMap()
+  @IsOptional()
   value: number;
 
-  @AutoMap()
+  @IsOptional()
   status: ShipmentStatus;
 
-  @AutoMap()
+  @IsOptional()
   deliveryDate: string;
 
-  @AutoMap()
+  @IsOptional()
   quantity: number;
+
+  @IsOptional()
+  order: string;
 }

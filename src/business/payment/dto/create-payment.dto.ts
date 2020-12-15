@@ -1,13 +1,16 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty } from 'class-validator';
 import { PaymentStatus } from 'src/business/enum/payment-status.enum';
 
 export class CreatePaymentDto {
-    @AutoMap()
+    @IsNotEmpty()
     value: number;
   
-    @AutoMap()
+    @IsNotEmpty()
     status: PaymentStatus;
   
-    @AutoMap()
+    @IsNotEmpty()
     date: string;
+
+    @IsNotEmpty()
+    order: string;
 }

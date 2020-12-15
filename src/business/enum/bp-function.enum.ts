@@ -1,4 +1,4 @@
 export enum BpFunction {
-    supplier,
-    customer
+    supplier = "supplier",
+    customer = "customer"
 }

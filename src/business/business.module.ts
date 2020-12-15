@@ -6,8 +6,9 @@ import { PaymentModule } from './payment/payment.module';
 import { ShipmentModule } from './shipment/shipment.module';
 import { ProductContractModule } from './product-contract/product-contract.module';
 import { ProductOrderModule } from './product-order/product-order.module';
+import { AddingServiceModule } from './adding-service/adding-service.module';
 
 @Module({
-  imports: [OrderModule, BusinessPartnerModule, BusinessContractModule, PaymentModule, ShipmentModule, ProductContractModule, ProductOrderModule]
+  imports: [OrderModule, BusinessPartnerModule, BusinessContractModule, PaymentModule, ShipmentModule, ProductContractModule, ProductOrderModule, AddingServiceModule]
 })
 export class BusinessModule {}

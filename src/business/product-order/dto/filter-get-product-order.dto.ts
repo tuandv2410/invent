@@ -1,18 +1,24 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 
 export class FilterGetProductOrderDto  {
-  @AutoMap()
+  @IsOptional()
   id: string;
 
-  @AutoMap()
+  @IsOptional()
   quantity: number;
 
-  @AutoMap()
+  @IsOptional()
   totalPrice: number;
 
-  @AutoMap()
+  @IsOptional()
   discount: number;
 
-  @AutoMap()
+  @IsOptional()
   currency: string;
+
+  @IsOptional()
+  order: string;
+
+  @IsOptional()
+  sku: string;
 }

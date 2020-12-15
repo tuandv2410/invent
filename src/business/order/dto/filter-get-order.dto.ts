@@ -6,4 +6,10 @@ export class FilterGetOrderDto {
 
     @IsOptional()
     createDate: string;
+
+    @IsOptional()
+    businessContract: string;
+
+    @IsOptional()
+    addingService: string;
 }
