@@ -1,7 +1,7 @@
 export enum ActArea {
-    picking,
-    putaway,
-    physical_inventory,
-    replenishment,
-    others
+    picking = "picking",
+    putaway = "putaway",
+    physical_inventory = "physical_inventory",
+    replenishment = "replenishment",
+    others = "others"
 }

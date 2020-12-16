@@ -11,10 +11,9 @@ export class StorageSectionEntity extends BaseEntity {
 
     @AutoMap()
     @Column({
-        type: 'varchar',
         nullable: false,
     })
-    description: string;
+    name: string;
 
     @ManyToOne(type => StorageTypeEntity, storageType => storageType.storageSections, {
         cascade: true

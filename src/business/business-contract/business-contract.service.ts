@@ -12,23 +12,4 @@ export class BusinessContractService extends BaseService<BusinessContractEntity,
     ) {
         super(repository)
     }
-
-    async assignBCToBP(bc:BusinessContractEntity, bp: BusinessPartnerEntity): Promise<ResultInterface> {
-        let result: ResultInterface = {
-            message: "succes",
-            succes: true
-        }
-        try {
-            bc.businessPartner = bp;
-            bc.save();
-        } catch (err) {
-            result = {
-                message: err,
-                succes: false
-            }
-        }
-
-        return result
-    }
-
 }

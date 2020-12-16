@@ -1,12 +1,18 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty } from 'class-validator';
 
 export class CreatePackageSpecificationDto{
-    @AutoMap()
+    @IsNotEmpty()
     name: string;
   
-    @AutoMap()
+    @IsNotEmpty()
     packingLevel: number;
   
-    @AutoMap()
+    @IsNotEmpty()
     quantity: number;
+
+    @IsNotEmpty()
+    product: string;
+
+    @IsNotEmpty()
+    packgingMaterial: string;
 }

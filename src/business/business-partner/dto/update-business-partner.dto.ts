@@ -1,3 +1,4 @@
+import { IsOptional } from 'class-validator';
 import { AutoMap } from 'nestjsx-automapper';
 import { BpCategory } from 'src/business/enum/bp-category.enum';
 import { BpFunction } from 'src/business/enum/bp-function.enum';
@@ -5,30 +6,30 @@ import { BpStatus } from 'src/business/enum/bp-status.enum';
 
 export class UpdateBusinessPartnerDto {
 
-    @AutoMap()
+    @IsOptional()
     fullName: string;
   
-    @AutoMap()
+    @IsOptional()
     address: string;
   
-    @AutoMap()
+    @IsOptional()
     taxInfo: string;
   
-    @AutoMap()
+    @IsOptional()
     phone: string;
   
-    @AutoMap()
+    @IsOptional()
     email: string;
   
-    @AutoMap()
+    @IsOptional()
     discount: number;
   
-    @AutoMap()
+    @IsOptional()
     category: BpCategory;
   
-    @AutoMap()
+    @IsOptional()
     function: BpFunction;
   
-    @AutoMap()
+    @IsOptional()
     status: BpStatus;
 }

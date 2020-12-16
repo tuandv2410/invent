@@ -20,5 +20,5 @@ export class FilterGetProductContractDto {
   sku: string;
 
   @IsOptional()
-  contract: string;
+  businessContract: string;
 }

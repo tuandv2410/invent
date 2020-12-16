@@ -1,22 +1,22 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty, IsOptional } from 'class-validator';
 
 export class CreateProductDto{
 
-    @AutoMap()
+    @IsNotEmpty()
     name: string;
   
-    @AutoMap()
+    @IsOptional()
     weight: number;
   
-    @AutoMap()
+    @IsOptional()
     volume: number;
   
-    @AutoMap()
+    @IsOptional()
     category: string;
   
-    @AutoMap()
+    @IsNotEmpty()
     unitOfMeasurement: string;
   
-    @AutoMap()
+    @IsOptional()
     color: string;
 }

@@ -14,21 +14,24 @@ export class StorageBinEntity extends BaseEntity {
 
     @AutoMap()
     @Column({
-        type: 'varchar',
+        nullable: false,
+    })
+    name: string;
+
+    @AutoMap()
+    @Column({
         nullable: false,
     })
     maxWeight: number;
 
     @AutoMap()
     @Column({
-        type: 'varchar',
         nullable: false,
     })
     totalCapicity: number;
 
     @AutoMap()
     @Column({
-        type: 'varchar',
         nullable: false,
     })
     type: BinType;

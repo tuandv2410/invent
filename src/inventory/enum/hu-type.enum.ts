@@ -1,5 +1,5 @@
 export enum HuType {
-    pallet,
-    cartons,
-    others
+    pallet = "pallet",
+    cartons = "cartons",
+    others = "others"
 }

@@ -11,9 +11,6 @@ export class CreateShipmentDto {
   
     @IsNotEmpty()
     deliveryDate: string;
-  
-    @IsNotEmpty()
-    quantity: number;
 
     @IsNotEmpty()
     order: string;

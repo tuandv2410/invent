@@ -11,27 +11,39 @@ export class ProductEntity extends BaseEntity {
     id: string;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     name: string;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: true,
+    })
     weight: number;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: true,
+    })
     volume: number;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: true,
+    })
     category: string;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     unitOfMeasurement: string;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: true,
+    })
     color: string;
 
 

@@ -1,12 +1,12 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 
 export class UpdatePackageSpecificationDto {
-    @AutoMap()
+    @IsOptional()
     name: string;
   
-    @AutoMap()
+    @IsOptional()
     packingLevel: number;
   
-    @AutoMap()
+    @IsOptional()
     quantity: number;
 }

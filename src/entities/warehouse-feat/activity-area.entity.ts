@@ -12,7 +12,12 @@ export class ActivityAreaEntity extends BaseEntity {
 
     @AutoMap()
     @Column({
-        type: 'varchar',
+        nullable: false,
+    })
+    name: string;
+
+    @AutoMap()
+    @Column({
         nullable: false,
     })
     activity: ActArea;

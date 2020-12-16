@@ -1,9 +1,10 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 import { StoType } from 'src/warehouse-feat/enum/sto-type.enum';
 
 export class UpdateStorageTypeDto{
 
-    @AutoMap()
-    areaType: StoType;
-  
-  }
+  @IsOptional()
+  areaType: StoType;
+  @IsOptional()
+  name : string;
+}

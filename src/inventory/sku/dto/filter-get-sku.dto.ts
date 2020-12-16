@@ -1,18 +1,27 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 
 export class FilterGetSkuDto {
-    @AutoMap()
+    @IsOptional()
     id: string;
+
+    @IsOptional()
+    productName: string;
   
-    @AutoMap()
+    @IsOptional()
     expireDate: string;
   
-    @AutoMap()
+    @IsOptional()
     unitPrice: number;
   
-    @AutoMap()
+    @IsOptional()
     currency: string;
   
-    @AutoMap()
+    @IsOptional()
     quantity: number;
+
+    @IsOptional()
+    handlingUnit: string;
+
+    @IsOptional()
+    storageBin: string;
 }

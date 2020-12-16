@@ -1,21 +1,21 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty, IsOptional } from 'class-validator';
 import { PmCategory } from 'src/inventory/enum/pm-category.enum';
 import { PmType } from 'src/inventory/enum/pm-type.enum';
 
 export class CreatePackgingMaterialDto{
 
-    @AutoMap()
+    @IsNotEmpty()
     type: PmType;
   
-    @AutoMap()
+    @IsNotEmpty()
     category: PmCategory;
-  
-    @AutoMap()
+
+    @IsOptional()
     tareWeight: number;
-  
-    @AutoMap()
-    tareVolume: string;
-  
-    @AutoMap()
-    capacities: string;
+
+    @IsOptional()
+    tareVolume: number;
+
+    @IsOptional()
+    capacities: number;
 }

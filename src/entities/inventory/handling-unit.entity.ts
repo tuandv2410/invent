@@ -14,6 +14,12 @@ export class HandlingUnitEntity extends BaseEntity {
     id: string;
 
     @AutoMap()
+    @Column({
+        nullable: true
+    })
+    parentId: string;
+
+    @AutoMap()
     @Column()
     type: HuType;
 

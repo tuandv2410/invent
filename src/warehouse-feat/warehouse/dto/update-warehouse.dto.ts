@@ -1,8 +1,11 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 
 export class UpdateWarehouseDto{
   
-    @AutoMap()
+    @IsOptional()
+    name: string;
+  
+    @IsOptional()
     location: string;
 
 }

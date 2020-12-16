@@ -1,11 +1,17 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 import { StoType } from 'src/warehouse-feat/enum/sto-type.enum';
 
 export class FilterGetStorageTypeDto{
-    @AutoMap()
-    id: string;
+  @IsOptional()
+  id: string;
+
+  @IsOptional()
+  areaType: StoType;
+
+  @IsOptional()
+  name: string;
+
+  @IsOptional()
+  warehouse: string;
   
-    @AutoMap()
-    areaType: StoType;
-  
-  }
+}

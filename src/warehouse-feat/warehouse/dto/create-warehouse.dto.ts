@@ -1,7 +1,8 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty } from 'class-validator';
 
 export class CreateWarehouseDto{
-    @AutoMap()
-    location: string;
-  
-  }
+  @IsNotEmpty()
+  location: string;
+  @IsNotEmpty()
+  name: string;
+}

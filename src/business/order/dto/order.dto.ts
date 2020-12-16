@@ -14,7 +14,6 @@ class shipment {
 
   deliveryDate: string;
 
-  quantity: number;
 }
 
 class payment {

@@ -1,10 +1,13 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 
 export class FilterGetWarehouseDto{
-    @AutoMap()
-    id: string;
-  
-    @AutoMap()
-    location: string;
-  
-  }
+  @IsOptional()
+  id: string;
+
+  @IsOptional()
+  name: string;
+
+  @IsOptional()
+  location: string;
+
+}

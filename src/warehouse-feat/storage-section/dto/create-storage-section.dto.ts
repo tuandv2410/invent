@@ -1,7 +1,10 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty } from 'class-validator';
 
 export class CreateStorageSectionDto{
 
-    @AutoMap()
-    description: string;
+    @IsNotEmpty()
+    name: string;
+
+    @IsNotEmpty()
+    storageType: string;
 }

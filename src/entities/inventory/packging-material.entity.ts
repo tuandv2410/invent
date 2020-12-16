@@ -12,24 +12,34 @@ export class PackgingMaterialEntity extends BaseEntity {
     id: string;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     type: PmType;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     category: PmCategory;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: true,
+    })
     tareWeight: number;
 
     @AutoMap()
-    @Column()
-    tareVolume: string;
+    @Column({
+        nullable: true,
+    })
+    tareVolume: number;
 
     @AutoMap()
-    @Column()
-    capacities: string;
+    @Column({
+        nullable: true,
+    })
+    capacities: number;
 
     @AutoMap(()=>HandlingUnitEntity)
     @OneToMany(type => HandlingUnitEntity, handlingUnit => handlingUnit.packgingMaterial)

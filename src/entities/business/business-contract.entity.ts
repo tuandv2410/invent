@@ -11,11 +11,15 @@ export class BusinessContractEntity extends BaseEntity {
     id: string;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     createDate: string;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     moneyValue: number;
 
     @ManyToOne(type => BusinessPartnerEntity, businessPartner => businessPartner.businessContracts, {

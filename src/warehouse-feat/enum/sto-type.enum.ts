@@ -1,9 +1,9 @@
 export enum StoType {
-    bulk,
-    general,
-    high_rack,
-    fixed_bin,
-    rack,
-    yard,
-    hazardous_substance
+    bulk = "bulk",
+    general = "general",
+    high_rack = "high_rack",
+    fixed_bin = "fixed_bin",
+    rack = "rack",
+    yard = "yard",
+    hazardous_substance = "hazardous_substance"
 }

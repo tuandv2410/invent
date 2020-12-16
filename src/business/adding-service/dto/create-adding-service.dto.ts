@@ -4,7 +4,7 @@ import { ServiceType } from 'src/business/enum/adding-service.enum';
 
 export class CreateAddingServiceDto {
     @IsNotEmpty()
-    price: string;
+    price: number;
   
     @IsNotEmpty()
     description: string;

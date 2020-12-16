@@ -14,21 +14,4 @@ export class OrderService extends BaseService<OrderEntity, OrderRepository>{
         super(repository)
     }
 
-    async assignOrderToBC(order:OrderEntity, bc: BusinessContractEntity): Promise<ResultInterface> {
-        let result: ResultInterface = {
-            message: "succes",
-            succes: true
-        }
-        try {
-            order.businessContract = bc;
-            order.save();
-        } catch (err) {
-            result = {
-                message: err,
-                succes: false
-            }
-        }
-
-        return result
-    }
 }

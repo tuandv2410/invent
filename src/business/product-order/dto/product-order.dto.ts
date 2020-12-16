@@ -1,7 +1,28 @@
 import { AutoMap } from 'nestjsx-automapper';
-import { Mapper } from '@nartc/automapper'
+import { mapFrom, Mapper } from '@nartc/automapper'
 import { ProductOrderEntity } from 'src/entities/business/product-order.entity';
-import { IsNotEmpty } from 'class-validator';
+import { IsNotEmpty, IsOptional } from 'class-validator';
+
+class Order {
+  id: string;
+
+  createDate: string;
+}
+
+class Sku {
+
+  id: string;
+
+  productName: string;
+
+  expireDate: string;
+
+  unitPrice: number;
+
+  currency: string;
+
+  quantity: number;
+}
 
 export class ProductOrderDto {
   @AutoMap()
@@ -9,12 +30,12 @@ export class ProductOrderDto {
   id: string;
 
   @AutoMap()
-  @IsNotEmpty()
-  order: string;
+  @IsOptional()
+  order: Order;
 
   @AutoMap()
-  @IsNotEmpty()
-  sku: string;
+  @IsOptional()
+  sku: Sku;
 
   @AutoMap()
   @IsNotEmpty()
@@ -34,3 +55,10 @@ export class ProductOrderDto {
 }
 
 Mapper.createMap(ProductOrderEntity, ProductOrderDto)
+.forMember(
+  d=>d.order,
+  mapFrom(s=>s.order)
+).forMember(
+  d=>d.sku,
+  mapFrom(s=>s.sku)
+)

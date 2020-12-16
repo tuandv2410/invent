@@ -18,5 +18,5 @@ export class CreateProductContractDto {
     sku: string;
 
     @IsNotEmpty()
-    contract: string;
+    businessContract: string;
 }

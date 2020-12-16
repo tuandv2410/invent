@@ -1,15 +1,24 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty, IsOptional } from 'class-validator';
 
 export class CreateSkuDto{
-    @AutoMap()
+    @IsNotEmpty()
+    productName: string;
+    @IsNotEmpty()
     expireDate: string;
   
-    @AutoMap()
+    @IsNotEmpty()
     unitPrice: number;
   
-    @AutoMap()
+    @IsNotEmpty()
     currency: string;
   
-    @AutoMap()
+    @IsNotEmpty()
     quantity: number;
+
+    @IsNotEmpty()
+    handlingUnit: string;
+
+    @IsOptional()
+    storageBin: string;
+
 }

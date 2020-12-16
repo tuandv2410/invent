@@ -1,8 +1,14 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty } from 'class-validator';
 import { ActArea } from 'src/warehouse-feat/enum/activity-area.enum';
 
 export class CreateActivityAreaDto{
 
-    @AutoMap()
+    @IsNotEmpty()
     activity: ActArea;
+
+    @IsNotEmpty()
+    name:string;
+
+    @IsNotEmpty()
+    warehouse: string;
 }

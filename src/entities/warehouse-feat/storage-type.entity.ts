@@ -13,7 +13,12 @@ export class StorageTypeEntity extends BaseEntity {
 
     @AutoMap()
     @Column({
-        type: 'varchar',
+        nullable: false,
+    })
+    name: string;
+
+    @AutoMap()
+    @Column({
         nullable: false,
     })
     areaType: StoType;

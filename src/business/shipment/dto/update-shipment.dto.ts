@@ -11,7 +11,4 @@ export class UpdateShipmentDto {
   
     @IsOptional()
     deliveryDate: string;
-  
-    @IsOptional()
-    quantity: number;
 }

@@ -20,10 +20,6 @@ export class ShipmentDto {
   @AutoMap()
   @IsNotEmpty()
   deliveryDate: string;
-
-  @AutoMap()
-  @IsNotEmpty()
-  quantity: number;
 }
 
 Mapper.createMap(ShipmentEntity, ShipmentDto);

@@ -1,0 +1,1 @@
+{"version":3,"file":"create-permission.dto.js","sourceRoot":"","sources":["../../../../../src/authentication/permission/dto/create-permission.dto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,qDAA6E;AAE7E,MAAa,mBAAmB;CAU/B;AALG;IAJC,4BAAU,EAAE;IACZ,0BAAQ,EAAE;IACV,2BAAS,CAAC,CAAC,CAAC;IACZ,2BAAS,CAAC,EAAE,CAAC;;iDACD;AAIb;IAFC,4BAAU,EAAE;IACZ,0BAAQ,EAAE;;wDACS;AATxB,kDAUC"}

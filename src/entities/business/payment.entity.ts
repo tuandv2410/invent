@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, OneToOne, PrimaryColumn } from "typeorm";
+import { BaseEntity, Column, Entity, ManyToOne, PrimaryColumn } from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
 import { PaymentStatus } from "src/business/enum/payment-status.enum";
 import { OrderEntity } from "./order.entity";
@@ -10,19 +10,24 @@ export class PaymentEntity extends BaseEntity {
     id: string;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     value: number;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     status: PaymentStatus;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     date: string;
 
-    @AutoMap(()=>OrderEntity)
-    @OneToOne(type => OrderEntity, order => order.payment, {
+    @ManyToOne(type => OrderEntity, order => order.payments, {
         cascade: true
     })
     order: OrderEntity;

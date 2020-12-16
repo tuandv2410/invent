@@ -1,6 +1,6 @@
 import { AutoMap } from 'nestjsx-automapper';
 import { mapFrom, Mapper } from '@nartc/automapper'
-import { IsNotEmpty } from 'class-validator';
+import { IsNotEmpty, IsOptional } from 'class-validator';
 import { AddingServiceEntity } from 'src/entities/business/adding-service.entity';
 import { ServiceType } from 'src/business/enum/adding-service.enum';
 class Order {
@@ -16,7 +16,7 @@ export class AddingServiceDto {
 
   @AutoMap()
   @IsNotEmpty()
-  price: string;
+  price: number;
 
   @AutoMap()
   @IsNotEmpty()
@@ -26,7 +26,8 @@ export class AddingServiceDto {
   @IsNotEmpty()
   type: ServiceType
 
-  @AutoMap()
+  @AutoMap(()=>Order)
+  @IsOptional()
   orders: Order[];
 }
 

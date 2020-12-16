@@ -1,7 +1,7 @@
 export enum PmType {
-    crates,
-    boxes,
-    containers,
-    wirebaskets,
-    pallets
+    crates = "crates",
+    boxes = "boxes",
+    containers = "containers",
+    wirebaskets = "wirebaskets",
+    pallets = "pallets"
 }

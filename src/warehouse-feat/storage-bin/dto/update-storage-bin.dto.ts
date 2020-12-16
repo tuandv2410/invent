@@ -1,13 +1,16 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 import { BinType } from 'src/warehouse-feat/enum/bin-type.enum';
 
 export class UpdateStorageBinDto {
-    @AutoMap()
+    @IsOptional()
     maxWeight: number;
+
+    @IsOptional()
+    name: string;
   
-    @AutoMap()
+    @IsOptional()
     totalCapicity: number;
   
-    @AutoMap()
+    @IsOptional()
     type: BinType;
 }

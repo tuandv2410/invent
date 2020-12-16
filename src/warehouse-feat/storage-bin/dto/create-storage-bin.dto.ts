@@ -1,13 +1,26 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsNotEmpty, IsOptional } from 'class-validator';
 import { BinType } from 'src/warehouse-feat/enum/bin-type.enum';
 
 export class CreateStorageBinDto{
-    @AutoMap()
+    @IsNotEmpty()
     maxWeight: number;
+
+    @IsNotEmpty()
+    name: string;
   
-    @AutoMap()
+    @IsNotEmpty()
     totalCapicity: number;
   
-    @AutoMap()
+    @IsNotEmpty()
     type: BinType;
+
+    @IsOptional()
+    storageSestion: string;
+
+    @IsOptional()
+    storageType: string;
+
+    @IsOptional()
+    activityArea: string;
+
 }

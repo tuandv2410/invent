@@ -1,32 +1,44 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 import { HuStatus } from '../../enum/hu-status.enum';
 import { HuType } from '../../enum/hu-type.enum';
 
 export class FilterGetHandlingUnitDto {
-    @AutoMap()
+    @IsOptional()
     id: string;
   
-    @AutoMap()
+    @IsOptional()
     type: HuType;
+
+    @IsOptional()
+    parentId: string;
   
-    @AutoMap()
+    @IsOptional()
     dimension: number;
   
-    @AutoMap()
+    @IsOptional()
     weight: number;
   
-    @AutoMap()
+    @IsOptional()
     volume: number;
   
-    @AutoMap()
+    @IsOptional()
     totalPrice: number;
   
-    @AutoMap()
+    @IsOptional()
     currency: string;
   
-    @AutoMap()
+    @IsOptional()
     quantity: number;
   
-    @AutoMap()
+    @IsOptional()
     status: HuStatus;
+
+    @IsOptional()
+    product: string;
+
+    @IsOptional()
+    packageSpecification: string;
+
+    @IsOptional()
+    packgingMaterial: string;
 }

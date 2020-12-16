@@ -1,8 +1,8 @@
 export enum HuStatus {
-    planned,
-    realized,
-    weighed,
-    blocked,
-    loaded,
-    posted_to_GI
+    planned = "planned",
+    realized = "realized",
+    weighed = "weighed",
+    blocked = "blocked",
+    loaded = "loaded",
+    posted_to_GI = "posted_to_GI"
 }

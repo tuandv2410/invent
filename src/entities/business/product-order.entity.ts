@@ -10,19 +10,27 @@ export class ProductOrderEntity extends BaseEntity {
     id: string;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     quantity: number;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     totalPrice: number;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     discount: number;
 
     @AutoMap()
-    @Column()
+    @Column({
+        nullable: false,
+    })
     currency: string;
 
     @ManyToOne(type => OrderEntity, order => order.productOrders, {

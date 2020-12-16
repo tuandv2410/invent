@@ -1,9 +1,12 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 
 export class FilterGetStorageSectionDto {
-    @AutoMap()
+    @IsOptional()
     id: string;
+
+    @IsOptional()
+    name: string;
   
-    @AutoMap()
-    description: string;
+    @IsOptional()
+    storageType: string;
 }

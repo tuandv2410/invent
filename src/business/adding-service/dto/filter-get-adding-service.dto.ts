@@ -6,7 +6,7 @@ export class FilterGetAddingServiceDto {
   id: string;
 
   @IsOptional()
-  price: string;
+  price: number;
 
   @IsOptional()
   description: string;

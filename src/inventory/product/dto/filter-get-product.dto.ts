@@ -1,24 +1,24 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 
 export class FilterGetProductDto {
-    @AutoMap()
+    @IsOptional()
     id: string;
   
-    @AutoMap()
+    @IsOptional()
     name: string;
   
-    @AutoMap()
+    @IsOptional()
     weight: number;
   
-    @AutoMap()
+    @IsOptional()
     volume: number;
   
-    @AutoMap()
+    @IsOptional()
     category: string;
   
-    @AutoMap()
+    @IsOptional()
     unitOfMeasurement: string;
   
-    @AutoMap()
+    @IsOptional()
     color: string;
 }

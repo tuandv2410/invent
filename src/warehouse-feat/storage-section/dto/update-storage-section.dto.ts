@@ -1,7 +1,6 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 
 export class UpdateStorageSectionDto {
-
-    @AutoMap()
-    description: string;
+    @IsOptional()
+    name: string;
 }

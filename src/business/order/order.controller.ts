@@ -10,7 +10,6 @@ import { v4 as uuid } from 'uuid'
 import { DeleteResultInterface } from 'src/interfaces/delete-result.interface';
 import { ResultInterface } from 'src/interfaces/result.interface';
 import { BusinessPartnerService } from '../business-partner/business-partner.service';
-import { AssignOrderToBCDto } from './dto/relations/assign-order-to-bc.dto';
 import { BusinessContractService } from '../business-contract/business-contract.service';
 
 @Controller('order')
@@ -61,25 +60,6 @@ export class OrderController {
         @Param('id') id: string
     ): Promise<DeleteResultInterface> {
         return this.service.delete(id)
-    }
-
-
-    @Post('/assignOrderToBC')
-    async assignOrderToBC(
-        @Body() userData : AssignOrderToBCDto
-    ): Promise<ResultInterface> {
-        const {idOrder, idBC} = userData
-        const order = await this.service.findById(idOrder);
-        const bc = await this.bcService.findById(idBC);
-
-        if(order && bc ){
-            return this.service.assignOrderToBC(order,bc);
-        }else {
-            return {
-                message: "false",
-                succes: false
-            }
-        }
     }
 
 }

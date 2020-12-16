@@ -1,15 +1,21 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 
 export class FilterGetPackageSpecificationDto {
-    @AutoMap()
+    @IsOptional()
     id: string;
   
-    @AutoMap()
+    @IsOptional()
     name: string;
   
-    @AutoMap()
+    @IsOptional()
     packingLevel: number;
   
-    @AutoMap()
+    @IsOptional()
     quantity: number;
+
+    @IsOptional()
+    product: string;
+
+    @IsOptional()
+    packgingMaterial: string;
 }

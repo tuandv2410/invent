@@ -15,8 +15,5 @@ export class FilterGetShipmentDto  {
   deliveryDate: string;
 
   @IsOptional()
-  quantity: number;
-
-  @IsOptional()
   order: string;
 }

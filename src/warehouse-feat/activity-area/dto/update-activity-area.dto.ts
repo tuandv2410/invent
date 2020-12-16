@@ -1,8 +1,11 @@
-import { AutoMap } from 'nestjsx-automapper';
+import { IsOptional } from 'class-validator';
 import { ActArea } from 'src/warehouse-feat/enum/activity-area.enum';
 
 export class UpdateActivityAreaDto {
 
-    @AutoMap()
+
+    @IsOptional()
+    name: string;
+    @IsOptional()
     activity: ActArea;
 }

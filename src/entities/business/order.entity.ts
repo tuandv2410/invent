@@ -1,6 +1,6 @@
 import { BaseEntity, Column, Entity, ManyToOne, OneToMany, OneToOne, PrimaryColumn } from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
-import { BusinessPartnerEntity } from "./business-partner.entity";
+import { AddingServiceEntity } from "./adding-service.entity";
 import { BusinessContractEntity } from "./business-contract.entity";
 import { PaymentEntity } from "./payment.entity";
 import { ShipmentEntity } from "./shipment.entity";
@@ -14,15 +14,9 @@ export class OrderEntity extends BaseEntity {
 
     @AutoMap()
     @Column({
-        type: 'varchar',
         nullable: false,
     })
     createDate: string;
-
-    @ManyToOne(type => BusinessPartnerEntity, businessPartner => businessPartner.orders, {
-        cascade: true
-    })
-    businessPartner: BusinessPartnerEntity;
 
     @ManyToOne(type => BusinessContractEntity, businessContract => businessContract.orders, {
         cascade: true
@@ -30,8 +24,8 @@ export class OrderEntity extends BaseEntity {
     businessContract: BusinessContractEntity;
 
     @AutoMap(()=>PaymentEntity)
-    @OneToOne(type => PaymentEntity, payment => payment.order)
-    payment: PaymentEntity;
+    @OneToMany(type => PaymentEntity, payment => payment.order)
+    payments: PaymentEntity[];
 
     @AutoMap(()=>ShipmentEntity)
     @OneToOne(type => ShipmentEntity, shipment => shipment.order)
@@ -39,6 +33,12 @@ export class OrderEntity extends BaseEntity {
 
     @AutoMap(()=>ProductOrderEntity)
     @OneToMany(type => ProductOrderEntity, productOrder => productOrder.order)
-    productOrders: ProductOrderEntity;
+    productOrders: ProductOrderEntity[];
+
+    @AutoMap(()=>AddingServiceEntity)
+    @ManyToOne(type => AddingServiceEntity, addingService => addingService.orders, {
+        cascade: true
+    })
+    addingService: AddingServiceEntity;
 
 }

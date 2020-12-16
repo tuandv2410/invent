@@ -10,6 +10,10 @@ export class WarehouseEntity extends BaseEntity {
     id: string;
 
     @AutoMap()
+    @Column()
+    name: string;
+    
+    @AutoMap()
     @Column({
         type: 'varchar',
         nullable: false,

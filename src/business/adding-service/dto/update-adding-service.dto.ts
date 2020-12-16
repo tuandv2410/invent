@@ -3,7 +3,7 @@ import { ServiceType } from "src/business/enum/adding-service.enum";
 
 export class UpdateAddingServiceDto {
     @IsOptional()
-    price: string;
+    price: number;
   
     @IsOptional()
     description: string;
