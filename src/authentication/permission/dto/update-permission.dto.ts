@@ -1,17 +1,11 @@
-import { IsString, MinLength, MaxLength, IsNotEmpty, IsNumber } from 'class-validator';
+import { IsString, IsOptional } from 'class-validator';
 
 export class UpdatePermissionDto {
-    @IsNotEmpty()
-    @IsNumber()
-    id: number;
-    
-    @IsNotEmpty()
-    @IsString()
-    @MinLength(4)
-    @MaxLength(20)
+
+    @IsOptional()
     name: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
     description: string;
 }

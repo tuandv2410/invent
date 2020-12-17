@@ -9,27 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UserDto = exports.role = void 0;
+exports.UserDto = void 0;
 const class_validator_1 = require("class-validator");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const permission_dto_1 = require("../../permission/dto/permission.dto");
 const automapper_1 = require("@nartc/automapper");
 const user_entity_1 = require("../../../entities/authentication/user.entity");
-class role {
+class Role {
 }
-__decorate([
-    nestjsx_automapper_1.AutoMap(),
-    __metadata("design:type", Number)
-], role.prototype, "id", void 0);
-__decorate([
-    nestjsx_automapper_1.AutoMap(),
-    __metadata("design:type", String)
-], role.prototype, "name", void 0);
-__decorate([
-    nestjsx_automapper_1.AutoMap(),
-    __metadata("design:type", String)
-], role.prototype, "description", void 0);
-exports.role = role;
+class Permission {
+}
 class UserDto {
 }
 __decorate([
@@ -54,15 +43,15 @@ __decorate([
     __metadata("design:type", String)
 ], UserDto.prototype, "organization", void 0);
 __decorate([
-    nestjsx_automapper_1.AutoMap(() => permission_dto_1.PermissionDto),
+    nestjsx_automapper_1.AutoMap(() => Permission),
     __metadata("design:type", Array)
-], UserDto.prototype, "permissionsDto", void 0);
+], UserDto.prototype, "permissions", void 0);
 __decorate([
-    nestjsx_automapper_1.AutoMap(() => role),
+    nestjsx_automapper_1.AutoMap(() => Role),
     __metadata("design:type", Array)
-], UserDto.prototype, "rolesDto", void 0);
+], UserDto.prototype, "roles", void 0);
 exports.UserDto = UserDto;
 automapper_1.Mapper.createMap(user_entity_1.UserEntity, UserDto)
-    .forMember(d => d.rolesDto, automapper_1.mapFrom(s => s.roles))
-    .forMember(d => d.permissionsDto, automapper_1.mapFrom(s => s.permissions));
+    .forMember(d => d.roles, automapper_1.mapFrom(s => s.roles))
+    .forMember(d => d.permissions, automapper_1.mapFrom(s => s.permissions));
 //# sourceMappingURL=user.dto.js.map

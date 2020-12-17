@@ -14,19 +14,12 @@ const class_validator_1 = require("class-validator");
 class UpdateRoleDto {
 }
 __decorate([
-    class_validator_1.IsNotEmpty(),
-    class_validator_1.IsNumber(),
-    __metadata("design:type", Number)
-], UpdateRoleDto.prototype, "id", void 0);
-__decorate([
-    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsOptional(),
     class_validator_1.IsString(),
-    class_validator_1.MinLength(4),
-    class_validator_1.MaxLength(20),
     __metadata("design:type", String)
 ], UpdateRoleDto.prototype, "name", void 0);
 __decorate([
-    class_validator_1.IsNotEmpty(),
+    class_validator_1.IsOptional(),
     class_validator_1.IsString(),
     __metadata("design:type", String)
 ], UpdateRoleDto.prototype, "description", void 0);

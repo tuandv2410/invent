@@ -13,81 +13,128 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UserController = void 0;
+const delete_result_interface_1 = require("../../interfaces/delete-result.interface");
 const common_1 = require("@nestjs/common");
-const passport_1 = require("@nestjs/passport");
-const permissions_decorator_1 = require("../auth/permissions.decorator");
-const permissions_guard_1 = require("../auth/permissions.guard");
-const add_permissions_dto_1 = require("./dto/add-permissions.dto");
+const uuid_1 = require("uuid");
+const bcrypt = require("bcrypt");
 const user_dto_1 = require("./dto/user.dto");
 const user_service_1 = require("./user.service");
 const automapper_1 = require("@nartc/automapper");
+const filter_get_user_dto_1 = require("./dto/filter-get-user.dto");
+const create_user_dto_1 = require("./dto/create.user.dto");
+const update_user_dto_1 = require("./dto/update-user.dto");
+const permission_service_1 = require("../permission/permission.service");
+const role_service_1 = require("../role/role.service");
+const add_permissions_dto_1 = require("./dto/add-permissions.dto");
 const add_role_dto_1 = require("./dto/add-role.dto");
-const change_password_dto_1 = require("./dto/change-password.dto");
+const user_entity_1 = require("../../entities/authentication/user.entity");
+const class_transformer_1 = require("class-transformer");
 let UserController = class UserController {
-    constructor(userService) {
-        this.userService = userService;
+    constructor(service, permissionService, roleService) {
+        this.service = service;
+        this.permissionService = permissionService;
+        this.roleService = roleService;
     }
-    async addPermissions(addPermissionsDto) {
-        const user = await this.userService.addPermissions(addPermissionsDto);
-        return automapper_1.Mapper.map(user, user_dto_1.UserDto);
-    }
-    async getAll() {
-        const result = await this.userService.getAll();
+    async get(filterDto) {
+        const result = await this.service.get(filterDto);
         return automapper_1.Mapper.mapArray(result, user_dto_1.UserDto);
     }
-    async getById(userId) {
-        const result = await this.userService.getById(userId);
+    async getWithRelations(filterDto) {
+        const result = await this.service.getWithRelations(filterDto);
+        return automapper_1.Mapper.mapArray(result, user_dto_1.UserDto);
+    }
+    async create(userData) {
+        const id = uuid_1.v4();
+        const salt = await bcrypt.genSalt();
+        userData.password = await this.service.hashPassword(userData.password, salt);
+        const data = Object.assign({ id, salt }, userData);
+        const storeData = await this.service.store(data);
+        const result = class_transformer_1.plainToClass(user_entity_1.UserEntity, storeData);
         return automapper_1.Mapper.map(result, user_dto_1.UserDto);
     }
-    async addRoles(addRolesDto) {
-        const user = await this.userService.addRole(addRolesDto);
-        return automapper_1.Mapper.map(user, user_dto_1.UserDto);
+    async update(id, userData) {
+        const result = await this.service.update(id, userData);
+        return automapper_1.Mapper.map(result, user_dto_1.UserDto);
     }
-    async changePassword(changePasswordDto) {
-        return await this.userService.changePassword(changePasswordDto);
+    async destroy(id) {
+        return this.service.delete(id);
+    }
+    async addPermission(userData) {
+        const { idUser, idPermissions } = userData;
+        const user = await this.service.findById(idUser);
+        const currentPermissions = await this.permissionService.getByUser(idUser);
+        const newPermissions = await this.permissionService.findByIds(idPermissions);
+        user.permissions = [...currentPermissions, ...newPermissions];
+        await user.save();
+        const result = await this.service.getWithRelations({ id: idUser });
+        return automapper_1.Mapper.map(result[0], user_dto_1.UserDto);
+    }
+    async addRole(userData) {
+        const { idUser, idRole } = userData;
+        const user = await this.service.findById(idUser);
+        const currentRoles = await this.roleService.getByUser(idUser);
+        const newRole = await this.roleService.findById(idRole);
+        user.roles = [...currentRoles, newRole];
+        await user.save();
+        const result = await this.service.getWithRelations({ id: idUser });
+        return automapper_1.Mapper.map(result[0], user_dto_1.UserDto);
     }
 };
 __decorate([
-    common_1.Patch('addPermissions'),
-    common_1.UseGuards(passport_1.AuthGuard('jwt'), permissions_guard_1.PermissionsGuard),
-    permissions_decorator_1.Permissions('read:hello'),
+    common_1.Get(),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [filter_get_user_dto_1.FilterGetUserDto]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "get", null);
+__decorate([
+    common_1.Get('/getWithRelations'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [filter_get_user_dto_1.FilterGetUserDto]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "getWithRelations", null);
+__decorate([
+    common_1.Post(),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [create_user_dto_1.CreateUserDto]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "create", null);
+__decorate([
+    common_1.Put('/:id'),
+    __param(0, common_1.Param('id')),
+    __param(1, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, update_user_dto_1.UpdateUserDto]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "update", null);
+__decorate([
+    common_1.Delete('/:id'),
+    __param(0, common_1.Param('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "destroy", null);
+__decorate([
+    common_1.Patch('/addPermission'),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [add_permissions_dto_1.AddPermissionsDto]),
     __metadata("design:returntype", Promise)
-], UserController.prototype, "addPermissions", null);
+], UserController.prototype, "addPermission", null);
 __decorate([
-    common_1.Get('getAll'),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
-    __metadata("design:returntype", Promise)
-], UserController.prototype, "getAll", null);
-__decorate([
-    common_1.Get('getById'),
-    __param(0, common_1.Body()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number]),
-    __metadata("design:returntype", Promise)
-], UserController.prototype, "getById", null);
-__decorate([
-    common_1.Patch('addRole'),
-    common_1.UseGuards(passport_1.AuthGuard('jwt'), permissions_guard_1.PermissionsGuard),
-    permissions_decorator_1.Permissions('read:hello'),
+    common_1.Patch('/addRole'),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [add_role_dto_1.AddRoleDto]),
     __metadata("design:returntype", Promise)
-], UserController.prototype, "addRoles", null);
-__decorate([
-    common_1.Patch('changePassword'),
-    __param(0, common_1.Body()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [change_password_dto_1.ChangePasswordDto]),
-    __metadata("design:returntype", Promise)
-], UserController.prototype, "changePassword", null);
+], UserController.prototype, "addRole", null);
 UserController = __decorate([
     common_1.Controller('user'),
-    __metadata("design:paramtypes", [user_service_1.UserService])
+    __metadata("design:paramtypes", [user_service_1.UserService,
+        permission_service_1.PermissionService,
+        role_service_1.RoleService])
 ], UserController);
 exports.UserController = UserController;
 //# sourceMappingURL=user.controller.js.map

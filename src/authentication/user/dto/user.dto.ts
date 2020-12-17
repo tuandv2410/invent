@@ -5,14 +5,19 @@ import { mapFrom, Mapper } from '@nartc/automapper'
 import { UserEntity } from '../../../entities/authentication/user.entity';
 
 
-export class role{
-  @AutoMap()
-  id: number;
+class Role{
+  id: string;
 
-  @AutoMap()
   name: string;
 
-  @AutoMap()
+  description: string;
+}
+
+class Permission{
+  id: string;
+
+  name: string;
+
   description: string;
 }
 
@@ -34,19 +39,19 @@ export class UserDto {
   @IsNotEmpty()
   organization: string;
 
-  @AutoMap(()=> PermissionDto)
-  permissionsDto: PermissionDto[];
+  @AutoMap(()=> Permission)
+  permissions: Permission[];
 
-  @AutoMap(()=> role)
-  rolesDto: role[];
+  @AutoMap(()=> Role)
+  roles: Role[];
 }
 
 Mapper.createMap(UserEntity, UserDto)
 .forMember(
-  d=>d.rolesDto,
+  d=>d.roles,
   mapFrom(s=>s.roles)
 )
 .forMember(
-  d=>d.permissionsDto,
+  d=>d.permissions,
   mapFrom(s=>s.permissions)
 );

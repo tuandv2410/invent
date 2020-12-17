@@ -18,13 +18,12 @@ let RoleEntity = class RoleEntity extends typeorm_1.BaseEntity {
 };
 __decorate([
     nestjsx_automapper_1.AutoMap(),
-    typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
+    typeorm_1.PrimaryColumn(),
+    __metadata("design:type", String)
 ], RoleEntity.prototype, "id", void 0);
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     typeorm_1.Column({
-        type: 'varchar',
         nullable: false,
         unique: true
     }),
@@ -33,7 +32,6 @@ __decorate([
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     typeorm_1.Column({
-        type: 'varchar',
         nullable: false,
     }),
     __metadata("design:type", String)

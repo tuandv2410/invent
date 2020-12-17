@@ -15,11 +15,11 @@ class AddRoleDto {
 }
 __decorate([
     class_validator_1.IsNotEmpty(),
-    __metadata("design:type", Number)
-], AddRoleDto.prototype, "userId", void 0);
+    __metadata("design:type", String)
+], AddRoleDto.prototype, "idUser", void 0);
 __decorate([
     class_validator_1.IsNotEmpty(),
-    __metadata("design:type", Number)
-], AddRoleDto.prototype, "roleId", void 0);
+    __metadata("design:type", String)
+], AddRoleDto.prototype, "idRole", void 0);
 exports.AddRoleDto = AddRoleDto;
 //# sourceMappingURL=add-role.dto.js.map

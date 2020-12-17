@@ -15,49 +15,32 @@ const jwt_1 = require("@nestjs/jwt");
 const automapper_1 = require("@nartc/automapper");
 const user_service_1 = require("../user/user.service");
 const user_dto_1 = require("../user/dto/user.dto");
+const result_interface_1 = require("../../interfaces/result.interface");
 let AuthService = class AuthService {
     constructor(userService, jwtService) {
         this.userService = userService;
         this.jwtService = jwtService;
     }
-    async register(createUserDto) {
-        let status = {
-            success: true,
-            message: 'user registered',
-        };
-        try {
-            const user = await this.userService.create(createUserDto);
-            const a = {
-                permissionsId: [1],
-                userId: user.id,
-            };
-            await this.userService.addPermissions(a);
-        }
-        catch (err) {
-            status = {
-                success: false,
-                message: err,
-            };
-        }
-        return status;
-    }
     async login(loginUserDto) {
-        const user = await this.userService.findByLogin(loginUserDto);
+        const user = await this.userService.login(loginUserDto);
         const token = this._createToken(automapper_1.Mapper.map(user, user_dto_1.UserDto));
         return Object.assign({ username: user.username }, token);
     }
+    async changePassword(changePasswordDto) {
+        return await this.userService.changePassword(changePasswordDto);
+    }
     async validateUser(payload) {
-        const { username, permissions } = payload;
-        const userInDb = await this.userService.findByUsername(username);
-        if (!userInDb) {
+        const { username } = payload;
+        const userInDb = await this.userService.get({ username: username });
+        if (!userInDb[0]) {
             throw new common_1.HttpException('Invalid token', common_1.HttpStatus.UNAUTHORIZED);
         }
-        return automapper_1.Mapper.map(userInDb, user_dto_1.UserDto);
+        return automapper_1.Mapper.map(userInDb[0], user_dto_1.UserDto);
     }
     _createToken(userDto) {
         const expiresIn = process.env.EXPIRESIN;
         const username = userDto.username;
-        const permissionsDto = userDto.permissionsDto;
+        const permissionsDto = userDto.permissions;
         let permissions = [];
         if (permissionsDto) {
             permissionsDto.forEach(permissionDto => {

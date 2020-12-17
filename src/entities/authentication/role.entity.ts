@@ -1,17 +1,16 @@
 import { AutoMap } from "nestjsx-automapper";
 import { PermissionEntity } from "./permission.entity";
 import { UserEntity } from "./user.entity";
-import { BaseEntity, Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, JoinTable, ManyToMany, PrimaryColumn } from "typeorm";
 
 @Entity('role')
 export class RoleEntity extends BaseEntity {
     @AutoMap()
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryColumn()
+    id: string;
 
     @AutoMap()
     @Column({
-        type: 'varchar',
         nullable: false,
         unique: true
     })
@@ -19,7 +18,6 @@ export class RoleEntity extends BaseEntity {
 
     @AutoMap()
     @Column({
-        type: 'varchar',
         nullable: false,
     })
     description: string;

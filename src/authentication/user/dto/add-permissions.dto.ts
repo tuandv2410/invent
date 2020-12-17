@@ -2,7 +2,7 @@ import { IsNotEmpty } from "class-validator";
 
 export class AddPermissionsDto {
   @IsNotEmpty()
-  userId: number;
+  idUser: string;
   @IsNotEmpty()
-  permissionsId: number[];
+  idPermissions: string[];
 }

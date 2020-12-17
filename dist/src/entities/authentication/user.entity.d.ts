@@ -2,7 +2,7 @@ import { BaseEntity } from "typeorm";
 import { PermissionEntity } from "./permission.entity";
 import { RoleEntity } from "./role.entity";
 export declare class UserEntity extends BaseEntity {
-    id: number;
+    id: string;
     username: string;
     password: string;
     email: string;

@@ -9,16 +9,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RoleModule = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const role_entity_1 = require("../../entities/authentication/role.entity");
 const permission_module_1 = require("../permission/permission.module");
 const role_controller_1 = require("./role.controller");
+const role_repository_1 = require("./role.repository");
 const role_service_1 = require("./role.service");
 let RoleModule = class RoleModule {
 };
 RoleModule = __decorate([
     common_1.Module({
         imports: [
-            typeorm_1.TypeOrmModule.forFeature([role_entity_1.RoleEntity]),
+            typeorm_1.TypeOrmModule.forFeature([role_repository_1.RoleRepository]),
             permission_module_1.PermissionModule,
         ],
         controllers: [role_controller_1.RoleController],

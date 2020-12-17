@@ -10,16 +10,16 @@ exports.UserModule = void 0;
 const common_1 = require("@nestjs/common");
 const user_service_1 = require("./user.service");
 const typeorm_1 = require("@nestjs/typeorm");
-const user_entity_1 = require("../../entities/authentication/user.entity");
 const user_controller_1 = require("./user.controller");
 const permission_module_1 = require("../permission/permission.module");
 const role_module_1 = require("../role/role.module");
+const user_repository_1 = require("./user.repository");
 let UserModule = class UserModule {
 };
 UserModule = __decorate([
     common_1.Module({
         imports: [
-            typeorm_1.TypeOrmModule.forFeature([user_entity_1.UserEntity]),
+            typeorm_1.TypeOrmModule.forFeature([user_repository_1.UserRepository]),
             permission_module_1.PermissionModule,
             role_module_1.RoleModule,
         ],

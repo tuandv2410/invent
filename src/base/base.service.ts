@@ -19,7 +19,7 @@ export class BaseService<T extends BaseEntity, R extends Repository<T>> implemen
         }
     }
 
-    findByIds(ids: [string]): Promise<T[]> {
+    findByIds(ids: string[]): Promise<T[]> {
         try{
             return this.repository.findByIds(ids)
         }catch(error) {
@@ -48,9 +48,48 @@ export class BaseService<T extends BaseEntity, R extends Repository<T>> implemen
         }
     }
 
+
+    async loadRelationships(repo: Repository<any>, relationships: string[], baseEntities?: any[]) {
+        if (!baseEntities) {
+            baseEntities = await repo.find({});	
+            
+        }
+    
+        const { ...res } = await Promise.all(
+            relationships.map((relation) => {
+                return repo.findByIds(
+                    baseEntities.map((entity) => {
+                        if (!entity || !entity.id) return;
+                        return entity.id;
+                    }),
+                    {
+                        select: ['id'],
+                        relations: [relation]
+                    }
+                );
+            })
+        );
+
+        console.log(res);
+            
+        Object.keys(res).forEach(i => {
+            res[i].forEach(r => {
+                const fullEntity = baseEntities.find(e => e.id === r.id);
+                if (fullEntity) {
+                    const relationship = relationships[i];
+                    fullEntity[relationship] = r[relationship];
+                }
+                return fullEntity
+            });
+        });
+
+        return res;
+    }
+
+
     store(data: any): Promise<InsertResult> {
         try{
-            return  this.repository.save(data)
+            return this.repository.save(data)
         }catch(error) {
             throw new HttpException(`${error}`, HttpStatus.INTERNAL_SERVER_ERROR);
         }

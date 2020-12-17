@@ -1,27 +1,16 @@
-import { Repository } from 'typeorm';
-import { CreateUserDto } from './dto/create.user.dto';
-import { LoginUserDto } from './dto/login.user.dto';
-import { AddPermissionsDto } from './dto/add-permissions.dto';
-import { AddRoleDto } from './dto/add-role.dto';
-import { CheckPermissionDto } from './dto/check-permission.dto';
 import { UserEntity } from 'src/entities/authentication/user.entity';
-import { RoleService } from '../role/role.service';
-import { PermissionService } from '../permission/permission.service';
-import { ChangePasswordDto } from './dto/change-password.dto';
-import { ChangePasswordResult } from './interfaces/change-password-result.interface';
-export declare class UserService {
-    private userRepository;
-    private permissionService;
-    private roleService;
-    constructor(userRepository: Repository<UserEntity>, permissionService: PermissionService, roleService: RoleService);
-    create(createUserDto: CreateUserDto): Promise<UserEntity>;
-    getAll(): Promise<UserEntity[]>;
-    getById(userId: number): Promise<UserEntity>;
-    findByLogin(loginUserDto: LoginUserDto): Promise<UserEntity>;
-    findByUsername(username: string): Promise<UserEntity>;
-    changePassword(changePasswordDto: ChangePasswordDto): Promise<ChangePasswordResult>;
-    checkPermission(checkPermissionDto: CheckPermissionDto): Promise<Boolean>;
-    addRole(addRoleDto: AddRoleDto): Promise<UserEntity>;
-    addPermissions(addPermissionsDto: AddPermissionsDto): Promise<UserEntity>;
-    private hashPassword;
+import { BaseService } from 'src/base/base.service';
+import { UserRepository } from './user.repository';
+import { PermissionEntity } from 'src/entities/authentication/permission.entity';
+import { RoleEntity } from 'src/entities/authentication/role.entity';
+import { LoginUserDto } from '../auth/dto/login.user.dto';
+import { ChangePasswordDto } from '../auth/dto/change-password.dto';
+import { ResultInterface } from 'src/interfaces/result.interface';
+export declare class UserService extends BaseService<UserEntity, UserRepository> {
+    constructor(repository: UserRepository);
+    login(userData: LoginUserDto): Promise<UserEntity>;
+    changePassword(userData: ChangePasswordDto): Promise<ResultInterface>;
+    addRole(user: UserEntity, role: RoleEntity): Promise<void>;
+    addPermission(user: UserEntity, permissions: PermissionEntity[]): Promise<void>;
+    hashPassword(password: string, salt: string): Promise<string>;
 }

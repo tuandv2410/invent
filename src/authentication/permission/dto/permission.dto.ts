@@ -1,25 +1,34 @@
-import { IsString, MinLength, MaxLength, IsNotEmpty, IsNumber } from 'class-validator';
+import { IsNotEmpty } from 'class-validator';
 import { AutoMap } from 'nestjsx-automapper';
-import { Mapper } from '@nartc/automapper'
+import { mapFrom, Mapper } from '@nartc/automapper'
 import { PermissionEntity } from 'src/entities/authentication/permission.entity';
+
+class Role {
+    id: string;
+    name: string;
+    description: string;
+}
 
 export class PermissionDto {
     @AutoMap()
     @IsNotEmpty()
-    @IsNumber()
-    id: number;
+    id: string;
 
     @AutoMap()
     @IsNotEmpty()
-    @IsString()
-    @MinLength(4)
-    @MaxLength(20)
     name: string;
 
     @AutoMap()
     @IsNotEmpty()
-    @IsString()
     description: string;
+
+    @AutoMap()
+    @IsNotEmpty()
+    roles: Role[];
 }
 
-Mapper.createMap(PermissionEntity, PermissionDto);
+Mapper.createMap(PermissionEntity, PermissionDto)
+.forMember(
+    d=>d.roles,
+    mapFrom(s=>s.roles)
+)

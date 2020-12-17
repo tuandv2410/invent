@@ -1,12 +1,11 @@
-import { Body, Controller, Get, HttpException, HttpStatus, Post, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Post, Put, Req, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
-import { CreateUserDto } from '../user/dto/create.user.dto';
-import { LoginUserDto } from '../user/dto/login.user.dto';
-
+import { LoginUserDto } from './dto/login.user.dto';
 import { AuthService } from './auth.service';
-import { JwtPayload } from './interfaces/jwt-payload.interface';
-import { LoginStatus } from './interfaces/login-status.inteface';
-import { RegistrationStatus } from './interfaces/regisration-status.interface';
+import { JwtPayload } from '../../interfaces/jwt-payload.interface';
+import { LoginStatus } from '../../interfaces/login-status.inteface';
+import { ResultInterface } from 'src/interfaces/result.interface';
+import { ChangePasswordDto } from './dto/change-password.dto';
 
 
 @Controller('auth')
@@ -15,25 +14,14 @@ export class AuthController {
         private readonly authService: AuthService
     ) {}
 
-    @Post('createUser')
-    public async register(
-        @Body() createUserDto: CreateUserDto,
-    ): Promise<RegistrationStatus> {
-
-        const result: RegistrationStatus = await this.authService.register(
-            createUserDto,
-        );
-
-        if (!result.success) {
-            throw new HttpException(result.message, HttpStatus.BAD_REQUEST);
-        }
-
-        return result;
-    }
-
     @Post('login')
     public async login(@Body() loginUserDto: LoginUserDto): Promise<LoginStatus> {
         return await this.authService.login(loginUserDto);
+    }
+
+    @Put('changePassword')
+    public async changePassword(@Body() changePasswordDto: ChangePasswordDto): Promise<ResultInterface> {
+        return await this.authService.changePassword(changePasswordDto);
     }
 
     @UseGuards(AuthGuard('jwt'))

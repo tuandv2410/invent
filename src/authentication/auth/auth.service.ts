@@ -1,14 +1,13 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { JwtPayload } from './interfaces/jwt-payload.interface';
-import { LoginStatus } from './interfaces/login-status.inteface';
-import { RegistrationStatus } from './interfaces/regisration-status.interface';
+import { JwtPayload } from '../../interfaces/jwt-payload.interface';
+import { LoginStatus } from '../../interfaces/login-status.inteface';
 import { Mapper } from '@nartc/automapper'
 import { UserService } from '../user/user.service';
-import { CreateUserDto } from '../user/dto/create.user.dto';
-import { AddPermissionsDto } from '../user/dto/add-permissions.dto';
-import { LoginUserDto } from '../user/dto/login.user.dto';
+import { LoginUserDto } from './dto/login.user.dto';
 import { UserDto } from '../user/dto/user.dto';
+import { ResultInterface } from 'src/interfaces/result.interface';
+import { ChangePasswordDto } from './dto/change-password.dto';
 
 @Injectable()
 export class AuthService {
@@ -17,31 +16,8 @@ export class AuthService {
         private readonly jwtService: JwtService,
       ) {}
     
-    async register(createUserDto: CreateUserDto): Promise<RegistrationStatus> {
-        let status: RegistrationStatus = {
-            success: true,
-            message: 'user registered',
-        };
-
-        try {
-            const user = await this.userService.create(createUserDto);
-            const a: AddPermissionsDto = {
-                permissionsId: [1],
-                userId: user.id,
-            };
-            await this.userService.addPermissions(a);
-        } catch (err) {
-            status = {
-                success: false,
-                message: err,
-            };
-        }
-
-        return status;
-    }
-    
     async login(loginUserDto: LoginUserDto): Promise<LoginStatus> {
-        const user = await this.userService.findByLogin(loginUserDto);
+        const user = await this.userService.login(loginUserDto);
         
         const token = this._createToken(Mapper.map(user,UserDto));
     
@@ -50,16 +26,19 @@ export class AuthService {
             ...token,
         };
     }
+
+    async changePassword(changePasswordDto: ChangePasswordDto): Promise<ResultInterface> {
+        return await this.userService.changePassword(changePasswordDto);
+    }
     
     async validateUser(payload: JwtPayload): Promise<UserDto> {
-        const { username, permissions } = payload;
-        const userInDb = await this.userService.findByUsername(username);
-        if (!userInDb) {
+        const { username } = payload;
+        const userInDb = await this.userService.get({username:username});
+        if (!userInDb[0]) {
             throw new HttpException('Invalid token', HttpStatus.UNAUTHORIZED);
         }
         
-        return Mapper.map(userInDb,UserDto);
-
+        return Mapper.map(userInDb[0],UserDto);
     }
     
     private _createToken(userDto: UserDto): any {
@@ -67,7 +46,7 @@ export class AuthService {
         const expiresIn = process.env.EXPIRESIN;
     
         const username= userDto.username;
-        const permissionsDto = userDto.permissionsDto;
+        const permissionsDto = userDto.permissions;
         let permissions= [];
         if(permissionsDto){
             permissionsDto.forEach(permissionDto=>{

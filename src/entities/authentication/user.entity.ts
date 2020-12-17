@@ -1,4 +1,4 @@
-import { BaseEntity, Column, Entity, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, ManyToMany, PrimaryColumn } from "typeorm";
 import * as bcrypt from 'bcrypt'
 import { PermissionEntity } from "./permission.entity";
 import { AutoMap } from "nestjsx-automapper";
@@ -7,26 +7,23 @@ import { RoleEntity } from "./role.entity";
 @Entity('user')
 export class UserEntity extends BaseEntity {
     @AutoMap()
-    @PrimaryGeneratedColumn()
-    id: number;
+    @PrimaryColumn()
+    id: string;
 
     @AutoMap()
     @Column({
-        type: 'varchar',
         nullable: false,
         unique: true
     })
     username: string;
 
     @Column({
-        type: 'varchar',
         nullable: false,
     })
     password: string;
 
     @AutoMap()
     @Column({
-        type: 'varchar',
         nullable: false,
         unique: true
     })
@@ -34,13 +31,11 @@ export class UserEntity extends BaseEntity {
 
     @AutoMap()
     @Column({
-        type: 'varchar',
         nullable: false,
     })
     organization: string;
 
     @Column({
-        type: 'varchar',
         nullable: false,
     })
     salt: string;

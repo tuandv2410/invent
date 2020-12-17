@@ -1,4 +1,4 @@
 export declare class AddPermissionsDto {
-    userId: number;
-    permissionsId: number[];
+    idUser: string;
+    idPermissions: string[];
 }

@@ -1,29 +1,60 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { DeleteResultInterface } from 'src/interfaces/delete-result.interface';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { InsertResult } from 'typeorm';
+import { v4 as uuid } from 'uuid'
 import { CreatePermissionDto } from './dto/create-permission.dto';
 import { PermissionDto } from './dto/permission.dto';
 import { PermissionService } from './permission.service';
 import { Mapper } from '@nartc/automapper'
+import { FilterGetPermissionDto } from './dto/filter-get-permission.dto';
+import { UpdatePermissionDto } from './dto/update-permission.dto';
 
 @Controller('permission')
 export class PermissionController {
     constructor(
-        private readonly permissionService: PermissionService,
+        private readonly service: PermissionService
     ) {}
-
-    @Post('create')
-    public async create(
-        @Body() createPermissionDto: CreatePermissionDto,
-    ): Promise<PermissionDto> {
-
-        const result = await this.permissionService.create(createPermissionDto);
-        return Mapper.map(result,PermissionDto);
-    }
-
-    @Get('getAll')
-    public async getAll(): Promise<PermissionDto[]> {
-        const result = await this.permissionService.getAll();
+  
+    @Get()
+    async get(
+        @Body() filterDto: FilterGetPermissionDto
+    ): Promise<PermissionDto[]> {
+        const result = await this.service.get(filterDto)
         return Mapper.mapArray(result,PermissionDto);
     }
 
+    @Get('/getWithRelations')
+    async getWithRelations(
+        @Body() filterDto: FilterGetPermissionDto
+    ): Promise<PermissionDto[]> {
+        const result = await this.service.getWithRelations(filterDto)
+        return Mapper.mapArray(result,PermissionDto);
+    }
+  
+    @Post()
+    async create(
+        @Body() userData: CreatePermissionDto
+    ): Promise<InsertResult> {
+
+        const id = uuid();
+        const data = {id , ...userData};
+        return await this.service.store(data) 
+    }
+
+    @Put('/:id')
+    async update(
+        @Param('id') id: string,
+        @Body() userData: UpdatePermissionDto
+    ): Promise<PermissionDto> {
+        const result = await this.service.update(id, userData)
+        return Mapper.map(result,PermissionDto);
+    }
+  
+    @Delete('/:id')
+    async destroy(
+        @Param('id') id: string
+    ): Promise<DeleteResultInterface> {
+        return this.service.delete(id)
+    }
 
 }

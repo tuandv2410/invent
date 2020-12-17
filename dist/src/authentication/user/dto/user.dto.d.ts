@@ -1,6 +1,10 @@
-import { PermissionDto } from 'src/authentication/permission/dto/permission.dto';
-export declare class role {
-    id: number;
+declare class Role {
+    id: string;
+    name: string;
+    description: string;
+}
+declare class Permission {
+    id: string;
     name: string;
     description: string;
 }
@@ -9,6 +13,7 @@ export declare class UserDto {
     username: string;
     email: string;
     organization: string;
-    permissionsDto: PermissionDto[];
-    rolesDto: role[];
+    permissions: Permission[];
+    roles: Role[];
 }
+export {};

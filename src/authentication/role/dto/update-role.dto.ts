@@ -1,17 +1,12 @@
-import { IsString, MinLength, MaxLength, IsNotEmpty, IsNumber } from 'class-validator';
+import { IsString, IsOptional } from 'class-validator';
 
 export class UpdateRoleDto {
-    @IsNotEmpty()
-    @IsNumber()
-    id: number;
-    
-    @IsNotEmpty()
+
+    @IsOptional()
     @IsString()
-    @MinLength(4)
-    @MaxLength(20)
     name: string;
 
-    @IsNotEmpty()
+    @IsOptional()
     @IsString()
     description: string;
 }

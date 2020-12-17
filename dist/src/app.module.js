@@ -17,7 +17,14 @@ const typeorm_config_1 = require("./config/typeorm.config");
 const business_module_1 = require("./business/business.module");
 const warehouse_feat_module_1 = require("./warehouse-feat/warehouse-feat.module");
 const inventory_module_1 = require("./inventory/inventory.module");
+const selling_and_sourcing_module_1 = require("./selling-and-sourcing/selling-and-sourcing.module");
+const logger_middleware_1 = require("./middleware/logger.middleware");
 let AppModule = class AppModule {
+    configure(consumer) {
+        consumer
+            .apply(logger_middleware_1.LoggerMiddleware)
+            .forRoutes('/');
+    }
 };
 AppModule = __decorate([
     common_1.Module({
@@ -27,7 +34,8 @@ AppModule = __decorate([
             authentication_module_1.AuthenticationModule,
             business_module_1.BusinessModule,
             warehouse_feat_module_1.WarehouseFeatModule,
-            inventory_module_1.InventoryModule
+            inventory_module_1.InventoryModule,
+            selling_and_sourcing_module_1.SellingAndSourcingModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [

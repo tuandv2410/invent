@@ -9,15 +9,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PermissionModule = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const permission_entity_1 = require("../../entities/authentication/permission.entity");
 const permission_controller_1 = require("./permission.controller");
+const permission_repository_1 = require("./permission.repository");
 const permission_service_1 = require("./permission.service");
 let PermissionModule = class PermissionModule {
 };
 PermissionModule = __decorate([
     common_1.Module({
         imports: [
-            typeorm_1.TypeOrmModule.forFeature([permission_entity_1.PermissionEntity]),
+            typeorm_1.TypeOrmModule.forFeature([permission_repository_1.PermissionRepository]),
         ],
         controllers: [permission_controller_1.PermissionController],
         providers: [permission_service_1.PermissionService],

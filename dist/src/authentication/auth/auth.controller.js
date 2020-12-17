@@ -15,34 +15,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthController = void 0;
 const common_1 = require("@nestjs/common");
 const passport_1 = require("@nestjs/passport");
-const create_user_dto_1 = require("../user/dto/create.user.dto");
-const login_user_dto_1 = require("../user/dto/login.user.dto");
+const login_user_dto_1 = require("./dto/login.user.dto");
 const auth_service_1 = require("./auth.service");
+const result_interface_1 = require("../../interfaces/result.interface");
+const change_password_dto_1 = require("./dto/change-password.dto");
 let AuthController = class AuthController {
     constructor(authService) {
         this.authService = authService;
     }
-    async register(createUserDto) {
-        const result = await this.authService.register(createUserDto);
-        if (!result.success) {
-            throw new common_1.HttpException(result.message, common_1.HttpStatus.BAD_REQUEST);
-        }
-        return result;
-    }
     async login(loginUserDto) {
         return await this.authService.login(loginUserDto);
+    }
+    async changePassword(changePasswordDto) {
+        return await this.authService.changePassword(changePasswordDto);
     }
     async testAuth(req) {
         return req.user;
     }
 };
-__decorate([
-    common_1.Post('createUser'),
-    __param(0, common_1.Body()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [create_user_dto_1.CreateUserDto]),
-    __metadata("design:returntype", Promise)
-], AuthController.prototype, "register", null);
 __decorate([
     common_1.Post('login'),
     __param(0, common_1.Body()),
@@ -50,6 +40,13 @@ __decorate([
     __metadata("design:paramtypes", [login_user_dto_1.LoginUserDto]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "login", null);
+__decorate([
+    common_1.Put('changePassword'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [change_password_dto_1.ChangePasswordDto]),
+    __metadata("design:returntype", Promise)
+], AuthController.prototype, "changePassword", null);
 __decorate([
     common_1.UseGuards(passport_1.AuthGuard('jwt')),
     common_1.Get('whoami'),

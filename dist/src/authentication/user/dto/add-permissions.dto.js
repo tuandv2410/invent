@@ -15,11 +15,11 @@ class AddPermissionsDto {
 }
 __decorate([
     class_validator_1.IsNotEmpty(),
-    __metadata("design:type", Number)
-], AddPermissionsDto.prototype, "userId", void 0);
+    __metadata("design:type", String)
+], AddPermissionsDto.prototype, "idUser", void 0);
 __decorate([
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", Array)
-], AddPermissionsDto.prototype, "permissionsId", void 0);
+], AddPermissionsDto.prototype, "idPermissions", void 0);
 exports.AddPermissionsDto = AddPermissionsDto;
 //# sourceMappingURL=add-permissions.dto.js.map

@@ -2,7 +2,7 @@ import { IsNotEmpty } from "class-validator";
 
 export class AddRoleDto {
   @IsNotEmpty()
-  userId: number;
+  idUser: string;
   @IsNotEmpty()
-  roleId: number;
+  idRole: string;
 }

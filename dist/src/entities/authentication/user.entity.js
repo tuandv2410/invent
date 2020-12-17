@@ -23,13 +23,12 @@ let UserEntity = class UserEntity extends typeorm_1.BaseEntity {
 };
 __decorate([
     nestjsx_automapper_1.AutoMap(),
-    typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
+    typeorm_1.PrimaryColumn(),
+    __metadata("design:type", String)
 ], UserEntity.prototype, "id", void 0);
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     typeorm_1.Column({
-        type: 'varchar',
         nullable: false,
         unique: true
     }),
@@ -37,7 +36,6 @@ __decorate([
 ], UserEntity.prototype, "username", void 0);
 __decorate([
     typeorm_1.Column({
-        type: 'varchar',
         nullable: false,
     }),
     __metadata("design:type", String)
@@ -45,7 +43,6 @@ __decorate([
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     typeorm_1.Column({
-        type: 'varchar',
         nullable: false,
         unique: true
     }),
@@ -54,14 +51,12 @@ __decorate([
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     typeorm_1.Column({
-        type: 'varchar',
         nullable: false,
     }),
     __metadata("design:type", String)
 ], UserEntity.prototype, "organization", void 0);
 __decorate([
     typeorm_1.Column({
-        type: 'varchar',
         nullable: false,
     }),
     __metadata("design:type", String)

@@ -1,4 +1,15 @@
 "use strict";
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BaseService = void 0;
 const common_1 = require("@nestjs/common");
@@ -43,12 +54,39 @@ class BaseService {
             throw new common_1.HttpException(`${error}`, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    async loadRelationships(repo, relationships, baseEntities) {
+        if (!baseEntities) {
+            baseEntities = await repo.find({});
+        }
+        const res = __rest(await Promise.all(relationships.map((relation) => {
+            return repo.findByIds(baseEntities.map((entity) => {
+                if (!entity || !entity.id)
+                    return;
+                return entity.id;
+            }), {
+                select: ['id'],
+                relations: [relation]
+            });
+        })), []);
+        console.log(res);
+        Object.keys(res).forEach(i => {
+            res[i].forEach(r => {
+                const fullEntity = baseEntities.find(e => e.id === r.id);
+                if (fullEntity) {
+                    const relationship = relationships[i];
+                    fullEntity[relationship] = r[relationship];
+                }
+                return fullEntity;
+            });
+        });
+        return res;
+    }
     store(data) {
         try {
             return this.repository.save(data);
         }
         catch (error) {
-            throw new common_1.HttpException(`${error}`, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+            throw new common_1.HttpException(`***********************************${error}`, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     async update(id, data) {

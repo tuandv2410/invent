@@ -14,28 +14,31 @@ const class_validator_1 = require("class-validator");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
 const permission_entity_1 = require("../../../entities/authentication/permission.entity");
+class Role {
+}
 class PermissionDto {
 }
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsNotEmpty(),
-    class_validator_1.IsNumber(),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], PermissionDto.prototype, "id", void 0);
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsNotEmpty(),
-    class_validator_1.IsString(),
-    class_validator_1.MinLength(4),
-    class_validator_1.MaxLength(20),
     __metadata("design:type", String)
 ], PermissionDto.prototype, "name", void 0);
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsNotEmpty(),
-    class_validator_1.IsString(),
     __metadata("design:type", String)
 ], PermissionDto.prototype, "description", void 0);
+__decorate([
+    nestjsx_automapper_1.AutoMap(),
+    class_validator_1.IsNotEmpty(),
+    __metadata("design:type", Array)
+], PermissionDto.prototype, "roles", void 0);
 exports.PermissionDto = PermissionDto;
-automapper_1.Mapper.createMap(permission_entity_1.PermissionEntity, PermissionDto);
+automapper_1.Mapper.createMap(permission_entity_1.PermissionEntity, PermissionDto)
+    .forMember(d => d.roles, automapper_1.mapFrom(s => s.roles));
 //# sourceMappingURL=permission.dto.js.map
