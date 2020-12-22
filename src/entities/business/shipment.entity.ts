@@ -1,6 +1,6 @@
 import { BaseEntity, Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
-import { ShipmentStatus } from "src/business/enum/shipment-status.enum";
+import { ShipmentStatus } from "src/epic/business/enum/shipment-status.enum";
 import { OrderEntity } from "./order.entity";
 
 @Entity('shipment')

@@ -1,5 +1,5 @@
 import { BaseEntity } from "typeorm";
-import { ShipmentStatus } from "src/business/enum/shipment-status.enum";
+import { ShipmentStatus } from "src/epic/business/enum/shipment-status.enum";
 import { OrderEntity } from "./order.entity";
 export declare class ShipmentEntity extends BaseEntity {
     id: string;

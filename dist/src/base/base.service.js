@@ -86,7 +86,7 @@ class BaseService {
             return this.repository.save(data);
         }
         catch (error) {
-            throw new common_1.HttpException(`***********************************${error}`, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
+            throw new common_1.HttpException(`${error}`, common_1.HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
     async update(id, data) {

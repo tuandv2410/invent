@@ -13,7 +13,7 @@ exports.AddingServiceEntity = void 0;
 const typeorm_1 = require("typeorm");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const order_entity_1 = require("./order.entity");
-const adding_service_enum_1 = require("../../business/enum/adding-service.enum");
+const adding_service_enum_1 = require("../../epic/business/enum/adding-service.enum");
 let AddingServiceEntity = class AddingServiceEntity extends typeorm_1.BaseEntity {
 };
 __decorate([

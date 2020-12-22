@@ -16,26 +16,6 @@ const sku_entity_1 = require("../../../entities/inventory/sku.entity");
 const class_validator_1 = require("class-validator");
 class ProductContract {
 }
-__decorate([
-    nestjsx_automapper_1.AutoMap(),
-    __metadata("design:type", String)
-], ProductContract.prototype, "id", void 0);
-__decorate([
-    nestjsx_automapper_1.AutoMap(),
-    __metadata("design:type", Number)
-], ProductContract.prototype, "quantity", void 0);
-__decorate([
-    nestjsx_automapper_1.AutoMap(),
-    __metadata("design:type", Number)
-], ProductContract.prototype, "totalPrice", void 0);
-__decorate([
-    nestjsx_automapper_1.AutoMap(),
-    __metadata("design:type", Number)
-], ProductContract.prototype, "discount", void 0);
-__decorate([
-    nestjsx_automapper_1.AutoMap(),
-    __metadata("design:type", String)
-], ProductContract.prototype, "currency", void 0);
 class productOrder {
 }
 class SkuDto {
@@ -50,6 +30,11 @@ __decorate([
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
 ], SkuDto.prototype, "productName", void 0);
+__decorate([
+    nestjsx_automapper_1.AutoMap(),
+    class_validator_1.IsNotEmpty(),
+    __metadata("design:type", String)
+], SkuDto.prototype, "productId", void 0);
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsNotEmpty(),

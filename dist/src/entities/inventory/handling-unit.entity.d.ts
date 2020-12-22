@@ -1,6 +1,6 @@
 import { BaseEntity } from "typeorm";
-import { HuType } from "src/inventory/enum/hu-type.enum";
-import { HuStatus } from "src/inventory/enum/hu-status.enum";
+import { HuType } from "src/epic/inventory/enum/hu-type.enum";
+import { HuStatus } from "src/epic/inventory/enum/hu-status.enum";
 import { SkuEntity } from "./sku.entity";
 import { ProductEntity } from "./product.entity";
 import { PackageSpecificationEntity } from "./package-specification.entity";

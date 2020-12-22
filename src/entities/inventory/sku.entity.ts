@@ -18,6 +18,10 @@ export class SkuEntity extends BaseEntity {
 
     @AutoMap()
     @Column()
+    productId: string;
+
+    @AutoMap()
+    @Column()
     expireDate: string;
 
     @AutoMap()

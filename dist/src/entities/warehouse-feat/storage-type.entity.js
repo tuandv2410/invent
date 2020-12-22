@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.StorageTypeEntity = void 0;
 const typeorm_1 = require("typeorm");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
-const sto_type_enum_1 = require("../../warehouse-feat/enum/sto-type.enum");
+const sto_type_enum_1 = require("../../epic/warehouse-feat/enum/sto-type.enum");
 const warehouse_entity_1 = require("./warehouse.entity");
 const storage_section_entity_1 = require("./storage-section.entity");
 const storage_bin_entity_1 = require("./storage-bin.entity");

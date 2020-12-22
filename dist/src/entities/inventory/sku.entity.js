@@ -33,6 +33,11 @@ __decorate([
     nestjsx_automapper_1.AutoMap(),
     typeorm_1.Column(),
     __metadata("design:type", String)
+], SkuEntity.prototype, "productId", void 0);
+__decorate([
+    nestjsx_automapper_1.AutoMap(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
 ], SkuEntity.prototype, "expireDate", void 0);
 __decorate([
     nestjsx_automapper_1.AutoMap(),

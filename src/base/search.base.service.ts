@@ -82,7 +82,7 @@ export class SearchBaseService<F,T> {
         }
     }
 
-    async indexDocument(id: number, document: Partial<T>): Promise<any> {
+    async indexDocument(id: string, document: Partial<T>): Promise<any> {
         try {
             const { body } = await this.elasticsearchService.index<F>({
                 index: this.config.index,
@@ -110,7 +110,7 @@ export class SearchBaseService<F,T> {
         }
     }
 
-    async deleteDocument(id: number): Promise<any> {
+    async deleteDocument(id: string): Promise<any> {
         try {
             const { body } = await this.elasticsearchService.delete<F>({
                 index: this.config.index,
@@ -123,7 +123,7 @@ export class SearchBaseService<F,T> {
         }
     }
 
-    async updateDocument(id: number, document: Partial<T>): Promise<any> {
+    async updateDocument(id: string, document: Partial<T>): Promise<any> {
         const script = Object.entries(document).reduce((result, [key, value]) => {
             return `${result} ctx._source.${key}='${value}';`;
         }, '');

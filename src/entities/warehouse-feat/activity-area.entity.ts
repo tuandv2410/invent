@@ -1,6 +1,6 @@
 import { BaseEntity, Column, Entity, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
-import { ActArea } from "src/warehouse-feat/enum/activity-area.enum";
+import { ActArea } from "src/epic/warehouse-feat/enum/activity-area.enum";
 import { WarehouseEntity } from "./warehouse.entity";
 import { StorageBinEntity } from "./storage-bin.entity";
 

@@ -1,8 +1,8 @@
 import { BaseEntity, Column, Entity, OneToMany, PrimaryColumn} from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
-import { BpCategory } from "src/business/enum/bp-category.enum";
-import { BpFunction } from "src/business/enum/bp-function.enum";
-import { BpStatus } from "src/business/enum/bp-status.enum";
+import { BpCategory } from "src/epic/business/enum/bp-category.enum";
+import { BpFunction } from "src/epic/business/enum/bp-function.enum";
+import { BpStatus } from "src/epic/business/enum/bp-status.enum";
 import { BusinessContractEntity } from "./business-contract.entity";
 
 @Entity('business-partner')

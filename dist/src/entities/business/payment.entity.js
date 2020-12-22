@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PaymentEntity = void 0;
 const typeorm_1 = require("typeorm");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
-const payment_status_enum_1 = require("../../business/enum/payment-status.enum");
+const payment_status_enum_1 = require("../../epic/business/enum/payment-status.enum");
 const order_entity_1 = require("./order.entity");
 let PaymentEntity = class PaymentEntity extends typeorm_1.BaseEntity {
 };

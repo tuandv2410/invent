@@ -12,9 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.OrderService = void 0;
 const common_1 = require("@nestjs/common");
 const base_service_1 = require("../../base/base.service");
-const business_contract_entity_1 = require("../../entities/business/business-contract.entity");
 const order_entity_1 = require("../../entities/business/order.entity");
-const result_interface_1 = require("../../interfaces/result.interface");
 const order_repository_1 = require("./order.repository");
 let OrderService = class OrderService extends base_service_1.BaseService {
     constructor(repository) {

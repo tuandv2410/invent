@@ -1,7 +1,7 @@
 import { BaseEntity, Column, Entity, OneToMany, PrimaryColumn} from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
 import { OrderEntity } from "./order.entity";
-import { ServiceType } from "src/business/enum/adding-service.enum";
+import { ServiceType } from "src/epic/business/enum/adding-service.enum";
 
 @Entity('adding-service')
 export class AddingServiceEntity extends BaseEntity {

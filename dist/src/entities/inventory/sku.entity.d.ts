@@ -7,6 +7,7 @@ import { ProductOrderEntity } from "../business/product-order.entity";
 export declare class SkuEntity extends BaseEntity {
     id: string;
     productName: string;
+    productId: string;
     expireDate: string;
     unitPrice: number;
     currency: string;

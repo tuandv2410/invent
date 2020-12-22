@@ -12,9 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BusinessPartnerEntity = void 0;
 const typeorm_1 = require("typeorm");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
-const bp_category_enum_1 = require("../../business/enum/bp-category.enum");
-const bp_function_enum_1 = require("../../business/enum/bp-function.enum");
-const bp_status_enum_1 = require("../../business/enum/bp-status.enum");
+const bp_category_enum_1 = require("../../epic/business/enum/bp-category.enum");
+const bp_function_enum_1 = require("../../epic/business/enum/bp-function.enum");
+const bp_status_enum_1 = require("../../epic/business/enum/bp-status.enum");
 const business_contract_entity_1 = require("./business-contract.entity");
 let BusinessPartnerEntity = class BusinessPartnerEntity extends typeorm_1.BaseEntity {
 };

@@ -1,6 +1,6 @@
 import { BaseEntity, Column, Entity, ManyToOne, PrimaryColumn } from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
-import { PaymentStatus } from "src/business/enum/payment-status.enum";
+import { PaymentStatus } from "src/epic/business/enum/payment-status.enum";
 import { OrderEntity } from "./order.entity";
 
 @Entity('payment')

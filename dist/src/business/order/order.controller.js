@@ -22,14 +22,27 @@ const filter_get_order_dto_1 = require("./dto/filter-get-order.dto");
 const automapper_1 = require("@nartc/automapper");
 const uuid_1 = require("uuid");
 const delete_result_interface_1 = require("../../interfaces/delete-result.interface");
-const result_interface_1 = require("../../interfaces/result.interface");
-const business_partner_service_1 = require("../business-partner/business-partner.service");
+const shipment_service_1 = require("../shipment/shipment.service");
+const payment_service_1 = require("../payment/payment.service");
 const business_contract_service_1 = require("../business-contract/business-contract.service");
+const business_partner_service_1 = require("../business-partner/business-partner.service");
+const adding_service_service_1 = require("../adding-service/adding-service.service");
+const order_entity_1 = require("../../entities/business/order.entity");
+const payment_status_enum_1 = require("../enum/payment-status.enum");
+const sku_service_1 = require("../../inventory/sku/sku.service");
+const product_order_entity_1 = require("../../entities/business/product-order.entity");
+const product_order_service_1 = require("../product-order/product-order.service");
+const shipment_status_enum_1 = require("../enum/shipment-status.enum");
 let OrderController = class OrderController {
-    constructor(service, bpService, bcService) {
+    constructor(service, shipmentService, paymentService, businessContractService, productOrderService, businessPartnerService, addingServiceService, skuService) {
         this.service = service;
-        this.bpService = bpService;
-        this.bcService = bcService;
+        this.shipmentService = shipmentService;
+        this.paymentService = paymentService;
+        this.businessContractService = businessContractService;
+        this.productOrderService = productOrderService;
+        this.businessPartnerService = businessPartnerService;
+        this.addingServiceService = addingServiceService;
+        this.skuService = skuService;
     }
     async get(filterDto) {
         const result = await this.service.get(filterDto);
@@ -50,6 +63,42 @@ let OrderController = class OrderController {
     }
     async destroy(id) {
         return this.service.delete(id);
+    }
+    async getByBp(idBp) {
+        var result = [];
+        const BCS = await this.businessContractService.get({ businessPartner: idBp });
+        for (const BC of BCS) {
+            const orders = await this.service.get({ businessContract: BC.id });
+            result = [...result, ...orders];
+        }
+        return automapper_1.Mapper.mapArray(result, order_dto_1.OrderDto);
+    }
+    async getByPaymentStatus(status) {
+        let result = [];
+        const payments = await this.paymentService.getWithRelations({ status: status });
+        for (const payment of payments) {
+            result = [...result, payment.order];
+        }
+        return automapper_1.Mapper.mapArray(result, order_dto_1.OrderDto);
+    }
+    async getByShipmentStatus(status) {
+        let result = [];
+        const shipments = await this.shipmentService.getWithRelations({ status: status });
+        for (const shipment of shipments) {
+            result = [...result, shipment.order];
+        }
+        return automapper_1.Mapper.mapArray(result, order_dto_1.OrderDto);
+    }
+    async getByProduct(id) {
+        let result = [];
+        const skus = await this.skuService.getWithRelations({ productId: id });
+        for (const sku of skus) {
+            for (const pr of sku.productOrders) {
+                const productOrders = await this.productOrderService.getWithRelations({ id: pr.id });
+                result = [...result, productOrders[0].order];
+            }
+        }
+        return automapper_1.Mapper.mapArray(result, order_dto_1.OrderDto);
     }
 };
 __decorate([
@@ -88,11 +137,44 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], OrderController.prototype, "destroy", null);
+__decorate([
+    common_1.Get('/getByBp'),
+    __param(0, common_1.Query('idBp')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], OrderController.prototype, "getByBp", null);
+__decorate([
+    common_1.Get('/getByPaymentStatus'),
+    __param(0, common_1.Query('status')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], OrderController.prototype, "getByPaymentStatus", null);
+__decorate([
+    common_1.Get('/getByShipmentStatus'),
+    __param(0, common_1.Query('status')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], OrderController.prototype, "getByShipmentStatus", null);
+__decorate([
+    common_1.Get('/getByProduct'),
+    __param(0, common_1.Query('idProduct')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], OrderController.prototype, "getByProduct", null);
 OrderController = __decorate([
     common_1.Controller('order'),
     __metadata("design:paramtypes", [order_service_1.OrderService,
+        shipment_service_1.ShipmentService,
+        payment_service_1.PaymentService,
+        business_contract_service_1.BusinessContractService,
+        product_order_service_1.ProductOrderService,
         business_partner_service_1.BusinessPartnerService,
-        business_contract_service_1.BusinessContractService])
+        adding_service_service_1.AddingServiceService,
+        sku_service_1.SkuService])
 ], OrderController);
 exports.OrderController = OrderController;
 //# sourceMappingURL=order.controller.js.map

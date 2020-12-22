@@ -1,6 +1,6 @@
 import { BaseEntity, Column, Entity, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
-import { StoType } from "src/warehouse-feat/enum/sto-type.enum";
+import { StoType } from "src/epic/warehouse-feat/enum/sto-type.enum";
 import { WarehouseEntity } from "./warehouse.entity";
 import { StorageSectionEntity } from "./storage-section.entity";
 import { StorageBinEntity } from "./storage-bin.entity";

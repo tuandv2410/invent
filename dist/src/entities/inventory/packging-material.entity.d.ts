@@ -1,6 +1,6 @@
 import { BaseEntity } from "typeorm";
-import { PmType } from "src/inventory/enum/pm-type.enum";
-import { PmCategory } from "src/inventory/enum/pm-category.enum";
+import { PmType } from "src/epic/inventory/enum/pm-type.enum";
+import { PmCategory } from "src/epic/inventory/enum/pm-category.enum";
 import { HandlingUnitEntity } from "./handling-unit.entity";
 import { PackageSpecificationEntity } from "./package-specification.entity";
 export declare class PackgingMaterialEntity extends BaseEntity {

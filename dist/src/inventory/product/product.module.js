@@ -20,7 +20,8 @@ ProductModule = __decorate([
             typeorm_1.TypeOrmModule.forFeature([product_repository_1.ProductRepository]),
         ],
         providers: [product_service_1.ProductService],
-        controllers: [product_controller_1.ProductController]
+        controllers: [product_controller_1.ProductController],
+        exports: [product_service_1.ProductService]
     })
 ], ProductModule);
 exports.ProductModule = ProductModule;

@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ShipmentEntity = void 0;
 const typeorm_1 = require("typeorm");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
-const shipment_status_enum_1 = require("../../business/enum/shipment-status.enum");
+const shipment_status_enum_1 = require("../../epic/business/enum/shipment-status.enum");
 const order_entity_1 = require("./order.entity");
 let ShipmentEntity = class ShipmentEntity extends typeorm_1.BaseEntity {
 };
