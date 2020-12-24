@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProductSearchBody = void 0;
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
-const product_entity_1 = require("../../entities/inventory/product.entity");
+const product_entity_1 = require("../../entities/tenant/inventory/product.entity");
 class ProductSearchBody {
 }
 __decorate([

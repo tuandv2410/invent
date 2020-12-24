@@ -12,15 +12,16 @@ const typeorm_1 = require("@nestjs/typeorm");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
-const authentication_module_1 = require("./epic/authentication/authentication.module");
+const authentication_module_1 = require("./module/public/authentication/authentication.module");
 const typeorm_config_1 = require("./config/typeorm.config");
-const business_module_1 = require("./epic/business/business.module");
-const warehouse_feat_module_1 = require("./epic/warehouse-feat/warehouse-feat.module");
-const inventory_module_1 = require("./epic/inventory/inventory.module");
-const selling_and_sourcing_module_1 = require("./epic/selling-and-sourcing/selling-and-sourcing.module");
+const business_module_1 = require("./module/tenant/business/business.module");
+const warehouse_feat_module_1 = require("./module/tenant/warehouse-feat/warehouse-feat.module");
+const inventory_module_1 = require("./module/tenant/inventory/inventory.module");
+const selling_and_sourcing_module_1 = require("./module/tenant/selling-and-sourcing/selling-and-sourcing.module");
 const logger_middleware_1 = require("./middleware/logger.middleware");
-const cash_flow_module_1 = require("./epic/cash-flow/cash-flow.module");
+const cash_flow_module_1 = require("./module/tenant/cash-flow/cash-flow.module");
 const search_module_1 = require("./search/search.module");
+const tenant_module_1 = require("./module/tenant/tenant.module");
 let AppModule = class AppModule {
     configure(consumer) {
         consumer
@@ -39,7 +40,8 @@ AppModule = __decorate([
             inventory_module_1.InventoryModule,
             selling_and_sourcing_module_1.SellingAndSourcingModule,
             cash_flow_module_1.CashFlowModule,
-            search_module_1.SearchModule
+            search_module_1.SearchModule,
+            tenant_module_1.TenantModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [

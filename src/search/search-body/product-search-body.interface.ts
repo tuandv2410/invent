@@ -1,6 +1,6 @@
 import { AutoMap } from "nestjsx-automapper";
 import { Mapper } from '@nartc/automapper'
-import { ProductEntity } from "src/entities/inventory/product.entity";
+import { ProductEntity } from "src/entities/tenant/inventory/product.entity";
 
 export class ProductSearchBody {
     @AutoMap()

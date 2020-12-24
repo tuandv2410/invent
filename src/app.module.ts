@@ -3,15 +3,16 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AutomapperModule } from 'nestjsx-automapper';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { AuthenticationModule } from './epic/authentication/authentication.module';
+import { AuthenticationModule } from './module/public/authentication/authentication.module';
 import { typeOrmConfig } from './config/typeorm.config';
-import { BusinessModule } from './epic/business/business.module';
-import { WarehouseFeatModule } from './epic/warehouse-feat/warehouse-feat.module';
-import { InventoryModule } from './epic/inventory/inventory.module';
-import { SellingAndSourcingModule } from './epic/selling-and-sourcing/selling-and-sourcing.module';
+import { BusinessModule } from './module/tenant/business/business.module';
+import { WarehouseFeatModule } from './module/tenant/warehouse-feat/warehouse-feat.module';
+import { InventoryModule } from './module/tenant/inventory/inventory.module';
+import { SellingAndSourcingModule } from './module/tenant/selling-and-sourcing/selling-and-sourcing.module';
 import { LoggerMiddleware } from './middleware/logger.middleware';
-import { CashFlowModule } from './epic/cash-flow/cash-flow.module';
+import { CashFlowModule } from './module/tenant/cash-flow/cash-flow.module';
 import { SearchModule } from './search/search.module';
+import { TenantModule } from './module/tenant/tenant.module';
 @Module({
   imports: [
     AutomapperModule.withMapper(),
@@ -22,7 +23,8 @@ import { SearchModule } from './search/search.module';
     InventoryModule,
     SellingAndSourcingModule,
     CashFlowModule,
-    SearchModule
+    SearchModule,
+    TenantModule
   ],
   controllers: [AppController],
   providers: [
