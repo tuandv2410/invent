@@ -167,7 +167,7 @@
         "affectsGlobalScope": true
       },
       "../tenant-ormconfig.ts": {
-        "version": "e3df322cb27699709605f065f4fb03f6eda05bf0b8ea769cc81b53f807eae208",
+        "version": "343f04c52ccd1c4fdcb7fb2f19b0bc40e288507bee9dd9c5e4c2ae2dcb8d2199",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": true
       },
@@ -3286,9 +3286,14 @@
         "signature": "18b9a9702d2fc7d3766b0c8124133c761ad25a9d767925005777eb2c2cd8aeba",
         "affectsGlobalScope": false
       },
+      "../src/entities/public/authentication/organization.entity.ts": {
+        "version": "43ae623cbb6c4d2cb7bc6123e91b61a57fed8706fd25a3f939113af8b481fcf0",
+        "signature": "67d271c92dc0d2482cc8413e024579cf3eca240afb7675dcbc5c47970357f4aa",
+        "affectsGlobalScope": false
+      },
       "../src/entities/public/authentication/role.entity.ts": {
-        "version": "bca3aa3b14e9117d3b4e63bc07db05587fd04be06118be50b53765fd67f433ca",
-        "signature": "fac16734cb76ed3611003c47bbfb89fb40dd68ee95451fd9d8323454303ec664",
+        "version": "fc85cc29772f85c78f69517b9b268fb0bf20cf30ce7d93ae826579b9c65a77f4",
+        "signature": "c880c6770ab2994e1e2f12133b34bf45e8b62cb116ffcb94597c437006d20602",
         "affectsGlobalScope": false
       },
       "../src/entities/public/authentication/permission.entity.ts": {
@@ -3297,8 +3302,8 @@
         "affectsGlobalScope": false
       },
       "../src/entities/public/authentication/user.entity.ts": {
-        "version": "0214f8a80c49f4537b31786e44ada9a63c90c8730073ac49305a3775f63c3111",
-        "signature": "c3d0c15fd5e7cdc19429184867aadcb1c2836e4dab706272ced3724977c560ca",
+        "version": "b46dbb9cc7289dc780e8057702b65bf9096122d83d794857661f7704180aa148",
+        "signature": "b4ee10bc6cbca6bb5e0924c39a09a5e740901f911675f27ddc5e9eac61b5078f",
         "affectsGlobalScope": false
       },
       "../src/interfaces/delete-result.interface.ts": {
@@ -3977,8 +3982,8 @@
         "affectsGlobalScope": false
       },
       "../src/module/public/authentication/user/dto/create.user.dto.ts": {
-        "version": "d25c47660be82427c9bfa4052cbcc94a3fea4af8b71afecaf78d0a079339a47b",
-        "signature": "0018396eee33af21e63c825b949b5efd0ffe522a3335506306dd2cf9b1b406dc",
+        "version": "ecf16a9de26effb20d3c7c4d095bd1c1318cb0363ee2eb41dbbd8764f8be3220",
+        "signature": "c9e42971ce2c4188438521443269cea49f6668aead8fc76d311d3bdb9f7ff6a5",
         "affectsGlobalScope": false
       },
       "../src/module/public/authentication/user/dto/update-user.dto.ts": {
@@ -4051,8 +4056,13 @@
         "signature": "ea4f5e760ac2f6dd1fb06785f38d42b6dde82b29d8a1be10a7540dc598a5e4af",
         "affectsGlobalScope": false
       },
+      "../src/module/public/authentication/auth/permissions.guard.ts": {
+        "version": "e79476635d84e4ea543ba196a4cd1a96ba60d5d30d2953c5f8bae85a3694faf3",
+        "signature": "28bcf9f830a3f643d13e6903195e0c1a1c10f47737be9674a84b8fba09b953e8",
+        "affectsGlobalScope": false
+      },
       "../src/module/public/authentication/user/user.controller.ts": {
-        "version": "b9b07c9e4de3b73dcd8da3cf7aa501772a4e370024d1b8c3927cc31fc1cb2948",
+        "version": "6c808e9d3eba2371ceaca6bacf8493e336cc64f9d324ef015619bcd12d71365f",
         "signature": "61edb237ae49dda11b555250ceeadcc227f64cc1a60e24d3c7846efc81aa1d47",
         "affectsGlobalScope": false
       },
@@ -4136,8 +4146,13 @@
         "signature": "6183511be62cd08b444b4d350d2bb5cdb5fd97c84f2b1213e7cbd4fbef40a415",
         "affectsGlobalScope": false
       },
+      "../src/module/public/authentication/auth/permissions.decorator.ts": {
+        "version": "ecba55fc6c36f7cf53c86181c816ff90ec24aaa1f91b38617877fd86732e1987",
+        "signature": "ae52b1150f0aca6399eb9ea743f1682914e408b555f9ebc630f6d620c842eae7",
+        "affectsGlobalScope": false
+      },
       "../src/module/public/authentication/auth/auth.controller.ts": {
-        "version": "e2817deaf7436de940633682c4b3e846838b77da9a839086d806e19c17d48da4",
+        "version": "f2846c96855b1dc35d3a55324e569be21e571815d6af69e299b91102ef75d7ac",
         "signature": "d0fe4c3a2c4e78912815936f87fac28c6ed3727c5489e9f351d7d60fdb5d573a",
         "affectsGlobalScope": false
       },
@@ -4157,17 +4172,62 @@
         "affectsGlobalScope": false
       },
       "../src/module/public/authentication/auth/auth.module.ts": {
-        "version": "3408c34fa61a3075f7b538e8ee51d1c21673d3f6c1ad92e5f00273c39b255169",
+        "version": "efd2d26b25ec1c10e6806e93a2ca81dd9d0ed74116ee561b06e5f2c0266ed492",
         "signature": "a28b5c0c372fb375910b3fe3c3ce4331509bc18ccef7cc39c9ee9d8daf8225d1",
         "affectsGlobalScope": false
       },
+      "../src/module/public/authentication/organization/organization.repository.ts": {
+        "version": "4c306d870c8d08e2bdf47875e2c69d00071a74a2ee6a5f668272dac088a7066c",
+        "signature": "e52dfa1dc477bde2b2f102ad644943499d52daf6c9c084817e286d1c269d990a",
+        "affectsGlobalScope": false
+      },
+      "../src/module/public/authentication/organization/organization.service.ts": {
+        "version": "cfbf374d6642e39de930765a25a40413ff451a88706d555a69438f9352296fb6",
+        "signature": "4018cd0b70e4c7da65a4dc0cb4c6bbc623ec0356f6c65639e5070b2a64a8c275",
+        "affectsGlobalScope": false
+      },
+      "../src/module/public/authentication/organization/dto/filter-get-organization.dto.ts": {
+        "version": "b5ebe40ab714b32272912829fd7643b16dd0a659685b867d59a9b3f2a2b4e9aa",
+        "signature": "9fcfae0b463f9ecd50f6a46192ad826d4376749e156728656f380b49d99e7bd4",
+        "affectsGlobalScope": false
+      },
+      "../src/module/public/authentication/organization/dto/organization.dto.ts": {
+        "version": "16b5d7034fea8125bc9bf033b8247480b338b76678f517b05835f79d9f4714e0",
+        "signature": "017d52ea71b40633370876990f56d9ef64f1e4cc73b7b68593a81d62c6f3083a",
+        "affectsGlobalScope": false
+      },
+      "../src/module/public/authentication/organization/dto/create-organization.dto.ts": {
+        "version": "900475db045d764ed21e2f85b132d3b4f86513338749fe561b5f9da3fa3e54c1",
+        "signature": "8240134637c66b835cfc810e0ef9c73ac5624837bcba4b40989f68db1485d5d3",
+        "affectsGlobalScope": false
+      },
+      "../src/module/public/authentication/organization/dto/update-organization.dto.ts": {
+        "version": "eb32f21729814f4669d7d40f8c8b68b72373e171f1fe66aec2f9a82cd16797d1",
+        "signature": "cb3900c0a1d100a96e39c0060f0948f353422c24c515a7badbc99bde37a3aea0",
+        "affectsGlobalScope": false
+      },
+      "../src/schema/create_schema.ts": {
+        "version": "8c7ea84ab3da0f34688aa2bd8c3d22b367a2cb1544dbec804e2800231b6a75d7",
+        "signature": "385ae37ee0c8eba3d3d0c6d663065aef312623aeeac26d647f3d7eff3a7a415c",
+        "affectsGlobalScope": false
+      },
+      "../src/module/public/authentication/organization/organization.controller.ts": {
+        "version": "efd5b263fef6582a93507a60e180a1540aca27bcab5e9ced785747893549a46b",
+        "signature": "9ace83cc97a0c04cdc37716009c89a1d96a58c1748e63e81b9adb3ab362e8764",
+        "affectsGlobalScope": false
+      },
+      "../src/module/public/authentication/organization/organization.module.ts": {
+        "version": "4e545f82a6131e04af22fae16a0c257306e0a7225a88ef98c6b39aa51a02e716",
+        "signature": "c29c54773fc26b3a9dbbb28f282004c308a3cc6a7151ac1e74d60c66b61b679d",
+        "affectsGlobalScope": false
+      },
       "../src/module/public/authentication/authentication.module.ts": {
-        "version": "d3b8ea9f124d3af8e48911e6b6d1ba04fd49f8c71a630930cbe4c704b4ecaf2c",
+        "version": "7cfc829ccd81dc5d8d8bb9a026055e4dda5a7e611e5c7f621cb3ecf85e57e25e",
         "signature": "7e103a5d1887cd302e878e710eaa083e006d9f1d041e5c457de53776f8aba54d",
         "affectsGlobalScope": false
       },
       "../src/config/typeorm.config.ts": {
-        "version": "980b8cd05956ae643615a5d4669d6a014dec6996e918aa21ce126742490a0a26",
+        "version": "0661fe9f2f502b842475c5994cd533b25e0a69c543ebb19d623170105b897d8b",
         "signature": "6020afb586c5c099dc8978a19d43c895dcc5c7d2cc0ad799ca7d7337ee1bd6d1",
         "affectsGlobalScope": false
       },
@@ -4737,8 +4797,8 @@
         "affectsGlobalScope": false
       },
       "../src/module/tenant/warehouse-feat/activity-area/activity-area.service.ts": {
-        "version": "1e0968dad9a95ba5e2e43dee871eeff574bd7090a64f5d262d98677c208d4336",
-        "signature": "972d0e32eb9584f27a046a359c8f89c90c25157875ce8aee904b5e7a03e790df",
+        "version": "9a796d23ee055038510f43feef467836213acb5f4abcf737ceb5e8204bc2e5f7",
+        "signature": "b9c9cff0071ea82640a458298c3c6eced77fd85145e7b817d754c4c68487b4e8",
         "affectsGlobalScope": false
       },
       "../src/module/tenant/warehouse-feat/activity-area/dto/filter-get-activity-area.dto.ts": {
@@ -5137,13 +5197,13 @@
         "affectsGlobalScope": false
       },
       "../src/config/search-property.config.ts": {
-        "version": "0ffdedaa1ec49436b1f822ccd1c43ae6e23032b33ac0ff8c2dce18ccab7f642b",
+        "version": "90690a50600d08084279a6da658200a7128267feeae44289fc00a44e11af484e",
         "signature": "0519b5bba2daa0c9bca4d698be16f230793f8ea2090a0fe5009b33dd72afed14",
         "affectsGlobalScope": false
       },
       "../src/config/search-settings.config.ts": {
-        "version": "ed846ccb0fb5ad16774903c075abfd0e500ba3790b9ec441a2d43b791d7892c9",
-        "signature": "e746ae043cad31830a44c480851a67786aa7255017eee3cb35309dd3040b543d",
+        "version": "93a30fcc24fdd80fe8523fd538a3eb390c1d206862e8aa6c41065ae6f801958f",
+        "signature": "e0e42881e22b4adc755802e06fb37ee92e934e23dae1d05913114de50daa8e5b",
         "affectsGlobalScope": false
       },
       "../src/search/search-body/product-search-body.interface.ts": {
@@ -5162,18 +5222,28 @@
         "affectsGlobalScope": false
       },
       "../src/search/search-service/product.search.service.ts": {
-        "version": "98bc9368a6713f8abdece94c8edea2e5c8fa34f402294b634e9b12c5d347bb87",
+        "version": "0b681c629905922ccd2c76542a1c79572458fce6c6d4063820e545d78458aa7e",
         "signature": "416ecd0558e60510dbaf335dfbb57bf20f108fa784269a859f5587e904097d09",
         "affectsGlobalScope": false
       },
+      "../src/module/public/authentication/auth/tenant.guard.ts": {
+        "version": "fde34d20700dba822f41aea0e49d1b40265ed09aa2ef3cbf642ef339fd8ac073",
+        "signature": "ef53f17d2180efb4be83e9669506a700f924d7d7563a221d11a1c44135b40903",
+        "affectsGlobalScope": false
+      },
       "../src/module/tenant/inventory/product/product.controller.ts": {
-        "version": "67986183aad834dced8187421355df3cc5d1830553e1dfc390c53d47b997d20f",
+        "version": "c119a17037f393053e81a03abd9d5577dfa1a4166d843302da4175023e45e438",
         "signature": "e43394e4b3e959ce33594bd2a5b720eba17dfe7798891b0b2579a63f5a8eea83",
         "affectsGlobalScope": false
       },
+      "../src/config/elastic-search.config.ts": {
+        "version": "5dddb449235a23f8c81460fc1ee81b49fdc5b685985a76c98e10a3ffc84a1ab3",
+        "signature": "69aaea4781a98c87b55c241004ded2b57c11de195d971c1986e6a215dbe98ac1",
+        "affectsGlobalScope": false
+      },
       "../src/search/search.module.ts": {
-        "version": "82fa5f64d0df3764e9bcd293f71672d03c08b36fab194a445cdd1fb491e122cf",
-        "signature": "d3bab980a1e743c335c491422ff6437e0893a9e955d5d75e1691f70c053003a5",
+        "version": "cf1cd3d5cb5d29ac92bd61b4887dfdae5a97e9234fd8fad65f278e3155c653e9",
+        "signature": "bf39329839288baf358b181b55bb5863fae02f14da4da3392ffeb770f1e7381a",
         "affectsGlobalScope": false
       },
       "../src/module/tenant/inventory/product/product.module.ts": {
@@ -5427,7 +5497,7 @@
         "affectsGlobalScope": false
       },
       "../src/module/tenant/tenant.module.ts": {
-        "version": "e6fcf0fbfdd2b08a90e1dca78ff073cc54f5906840b70f1fbb94b59013ea55ec",
+        "version": "5e052138ef8d833ce03a317919060c67ed4a16401c05d2f65d4daf175560d4aa",
         "signature": "5f7092ca69cd41b85746205cbd0a0506a11707c69db783d300dbbe00a452d627",
         "affectsGlobalScope": false
       },
@@ -5436,29 +5506,24 @@
         "signature": "9e55d69c2879e4c1f6039d177c0daf79a72435ac51ec7d4f46fc72e8b0c503d6",
         "affectsGlobalScope": false
       },
+      "../node_modules/@types/cookie-parser/index.d.ts": {
+        "version": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8",
+        "signature": "8d77ed4e39114c32edc2e35b683b6f54a6b3292ecdf392e4bfc5f726734955d8",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@types/express-session/index.d.ts": {
+        "version": "2e5548bb0a712c33b2865a49051bd41e2dc429249c8906f190969ea1497c4942",
+        "signature": "2e5548bb0a712c33b2865a49051bd41e2dc429249c8906f190969ea1497c4942",
+        "affectsGlobalScope": true
+      },
       "../src/filter/exceptions.filter.ts": {
         "version": "dd340a89db84da42017085fddd84fbb3005e96ab1949fbaa539bba216c8d925b",
         "signature": "a718231617eac59c776c5ece6b9deebb09e610a6a0eb0b26921b7cb22a0b6ca8",
         "affectsGlobalScope": false
       },
-      "../src/schema/schemalist.ts": {
-        "version": "bffcb680ca5ddb91a48fc9f49f28fea00d30227fc6dcda392d9b8b13dc446e60",
-        "signature": "94b4bed015e1a9764540ddaf9a13a424902f28540a92721ee28aa0c07319b7fc",
-        "affectsGlobalScope": false
-      },
-      "../src/schema/create_schema.ts": {
-        "version": "2900c56596ba72ce3219244e2f88a72172e012f6eec5a3c1499fc69023bd7312",
-        "signature": "8793bb7729e32b0b55f15982eaa26ade8d908f8b81f4b1a17c4da5697ceb8259",
-        "affectsGlobalScope": false
-      },
       "../src/main.ts": {
-        "version": "8bccb6154601e89794ae672ad024a3e32648f6cb071afa94ba662b0acef66cd0",
+        "version": "51692ab6443557cb1af21b6f502a0d072a6fdb85e7bf4301d358c011c9ac0784",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
-        "affectsGlobalScope": false
-      },
-      "../src/config/elastic-search.config.ts": {
-        "version": "5dddb449235a23f8c81460fc1ee81b49fdc5b685985a76c98e10a3ffc84a1ab3",
-        "signature": "69aaea4781a98c87b55c241004ded2b57c11de195d971c1986e6a215dbe98ac1",
         "affectsGlobalScope": false
       },
       "../src/entities/tenant/cash-flow/adm-expense.entity.ts": {
@@ -5541,24 +5606,14 @@
         "signature": "9e75512a3c0d6cbd347904b6c939d6eb1b7b1aeeae5cd1a4fddc949eaac203a5",
         "affectsGlobalScope": false
       },
-      "../src/migrations/public/1608800516581-initdb.ts": {
-        "version": "a22050bcb6bb235c6560898e133ca97bae4be407b45b827f7cfa23fd29b31c6d",
-        "signature": "ec2f56c981c3a1de41f13a129d83e9e0338b142e2be8364e1952ec09f7b73a2b",
+      "../src/migrations/public/1609234904029-initDb.ts": {
+        "version": "74ec22d4410b2a920a95876d89a5196056cb1d0da65e2eec710eaf99e5c81d7f",
+        "signature": "e0a817c342faa763e4144eec8df107f0f5117e2340bbf67646a974a42166b672",
         "affectsGlobalScope": false
       },
-      "../src/migrations/tenant/1608800577870-initdb.ts": {
-        "version": "91a4272f5c4f22436f6fd7edbeac68d05329ef779ea294f052a56aa8368f5286",
-        "signature": "68afbb4e1e19bef0a1e765e368c02d5d1b57c817ccade99dff5de73b1aba60fb",
-        "affectsGlobalScope": false
-      },
-      "../src/module/public/authentication/auth/permissions.decorator.ts": {
-        "version": "ecba55fc6c36f7cf53c86181c816ff90ec24aaa1f91b38617877fd86732e1987",
-        "signature": "ae52b1150f0aca6399eb9ea743f1682914e408b555f9ebc630f6d620c842eae7",
-        "affectsGlobalScope": false
-      },
-      "../src/module/public/authentication/auth/permissions.guard.ts": {
-        "version": "e79476635d84e4ea543ba196a4cd1a96ba60d5d30d2953c5f8bae85a3694faf3",
-        "signature": "28bcf9f830a3f643d13e6903195e0c1a1c10f47737be9674a84b8fba09b953e8",
+      "../src/migrations/public/1609234915009-seed.ts": {
+        "version": "68d66150f403a18d40bd187b4d1fdac5c7670b8badc4aad9f33ec47dc3321763",
+        "signature": "5585818a9c300ca167cb5e8a7d340a58f47da9641b3400dd7d08fae884885b10",
         "affectsGlobalScope": false
       },
       "../src/module/public/authentication/user/dto/check-permission.dto.ts": {
@@ -6863,6 +6918,9 @@
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
+      "../node_modules/@types/cookie-parser/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts"
+      ],
       "../node_modules/@types/eslint-scope/index.d.ts": [
         "../node_modules/@types/eslint/index.d.ts",
         "../node_modules/@types/estree/index.d.ts"
@@ -6882,6 +6940,10 @@
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/qs/index.d.ts",
         "../node_modules/@types/range-parser/index.d.ts"
+      ],
+      "../node_modules/@types/express-session/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/node/events.d.ts"
       ],
       "../node_modules/@types/express-unless/index.d.ts": [
         "../node_modules/@types/express/index.d.ts"
@@ -9189,6 +9251,12 @@
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/dotenv/types/index.d.ts"
       ],
+      "../src/entities/public/authentication/organization.entity.ts": [
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/public/authentication/role.entity.ts",
+        "../src/entities/public/authentication/user.entity.ts"
+      ],
       "../src/entities/public/authentication/permission.entity.ts": [
         "../node_modules/nestjsx-automapper/dist/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
@@ -9198,6 +9266,7 @@
       "../src/entities/public/authentication/role.entity.ts": [
         "../node_modules/nestjsx-automapper/dist/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
+        "../src/entities/public/authentication/organization.entity.ts",
         "../src/entities/public/authentication/permission.entity.ts",
         "../src/entities/public/authentication/user.entity.ts"
       ],
@@ -9205,6 +9274,7 @@
         "../node_modules/@types/bcrypt/index.d.ts",
         "../node_modules/nestjsx-automapper/dist/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
+        "../src/entities/public/authentication/organization.entity.ts",
         "../src/entities/public/authentication/permission.entity.ts",
         "../src/entities/public/authentication/role.entity.ts"
       ],
@@ -9345,19 +9415,21 @@
       "../src/main.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/core/index.d.ts",
+        "../node_modules/@types/cookie-parser/index.d.ts",
+        "../node_modules/@types/express-session/index.d.ts",
         "../src/app.module.ts",
-        "../src/filter/exceptions.filter.ts",
-        "../src/schema/create_schema.ts"
+        "../src/filter/exceptions.filter.ts"
       ],
       "../src/middleware/logger.middleware.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/express/index.d.ts"
       ],
-      "../src/migrations/public/1608800516581-initdb.ts": [
+      "../src/migrations/public/1609234904029-initDb.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
-      "../src/migrations/tenant/1608800577870-initdb.ts": [
-        "../node_modules/typeorm/driver/postgres/PostgresConnectionOptions.d.ts",
+      "../src/migrations/public/1609234915009-seed.ts": [
+        "../node_modules/@types/bcrypt/index.d.ts",
+        "../node_modules/@types/uuid/index.d.ts",
         "../node_modules/typeorm/index.d.ts"
       ],
       "../src/module/public/authentication/auth/auth.controller.ts": [
@@ -9368,7 +9440,8 @@
         "../src/interfaces/result.interface.ts",
         "../src/module/public/authentication/auth/auth.service.ts",
         "../src/module/public/authentication/auth/dto/change-password.dto.ts",
-        "../src/module/public/authentication/auth/dto/login.user.dto.ts"
+        "../src/module/public/authentication/auth/dto/login.user.dto.ts",
+        "../src/module/public/authentication/auth/permissions.decorator.ts"
       ],
       "../src/module/public/authentication/auth/auth.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -9413,12 +9486,63 @@
         "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/rxjs/index.d.ts"
       ],
+      "../src/module/public/authentication/auth/tenant.guard.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/rxjs/index.d.ts"
+      ],
       "../src/module/public/authentication/authentication.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/module/public/authentication/auth/auth.module.ts",
+        "../src/module/public/authentication/organization/organization.module.ts",
         "../src/module/public/authentication/permission/permission.module.ts",
         "../src/module/public/authentication/role/role.module.ts",
         "../src/module/public/authentication/user/user.module.ts"
+      ],
+      "../src/module/public/authentication/organization/dto/create-organization.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/module/public/authentication/organization/dto/filter-get-organization.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/module/public/authentication/organization/dto/organization.dto.ts": [
+        "../node_modules/@nartc/automapper/dist/index.d.ts",
+        "../node_modules/class-validator/types/index.d.ts",
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../src/entities/public/authentication/organization.entity.ts"
+      ],
+      "../src/module/public/authentication/organization/dto/update-organization.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts"
+      ],
+      "../src/module/public/authentication/organization/organization.controller.ts": [
+        "../node_modules/@nartc/automapper/dist/index.d.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/uuid/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/interfaces/delete-result.interface.ts",
+        "../src/module/public/authentication/organization/dto/create-organization.dto.ts",
+        "../src/module/public/authentication/organization/dto/filter-get-organization.dto.ts",
+        "../src/module/public/authentication/organization/dto/organization.dto.ts",
+        "../src/module/public/authentication/organization/dto/update-organization.dto.ts",
+        "../src/module/public/authentication/organization/organization.service.ts",
+        "../src/schema/create_schema.ts"
+      ],
+      "../src/module/public/authentication/organization/organization.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/module/public/authentication/organization/organization.controller.ts",
+        "../src/module/public/authentication/organization/organization.repository.ts",
+        "../src/module/public/authentication/organization/organization.service.ts"
+      ],
+      "../src/module/public/authentication/organization/organization.repository.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/public/authentication/organization.entity.ts",
+        "../src/entities/public/authentication/role.entity.ts"
+      ],
+      "../src/module/public/authentication/organization/organization.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/base/base.service.ts",
+        "../src/entities/public/authentication/organization.entity.ts",
+        "../src/module/public/authentication/organization/organization.repository.ts"
       ],
       "../src/module/public/authentication/permission/dto/create-permission.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts"
@@ -9548,6 +9672,7 @@
         "../node_modules/class-transformer/index.d.ts",
         "../src/entities/public/authentication/user.entity.ts",
         "../src/interfaces/delete-result.interface.ts",
+        "../src/module/public/authentication/auth/permissions.guard.ts",
         "../src/module/public/authentication/permission/permission.service.ts",
         "../src/module/public/authentication/role/role.service.ts",
         "../src/module/public/authentication/user/dto/add-permissions.dto.ts",
@@ -10304,10 +10429,13 @@
       "../src/module/tenant/inventory/product/product.controller.ts": [
         "../node_modules/@nartc/automapper/dist/index.d.ts",
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/passport/index.d.ts",
         "../node_modules/@types/uuid/index.d.ts",
         "../node_modules/class-transformer/index.d.ts",
         "../src/entities/tenant/inventory/product.entity.ts",
         "../src/interfaces/delete-result.interface.ts",
+        "../src/module/public/authentication/auth/permissions.guard.ts",
+        "../src/module/public/authentication/auth/tenant.guard.ts",
         "../src/module/tenant/inventory/product/dto/create-product.dto.ts",
         "../src/module/tenant/inventory/product/dto/filter-get-product.dto.ts",
         "../src/module/tenant/inventory/product/dto/product.dto.ts",
@@ -10431,7 +10559,8 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/dotenv/types/index.d.ts",
-        "../node_modules/typeorm/index.d.ts"
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/public/authentication/organization.entity.ts"
       ],
       "../src/module/tenant/warehouse-feat/activity-area/activity-area.controller.ts": [
         "../node_modules/@nartc/automapper/dist/index.d.ts",
@@ -10457,6 +10586,7 @@
       ],
       "../src/module/tenant/warehouse-feat/activity-area/activity-area.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
         "../src/base/base.service.ts",
         "../src/entities/tenant/warehouse-feat/activity-area.entity.ts",
         "../src/module/tenant/warehouse-feat/activity-area/activity-area.repository.ts"
@@ -10677,8 +10807,7 @@
         "../src/module/tenant/warehouse-feat/warehouse/warehouse.repository.ts"
       ],
       "../src/schema/create_schema.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../src/schema/schemalist.ts"
+        "../node_modules/typeorm/index.d.ts"
       ],
       "../src/search/search-body/product-search-body.interface.ts": [
         "../node_modules/@nartc/automapper/dist/index.d.ts",
@@ -10701,6 +10830,7 @@
       "../src/search/search.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/elasticsearch/index.d.ts",
+        "../src/config/elastic-search.config.ts",
         "../src/search/search-service/product.search.service.ts"
       ]
     },
@@ -11621,6 +11751,9 @@
         "../node_modules/@types/node/http.d.ts",
         "../node_modules/@types/node/index.d.ts"
       ],
+      "../node_modules/@types/cookie-parser/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts"
+      ],
       "../node_modules/@types/eslint-scope/index.d.ts": [
         "../node_modules/@types/eslint/index.d.ts",
         "../node_modules/@types/estree/index.d.ts"
@@ -11640,6 +11773,10 @@
         "../node_modules/@types/node/index.d.ts",
         "../node_modules/@types/qs/index.d.ts",
         "../node_modules/@types/range-parser/index.d.ts"
+      ],
+      "../node_modules/@types/express-session/index.d.ts": [
+        "../node_modules/@types/express/index.d.ts",
+        "../node_modules/@types/node/events.d.ts"
       ],
       "../node_modules/@types/express-unless/index.d.ts": [
         "../node_modules/@types/express/index.d.ts"
@@ -13922,6 +14059,11 @@
       "../src/config/typeorm.config.ts": [
         "../node_modules/@nestjs/typeorm/index.d.ts"
       ],
+      "../src/entities/public/authentication/organization.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/public/authentication/role.entity.ts",
+        "../src/entities/public/authentication/user.entity.ts"
+      ],
       "../src/entities/public/authentication/permission.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/entities/public/authentication/role.entity.ts",
@@ -13929,11 +14071,13 @@
       ],
       "../src/entities/public/authentication/role.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
+        "../src/entities/public/authentication/organization.entity.ts",
         "../src/entities/public/authentication/permission.entity.ts",
         "../src/entities/public/authentication/user.entity.ts"
       ],
       "../src/entities/public/authentication/user.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
+        "../src/entities/public/authentication/organization.entity.ts",
         "../src/entities/public/authentication/permission.entity.ts",
         "../src/entities/public/authentication/role.entity.ts"
       ],
@@ -14056,10 +14200,10 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/express/index.d.ts"
       ],
-      "../src/migrations/public/1608800516581-initdb.ts": [
+      "../src/migrations/public/1609234904029-initDb.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
-      "../src/migrations/tenant/1608800577870-initdb.ts": [
+      "../src/migrations/public/1609234915009-seed.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
       "../src/module/public/authentication/auth/auth.controller.ts": [
@@ -14092,6 +14236,28 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/core/index.d.ts",
         "../node_modules/rxjs/index.d.ts"
+      ],
+      "../src/module/public/authentication/auth/tenant.guard.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/rxjs/index.d.ts"
+      ],
+      "../src/module/public/authentication/organization/organization.controller.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/interfaces/delete-result.interface.ts",
+        "../src/module/public/authentication/organization/dto/create-organization.dto.ts",
+        "../src/module/public/authentication/organization/dto/filter-get-organization.dto.ts",
+        "../src/module/public/authentication/organization/dto/organization.dto.ts",
+        "../src/module/public/authentication/organization/dto/update-organization.dto.ts",
+        "../src/module/public/authentication/organization/organization.service.ts"
+      ],
+      "../src/module/public/authentication/organization/organization.repository.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/public/authentication/organization.entity.ts"
+      ],
+      "../src/module/public/authentication/organization/organization.service.ts": [
+        "../src/base/base.service.ts",
+        "../src/entities/public/authentication/organization.entity.ts",
+        "../src/module/public/authentication/organization/organization.repository.ts"
       ],
       "../src/module/public/authentication/permission/permission.controller.ts": [
         "../node_modules/typeorm/index.d.ts",
@@ -14516,6 +14682,7 @@
         "../src/entities/tenant/warehouse-feat/activity-area.entity.ts"
       ],
       "../src/module/tenant/warehouse-feat/activity-area/activity-area.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
         "../src/base/base.service.ts",
         "../src/entities/tenant/warehouse-feat/activity-area.entity.ts",
         "../src/module/tenant/warehouse-feat/activity-area/activity-area.repository.ts"
@@ -14646,9 +14813,6 @@
         "../src/base/search.base.service.ts",
         "../src/search/search-body/product-search-body.interface.ts",
         "../src/search/search-result/product-search-result.ts"
-      ],
-      "../src/search/search.module.ts": [
-        "../src/search/search-service/product.search.service.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -14901,6 +15065,7 @@
       "../node_modules/@types/bcrypt/index.d.ts",
       "../node_modules/@types/body-parser/index.d.ts",
       "../node_modules/@types/connect/index.d.ts",
+      "../node_modules/@types/cookie-parser/index.d.ts",
       "../node_modules/@types/cookiejar/index.d.ts",
       "../node_modules/@types/eslint-scope/index.d.ts",
       "../node_modules/@types/eslint-visitor-keys/index.d.ts",
@@ -14909,6 +15074,7 @@
       "../node_modules/@types/estree/index.d.ts",
       "../node_modules/@types/express-jwt/index.d.ts",
       "../node_modules/@types/express-serve-static-core/index.d.ts",
+      "../node_modules/@types/express-session/index.d.ts",
       "../node_modules/@types/express-unless/index.d.ts",
       "../node_modules/@types/express/index.d.ts",
       "../node_modules/@types/graceful-fs/index.d.ts",
@@ -15525,6 +15691,7 @@
       "../src/config/search-property.config.ts",
       "../src/config/search-settings.config.ts",
       "../src/config/typeorm.config.ts",
+      "../src/entities/public/authentication/organization.entity.ts",
       "../src/entities/public/authentication/permission.entity.ts",
       "../src/entities/public/authentication/role.entity.ts",
       "../src/entities/public/authentication/user.entity.ts",
@@ -15569,8 +15736,8 @@
       "../src/interfaces/result.interface.ts",
       "../src/main.ts",
       "../src/middleware/logger.middleware.ts",
-      "../src/migrations/public/1608800516581-initdb.ts",
-      "../src/migrations/tenant/1608800577870-initdb.ts",
+      "../src/migrations/public/1609234904029-initDb.ts",
+      "../src/migrations/public/1609234915009-seed.ts",
       "../src/module/public/authentication/auth/auth.controller.ts",
       "../src/module/public/authentication/auth/auth.module.ts",
       "../src/module/public/authentication/auth/auth.service.ts",
@@ -15579,7 +15746,16 @@
       "../src/module/public/authentication/auth/jwt.strategy.ts",
       "../src/module/public/authentication/auth/permissions.decorator.ts",
       "../src/module/public/authentication/auth/permissions.guard.ts",
+      "../src/module/public/authentication/auth/tenant.guard.ts",
       "../src/module/public/authentication/authentication.module.ts",
+      "../src/module/public/authentication/organization/dto/create-organization.dto.ts",
+      "../src/module/public/authentication/organization/dto/filter-get-organization.dto.ts",
+      "../src/module/public/authentication/organization/dto/organization.dto.ts",
+      "../src/module/public/authentication/organization/dto/update-organization.dto.ts",
+      "../src/module/public/authentication/organization/organization.controller.ts",
+      "../src/module/public/authentication/organization/organization.module.ts",
+      "../src/module/public/authentication/organization/organization.repository.ts",
+      "../src/module/public/authentication/organization/organization.service.ts",
       "../src/module/public/authentication/permission/dto/create-permission.dto.ts",
       "../src/module/public/authentication/permission/dto/filter-get-permission.dto.ts",
       "../src/module/public/authentication/permission/dto/permission.dto.ts",
@@ -15832,7 +16008,6 @@
       "../src/module/tenant/warehouse-feat/warehouse/warehouse.repository.ts",
       "../src/module/tenant/warehouse-feat/warehouse/warehouse.service.ts",
       "../src/schema/create_schema.ts",
-      "../src/schema/schemalist.ts",
       "../src/search/search-body/product-search-body.interface.ts",
       "../src/search/search-result/product-search-result.ts",
       "../src/search/search-service/product.search.service.ts",

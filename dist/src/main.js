@@ -2,12 +2,18 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const core_1 = require("@nestjs/core");
+const cookieParser = require("cookie-parser");
+const session = require("express-session");
 const app_module_1 = require("./app.module");
-const create_schema_1 = require("./schema/create_schema");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.useGlobalPipes(new common_1.ValidationPipe());
-    await create_schema_1.create_schema();
+    app.use(session({
+        secret: 'my-secret',
+        resave: false,
+        saveUninitialized: false,
+    }));
+    app.use(cookieParser());
     await app.listen(3000);
 }
 bootstrap();

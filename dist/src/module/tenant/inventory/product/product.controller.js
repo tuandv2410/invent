@@ -26,6 +26,9 @@ const product_search_service_1 = require("../../../../search/search-service/prod
 const class_transformer_1 = require("class-transformer");
 const product_entity_1 = require("../../../../entities/tenant/inventory/product.entity");
 const product_search_body_interface_1 = require("../../../../search/search-body/product-search-body.interface");
+const tenant_guard_1 = require("../../../public/authentication/auth/tenant.guard");
+const permissions_guard_1 = require("../../../public/authentication/auth/permissions.guard");
+const passport_1 = require("@nestjs/passport");
 let ProductController = class ProductController {
     constructor(service, searchService) {
         this.service = service;
@@ -77,6 +80,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ProductController.prototype, "getWithRelations", null);
 __decorate([
+    common_1.UseGuards(passport_1.AuthGuard("jwt"), tenant_guard_1.TenantGuard),
     common_1.Post(),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),

@@ -1,6 +1,7 @@
 import { BaseEntity } from "typeorm";
 import { PermissionEntity } from "./permission.entity";
 import { RoleEntity } from "./role.entity";
+import { OrganizationEntity } from "./organization.entity";
 export declare class UserEntity extends BaseEntity {
     id: string;
     username: string;
@@ -10,5 +11,7 @@ export declare class UserEntity extends BaseEntity {
     salt: string;
     permissions: PermissionEntity[];
     roles: RoleEntity[];
+    adminOrg: OrganizationEntity;
+    org: OrganizationEntity;
     validatePassword(userPassword: string): Promise<boolean>;
 }

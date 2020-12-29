@@ -24,5 +24,5 @@ export class CreateUserDto {
 
   @IsNotEmpty()
   @IsString()
-  organization: string;
+  org: string;
 }

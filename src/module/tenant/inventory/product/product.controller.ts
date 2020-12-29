@@ -1,5 +1,5 @@
 import { DeleteResultInterface } from 'src/interfaces/delete-result.interface';
-import { Body, Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Query, UseGuards } from '@nestjs/common';
 import { Mapper } from '@nartc/automapper'
 import { v4 as uuid } from 'uuid'
 import { ProductService } from './product.service';
@@ -11,6 +11,9 @@ import { ProductSearchService } from 'src/search/search-service/product.search.s
 import { plainToClass } from 'class-transformer';
 import { ProductEntity } from 'src/entities/tenant/inventory/product.entity';
 import { ProductSearchBody } from 'src/search/search-body/product-search-body.interface';
+import { TenantGuard } from 'src/module/public/authentication/auth/tenant.guard';
+import { PermissionsGuard } from 'src/module/public/authentication/auth/permissions.guard';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('product')
 export class ProductController {
@@ -35,6 +38,7 @@ export class ProductController {
         return Mapper.mapArray(result,ProductDto);
     }
   
+    @UseGuards(AuthGuard("jwt"),TenantGuard)
     @Post()
     async create(
         @Body() userData: CreateProductDto

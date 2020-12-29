@@ -19,6 +19,7 @@ const login_user_dto_1 = require("./dto/login.user.dto");
 const auth_service_1 = require("./auth.service");
 const result_interface_1 = require("../../../../interfaces/result.interface");
 const change_password_dto_1 = require("./dto/change-password.dto");
+const permissions_decorator_1 = require("./permissions.decorator");
 let AuthController = class AuthController {
     constructor(authService) {
         this.authService = authService;
@@ -49,6 +50,7 @@ __decorate([
 ], AuthController.prototype, "changePassword", null);
 __decorate([
     common_1.UseGuards(passport_1.AuthGuard('jwt')),
+    permissions_decorator_1.Permissions('basic:test'),
     common_1.Get('whoami'),
     __param(0, common_1.Req()),
     __metadata("design:type", Function),

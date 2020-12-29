@@ -14,6 +14,7 @@ import { AddPermissionsDto } from './dto/add-permissions.dto';
 import { AddRoleDto } from './dto/add-role.dto';
 import { UserEntity } from 'src/entities/public/authentication/user.entity';
 import { plainToClass } from 'class-transformer';
+import { PermissionsGuard } from '../auth/permissions.guard';
 
 @Controller('user')
 

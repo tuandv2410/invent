@@ -1,16 +1,21 @@
-import { Global, Module, Scope } from '@nestjs/common';
+import { Global, HttpException, HttpStatus, Module, Scope } from '@nestjs/common';
 import { REQUEST } from '@nestjs/core';
-import { createConnection, getConnectionManager } from 'typeorm';
+import { createConnection, getConnection, getConnectionManager } from 'typeorm';
 import * as dotenv from 'dotenv';
+import { OrganizationEntity } from 'src/entities/public/authentication/organization.entity';
 dotenv.config();
 
 const connectionFactory = {
   provide: 'CONNECTION',
   scope: Scope.REQUEST,
   useFactory: async (req) => {
-    const teamId = req.headers['schema']
-    if (teamId) {
-      const connectionName = `${teamId}`;
+    const schema = req.headers['schema'];
+    const res = await getConnection().getRepository(OrganizationEntity).findOne({where:{name:schema}})
+    if(!res) {
+      throw new HttpException(`Schema does not exist`, HttpStatus.BAD_REQUEST);
+    }
+    if (schema) {
+      const connectionName = `${schema}`;
       const connectionManager = getConnectionManager();
 
       if (connectionManager.has(connectionName)) {

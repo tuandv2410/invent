@@ -19,40 +19,11 @@ let ProductSearchService = class ProductSearchService extends search_base_servic
     constructor(elasticsearch) {
         super(elasticsearch, {
             index: "product",
-            settings: {
-                analysis: {
-                    filter: {
-                        autocomplete_filter: {
-                            type: "edge_ngram",
-                            min_gram: 1,
-                            max_gram: 20
-                        }
-                    },
-                    analyzer: {
-                        autocomplete: {
-                            type: "custom",
-                            tokenizer: "standard",
-                            filter: [
-                                "lowercase",
-                                "autocomplete_filter"
-                            ]
-                        }
-                    }
-                }
-            },
+            settings: search_settings_config_1.searchSettings,
             properties: {
-                id: {
-                    type: 'text',
-                    analyzer: 'autocomplete',
-                    search_analyzer: 'standard',
-                },
-                name: {
-                    type: 'text',
-                    analyzer: 'autocomplete',
-                    search_analyzer: 'standard',
-                },
+                name: search_property_config_1.searchProperty
             },
-            fields: ['id', 'name']
+            fields: ['name']
         });
     }
 };

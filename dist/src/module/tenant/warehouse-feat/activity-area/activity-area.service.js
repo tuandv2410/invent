@@ -16,6 +16,7 @@ exports.ActivityAreaService = void 0;
 const common_1 = require("@nestjs/common");
 const base_service_1 = require("../../../../base/base.service");
 const activity_area_entity_1 = require("../../../../entities/tenant/warehouse-feat/activity-area.entity");
+const typeorm_1 = require("typeorm");
 const activity_area_repository_1 = require("./activity-area.repository");
 let ActivityAreaService = class ActivityAreaService extends base_service_1.BaseService {
     constructor(repository, connection) {
@@ -27,7 +28,8 @@ let ActivityAreaService = class ActivityAreaService extends base_service_1.BaseS
 ActivityAreaService = __decorate([
     common_1.Injectable(),
     __param(1, common_1.Inject('CONNECTION')),
-    __metadata("design:paramtypes", [activity_area_repository_1.ActivityAreaRepository, Object])
+    __metadata("design:paramtypes", [activity_area_repository_1.ActivityAreaRepository,
+        typeorm_1.Connection])
 ], ActivityAreaService);
 exports.ActivityAreaService = ActivityAreaService;
 //# sourceMappingURL=activity-area.service.js.map

@@ -1,1 +1,1 @@
-export declare function create_schema(): Promise<void>;
+export declare function create_schema(schemaName: string): Promise<void>;

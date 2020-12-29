@@ -15,6 +15,7 @@ const bcrypt = require("bcrypt");
 const permission_entity_1 = require("./permission.entity");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const role_entity_1 = require("./role.entity");
+const organization_entity_1 = require("./organization.entity");
 let UserEntity = class UserEntity extends typeorm_1.BaseEntity {
     async validatePassword(userPassword) {
         const hash = await bcrypt.hash(userPassword, this.salt);
@@ -51,7 +52,7 @@ __decorate([
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     typeorm_1.Column({
-        nullable: false,
+        nullable: true,
     }),
     __metadata("design:type", String)
 ], UserEntity.prototype, "organization", void 0);
@@ -71,6 +72,20 @@ __decorate([
     typeorm_1.ManyToMany(type => role_entity_1.RoleEntity, role => role.users),
     __metadata("design:type", Array)
 ], UserEntity.prototype, "roles", void 0);
+__decorate([
+    nestjsx_automapper_1.AutoMap(() => organization_entity_1.OrganizationEntity),
+    typeorm_1.OneToOne(type => organization_entity_1.OrganizationEntity, organization => organization.admin, {
+        cascade: true
+    }),
+    typeorm_1.JoinColumn(),
+    __metadata("design:type", organization_entity_1.OrganizationEntity)
+], UserEntity.prototype, "adminOrg", void 0);
+__decorate([
+    typeorm_1.ManyToOne(type => organization_entity_1.OrganizationEntity, organization => organization.users, {
+        cascade: true
+    }),
+    __metadata("design:type", organization_entity_1.OrganizationEntity)
+], UserEntity.prototype, "org", void 0);
 UserEntity = __decorate([
     typeorm_1.Entity('user')
 ], UserEntity);

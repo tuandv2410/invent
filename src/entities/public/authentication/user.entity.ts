@@ -1,8 +1,9 @@
-import { BaseEntity, Column, Entity, ManyToMany, PrimaryColumn } from "typeorm";
+import { BaseEntity, BeforeInsert, Column, Entity, JoinColumn, ManyToMany, ManyToOne, OneToOne, PrimaryColumn } from "typeorm";
 import * as bcrypt from 'bcrypt'
 import { PermissionEntity } from "./permission.entity";
 import { AutoMap } from "nestjsx-automapper";
 import { RoleEntity } from "./role.entity";
+import { OrganizationEntity } from "./organization.entity";
 
 @Entity('user')
 export class UserEntity extends BaseEntity {
@@ -31,7 +32,7 @@ export class UserEntity extends BaseEntity {
 
     @AutoMap()
     @Column({
-        nullable: false,
+        nullable: true,
     })
     organization: string;
 
@@ -51,9 +52,23 @@ export class UserEntity extends BaseEntity {
         type => RoleEntity, role => role.users
     )
     roles: RoleEntity[];
+
+    @AutoMap(()=>OrganizationEntity)
+    @OneToOne(type => OrganizationEntity, organization => organization.admin, {
+        cascade: true
+    })
+    @JoinColumn()
+    adminOrg: OrganizationEntity;
     
+    @ManyToOne(type => OrganizationEntity, organization => organization.users, {
+        cascade: true
+    })
+    org: OrganizationEntity;
+
     async validatePassword(userPassword: string): Promise<boolean> {
         const hash = await bcrypt.hash(userPassword, this.salt);
         return hash === this.password;
     }
+
+
 }

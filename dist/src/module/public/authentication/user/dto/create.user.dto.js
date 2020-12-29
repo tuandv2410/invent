@@ -38,6 +38,6 @@ __decorate([
     class_validator_1.IsNotEmpty(),
     class_validator_1.IsString(),
     __metadata("design:type", String)
-], CreateUserDto.prototype, "organization", void 0);
+], CreateUserDto.prototype, "org", void 0);
 exports.CreateUserDto = CreateUserDto;
 //# sourceMappingURL=create.user.dto.js.map

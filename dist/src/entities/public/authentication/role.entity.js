@@ -14,6 +14,7 @@ const nestjsx_automapper_1 = require("nestjsx-automapper");
 const permission_entity_1 = require("./permission.entity");
 const user_entity_1 = require("./user.entity");
 const typeorm_1 = require("typeorm");
+const organization_entity_1 = require("./organization.entity");
 let RoleEntity = class RoleEntity extends typeorm_1.BaseEntity {
 };
 __decorate([
@@ -48,6 +49,12 @@ __decorate([
     typeorm_1.JoinTable({ name: 'users-roles' }),
     __metadata("design:type", Array)
 ], RoleEntity.prototype, "users", void 0);
+__decorate([
+    typeorm_1.ManyToOne(type => organization_entity_1.OrganizationEntity, organization => organization.roles, {
+        cascade: true
+    }),
+    __metadata("design:type", organization_entity_1.OrganizationEntity)
+], RoleEntity.prototype, "organization", void 0);
 RoleEntity = __decorate([
     typeorm_1.Entity('role')
 ], RoleEntity);

@@ -1,7 +1,8 @@
 import { AutoMap } from "nestjsx-automapper";
 import { PermissionEntity } from "./permission.entity";
 import { UserEntity } from "./user.entity";
-import { BaseEntity, Column, Entity, JoinTable, ManyToMany, PrimaryColumn } from "typeorm";
+import { BaseEntity, Column, Entity, JoinTable, ManyToMany, ManyToOne, PrimaryColumn } from "typeorm";
+import { OrganizationEntity } from "./organization.entity";
 
 @Entity('role')
 export class RoleEntity extends BaseEntity {
@@ -35,5 +36,10 @@ export class RoleEntity extends BaseEntity {
     )
     @JoinTable({ name: 'users-roles'})
     users: UserEntity[]
+
+    @ManyToOne(type => OrganizationEntity, organization => organization.roles, {
+        cascade: true
+    })
+    organization: OrganizationEntity;
 
 }

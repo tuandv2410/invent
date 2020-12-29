@@ -1,21 +1,17 @@
 export declare const searchSettings: {
     analysis: {
-        analyzer: {
-            autocomplete_analyzer: {
-                tokenizer: string;
-                filter: string[];
-            };
-            autocomplete_search_analyzer: {
-                tokenizer: string;
-                filter: string[];
-            };
-        };
-        tokenizer: {
-            autocomplete: {
+        filter: {
+            autocomplete_filter: {
                 type: string;
                 min_gram: number;
                 max_gram: number;
-                token_chars: string[];
+            };
+        };
+        analyzer: {
+            autocomplete: {
+                type: string;
+                tokenizer: string;
+                filter: string[];
             };
         };
     };
