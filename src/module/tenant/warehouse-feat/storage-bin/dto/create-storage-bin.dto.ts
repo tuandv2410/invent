@@ -1,5 +1,5 @@
 import { IsNotEmpty, IsOptional } from 'class-validator';
-import { BinType } from 'src/module/tenant/warehouse-feat/enum/bin-type.enum';
+import { BinType } from 'src/enum/bin-type.enum';
 
 export class CreateStorageBinDto{
     @IsNotEmpty()

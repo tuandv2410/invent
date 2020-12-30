@@ -3,8 +3,8 @@ import { AutoMap } from "nestjsx-automapper";
 import { StorageBinEntity } from "../warehouse-feat/storage-bin.entity";
 import { HandlingUnitEntity } from "./handling-unit.entity";
 import { ProductEntity } from "./product.entity";
-import { ProductContractEntity } from "../business/product-contract.entity";
-import { ProductOrderEntity } from "../business/product-order.entity";
+import { ProductSourcingContractEntity } from "../sourcing/product-sourcing-contract.entity";
+import { ProductSourcingOrderEntity } from "../sourcing/product-sourcing-order.entity";
 
 @Entity('sku')
 export class SkuEntity extends BaseEntity {
@@ -51,12 +51,12 @@ export class SkuEntity extends BaseEntity {
     })
     product: ProductEntity;
 
-    @AutoMap(()=>ProductContractEntity)
-    @OneToMany(type => ProductContractEntity, productContract => productContract.sku)
-    productContracts: ProductContractEntity[];
+    @AutoMap(()=>ProductSourcingContractEntity)
+    @OneToMany(type => ProductSourcingContractEntity, productSourcingContract => productSourcingContract.sku)
+    productSourcingContracts: ProductSourcingContractEntity[];
 
 
-    @AutoMap(()=>ProductOrderEntity)
-    @OneToMany(type => ProductOrderEntity, productOrder => productOrder.sku)
-    productOrders: ProductOrderEntity[];
+    @AutoMap(()=>ProductSourcingOrderEntity)
+    @OneToMany(type => ProductSourcingOrderEntity, productSourcingOrder => productSourcingOrder.sku)
+    productSourcingOrders: ProductSourcingOrderEntity[];
 }

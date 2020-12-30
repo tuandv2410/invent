@@ -1,7 +1,7 @@
 import { AutoMap } from 'nestjsx-automapper';
 import { mapFrom, Mapper } from '@nartc/automapper'
-import { HuType } from '../../enum/hu-type.enum';
-import { HuStatus } from '../../enum/hu-status.enum';
+import { HuType } from '../../../../../enum/hu-type.enum';
+import { HuStatus } from '../../../../../enum/hu-status.enum';
 import { HandlingUnitEntity } from 'src/entities/tenant/inventory/handling-unit.entity';
 import { IsNotEmpty, IsOptional } from 'class-validator';
 

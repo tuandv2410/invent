@@ -1,8 +1,8 @@
 import { AutoMap } from 'nestjsx-automapper';
 import { mapFrom, Mapper } from '@nartc/automapper'
 import { WarehouseEntity } from 'src/entities/tenant/warehouse-feat/warehouse.entity';
-import { StoType } from 'src/module/tenant/warehouse-feat/enum/sto-type.enum';
-import { ActArea } from 'src/module/tenant/warehouse-feat/enum/activity-area.enum';
+import { StoType } from 'src/enum/sto-type.enum';
+import { ActArea } from 'src/enum/activity-area.enum';
 import { IsNotEmpty, IsOptional } from 'class-validator';
 
 class StorageType {

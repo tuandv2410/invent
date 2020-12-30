@@ -1,7 +1,7 @@
 import { AutoMap } from 'nestjsx-automapper';
 import { mapFrom, Mapper } from '@nartc/automapper'
 import { StorageSectionEntity } from 'src/entities/tenant/warehouse-feat/storage-section.entity';
-import { BinType } from 'src/module/tenant/warehouse-feat/enum/bin-type.enum';
+import { BinType } from 'src/enum/bin-type.enum';
 import { IsNotEmpty } from 'class-validator';
 
 class StorageBin {

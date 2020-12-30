@@ -3,6 +3,7 @@ import { REQUEST } from '@nestjs/core';
 import { createConnection, getConnection, getConnectionManager } from 'typeorm';
 import * as dotenv from 'dotenv';
 import { OrganizationEntity } from 'src/entities/public/authentication/organization.entity';
+
 dotenv.config();
 
 const connectionFactory = {
@@ -44,6 +45,6 @@ const connectionFactory = {
 @Global()
 @Module({
   providers: [connectionFactory],
-  exports: ['CONNECTION']
+  exports: ['CONNECTION'],
 })
 export class TenantModule { }

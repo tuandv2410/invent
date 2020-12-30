@@ -1,7 +1,7 @@
 import { BaseEntity, Column, Entity, ManyToOne, OneToMany, PrimaryColumn } from "typeorm";
 import { AutoMap } from "nestjsx-automapper";
-import { HuType } from "src/module/tenant/inventory/enum/hu-type.enum";
-import { HuStatus } from "src/module/tenant/inventory/enum/hu-status.enum";
+import { HuType } from "src/enum/hu-type.enum";
+import { HuStatus } from "src/enum/hu-status.enum";
 import { SkuEntity } from "./sku.entity";
 import { ProductEntity } from "./product.entity";
 import { PackageSpecificationEntity } from "./package-specification.entity";

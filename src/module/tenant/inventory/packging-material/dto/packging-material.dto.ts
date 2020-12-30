@@ -1,11 +1,11 @@
 import { AutoMap } from 'nestjsx-automapper';
 import { mapFrom, Mapper } from '@nartc/automapper'
-import { PmCategory } from 'src/module/tenant/inventory/enum/pm-category.enum';
-import { PmType } from 'src/module/tenant/inventory/enum/pm-type.enum';
+import { PmCategory } from 'src/enum/pm-category.enum';
+import { PmType } from 'src/enum/pm-type.enum';
 import { PackgingMaterialEntity } from 'src/entities/tenant/inventory/packging-material.entity';
 import { IsNotEmpty, IsOptional } from 'class-validator';
-import { HuType } from 'src/module/tenant/inventory/enum/hu-type.enum';
-import { HuStatus } from 'src/module/tenant/inventory/enum/hu-status.enum';
+import { HuType } from 'src/enum/hu-type.enum';
+import { HuStatus } from 'src/enum/hu-status.enum';
 
 class HandlingUnit {
   id: string;

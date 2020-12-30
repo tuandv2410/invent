@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsOptional } from 'class-validator';
-import { HuStatus } from '../../enum/hu-status.enum';
-import { HuType } from '../../enum/hu-type.enum';
+import { HuStatus } from '../../../../../enum/hu-status.enum';
+import { HuType } from '../../../../../enum/hu-type.enum';
 
 export class CreateHandlingUnitDto{
     @IsNotEmpty()

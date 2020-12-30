@@ -1,5 +1,5 @@
 import { IsOptional } from 'class-validator';
-import { StoType } from 'src/module/tenant/warehouse-feat/enum/sto-type.enum';
+import { StoType } from 'src/enum/sto-type.enum';
 
 export class UpdateStorageTypeDto{
 

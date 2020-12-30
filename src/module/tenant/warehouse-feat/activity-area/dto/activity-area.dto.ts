@@ -1,8 +1,8 @@
 import { AutoMap } from 'nestjsx-automapper';
 import { mapFrom, Mapper } from '@nartc/automapper'
-import { ActArea } from 'src/module/tenant/warehouse-feat/enum/activity-area.enum';
+import { ActArea } from 'src/enum/activity-area.enum';
 import { ActivityAreaEntity } from 'src/entities/tenant/warehouse-feat/activity-area.entity';
-import { BinType } from 'src/module/tenant/warehouse-feat/enum/bin-type.enum';
+import { BinType } from 'src/enum/bin-type.enum';
 import { IsNotEmpty } from 'class-validator';
 
 

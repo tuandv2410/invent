@@ -1,6 +1,6 @@
 import { IsOptional } from 'class-validator';
-import { PmCategory } from 'src/module/tenant/inventory/enum/pm-category.enum';
-import { PmType } from 'src/module/tenant/inventory/enum/pm-type.enum';
+import { PmCategory } from 'src/enum/pm-category.enum';
+import { PmType } from 'src/enum/pm-type.enum';
 
 export class FilterGetPackgingMaterialDto {
     @IsOptional()
