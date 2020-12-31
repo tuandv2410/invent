@@ -5,14 +5,29 @@ import { BpFunction } from 'src/enum/bp-function.enum';
 import { BpStatus } from 'src/enum/bp-status.enum';
 import { BusinessPartnerEntity } from 'src/entities/tenant/inventory/business-partner.entity';
 import { IsNotEmpty, IsOptional } from 'class-validator';
+import { SellingBusinessContractEntity } from 'src/entities/tenant/selling/selling-business-contract.entity';
+import { SourcingBusinessContractEntity } from 'src/entities/tenant/sourcing/sourcing-business-contract.entity';
 
-class BusinessContract {
+class SellingBusinessContract {
+  @AutoMap()
+  id: string;
+
+  @AutoMap()
+  createDate: string;
+
+  @AutoMap()
+  moneyValue: number;
+}
+Mapper.createMap(SellingBusinessContractEntity, SellingBusinessContract)
+
+class SourcingBusinessContract {
   id: string;
 
   createDate: string;
 
   moneyValue: number;
 }
+Mapper.createMap(SourcingBusinessContractEntity, SourcingBusinessContract)
 
 export class BusinessPartnerDto {
   @AutoMap()
@@ -55,14 +70,14 @@ export class BusinessPartnerDto {
   @IsNotEmpty()
   status: BpStatus;
 
-  @AutoMap(()=> BusinessContract)
+  @AutoMap(()=> SellingBusinessContract)
   @IsOptional()
-  businessContracts: BusinessContract[];
+  sellingBusinessContracts: SellingBusinessContract[];
+
+  @AutoMap(()=> SourcingBusinessContract)
+  @IsOptional()
+  sourcingBusinessContracts: SourcingBusinessContract[];
 
 }
 
 Mapper.createMap(BusinessPartnerEntity, BusinessPartnerDto)
-.forMember(
-  d=>d.businessContracts,
-  mapFrom(s=>s.businessContracts)
-)

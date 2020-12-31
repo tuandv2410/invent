@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InventoryModule = void 0;
 const common_1 = require("@nestjs/common");
+const business_partner_module_1 = require("./business-partner/business-partner.module");
 const handling_unit_module_1 = require("./handling-unit/handling-unit.module");
 const package_specification_module_1 = require("./package-specification/package-specification.module");
 const packging_material_module_1 = require("./packging-material/packging-material.module");
@@ -17,7 +18,7 @@ let InventoryModule = class InventoryModule {
 };
 InventoryModule = __decorate([
     common_1.Module({
-        imports: [handling_unit_module_1.HandlingUnitModule, package_specification_module_1.PackageSpecificationModule, packging_material_module_1.PackgingMaterialModule, product_module_1.ProductModule, sku_module_1.SkuModule]
+        imports: [handling_unit_module_1.HandlingUnitModule, package_specification_module_1.PackageSpecificationModule, packging_material_module_1.PackgingMaterialModule, product_module_1.ProductModule, sku_module_1.SkuModule, business_partner_module_1.BusinessPartnerModule]
     })
 ], InventoryModule);
 exports.InventoryModule = InventoryModule;

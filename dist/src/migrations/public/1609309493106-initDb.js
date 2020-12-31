@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.initDb1609234904029 = void 0;
-class initDb1609234904029 {
+exports.initDb1609309493106 = void 0;
+class initDb1609309493106 {
     constructor() {
-        this.name = 'initDb1609234904029';
+        this.name = 'initDb1609309493106';
     }
     async up(queryRunner) {
         await queryRunner.query(`CREATE TABLE "user" ("id" character varying NOT NULL, "username" character varying NOT NULL, "password" character varying NOT NULL, "email" character varying NOT NULL, "organization" character varying, "salt" character varying NOT NULL, "adminOrgId" character varying, "orgId" character varying, CONSTRAINT "UQ_78a916df40e02a9deb1c4b75edb" UNIQUE ("username"), CONSTRAINT "UQ_e12875dfb3b1d92d7d7c5377e22" UNIQUE ("email"), CONSTRAINT "REL_a0efa7577003932af2ed55c0cc" UNIQUE ("adminOrgId"), CONSTRAINT "PK_cace4a159ff9f2512dd42373760" PRIMARY KEY ("id"))`);
@@ -54,5 +54,5 @@ class initDb1609234904029 {
         await queryRunner.query(`DROP TABLE "user"`);
     }
 }
-exports.initDb1609234904029 = initDb1609234904029;
-//# sourceMappingURL=1609234904029-initDb.js.map
+exports.initDb1609309493106 = initDb1609309493106;
+//# sourceMappingURL=1609309493106-initDb.js.map

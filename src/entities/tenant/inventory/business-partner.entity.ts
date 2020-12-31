@@ -4,6 +4,7 @@ import { BpCategory } from "src/enum/bp-category.enum";
 import { BpFunction } from "src/enum/bp-function.enum";
 import { BpStatus } from "src/enum/bp-status.enum";
 import { SourcingBusinessContractEntity } from "../sourcing/sourcing-business-contract.entity";
+import { SellingBusinessContractEntity } from "../selling/selling-business-contract.entity";
 
 @Entity('business-partner')
 export class BusinessPartnerEntity extends BaseEntity {
@@ -70,4 +71,8 @@ export class BusinessPartnerEntity extends BaseEntity {
     @OneToMany(type => SourcingBusinessContractEntity, sourcingBusinessContract => sourcingBusinessContract.businessPartner)
     sourcingBusinessContracts: SourcingBusinessContractEntity[];
 
+
+    @AutoMap(()=>SellingBusinessContractEntity)
+    @OneToMany(type => SellingBusinessContractEntity, sellingBusinessContract => sellingBusinessContract.businessPartner)
+    sellingBusinessContracts: SellingBusinessContractEntity[];
 }

@@ -4326,9 +4326,9 @@
         "signature": "39a1eba651fe293106fd6a877d5400c4db6256c2248996483312fcb4e0994e31",
         "affectsGlobalScope": false
       },
-      "../src/entities/tenant/business/business-partner.entity.ts": {
-        "version": "cea36f8ebb133570cfcd2bcf7958bd80601d0e8625eed71cdd6b8eba295d126d",
-        "signature": "035413e5192f5b83825b589b55f40f487205b4b2654cef8c06e4ec67e6420158",
+      "../src/entities/tenant/inventory/business-partner.entity.ts": {
+        "version": "2f3fb6dd500a646892eafe906d056ee141590d3684f3f25268af6a5f1b3b65c5",
+        "signature": "991f7568831ee082d6cb169b3146efe17beb50fcda237f9d60dc5f5a04aeb774",
         "affectsGlobalScope": false
       },
       "../src/module/tenant/business/enum/adding-service.enum.ts": {
@@ -4372,8 +4372,8 @@
         "affectsGlobalScope": false
       },
       "../src/entities/tenant/business/business-contract.entity.ts": {
-        "version": "f003c71158440ee217ec2a935721ea08b81d4dea65863c991f6b90b7f93a459f",
-        "signature": "4c5444cec9c50c89c79bcc2c3c85e39d928c2215481a1f76b8570494fbceaa2e",
+        "version": "a84c2dbe2b2b967e3f791b5946867b837a27b8c2d4a180b307e0ce845798cda0",
+        "signature": "0e07ca0dd4f56d8d343e7e705faee1f1c11c0ef631240d65963f2096052d7b48",
         "affectsGlobalScope": false
       },
       "../src/entities/tenant/business/product-contract.entity.ts": {
@@ -4501,47 +4501,47 @@
         "signature": "bc1b40c250edc29c30c8d4961cf132832859fc64d98a0ebb5164276ef9d5d880",
         "affectsGlobalScope": false
       },
-      "../src/module/tenant/business/business-partner/business-partner.repository.ts": {
-        "version": "2d63dee3bf2d213bc91b0c4b0f3e0b3f40e1e790c2b2d49c035346318b3967e6",
-        "signature": "78c922fe991045488dbc0947f0cacd482aefcdaa5f42392c529459127bc2a331",
+      "../src/module/tenant/inventory/business-partner/business-partner.repository.ts": {
+        "version": "d599937548cb2d1b1b8677458a091d203ea90c4a185a5e205d4fb6d7e7f0da3a",
+        "signature": "2a5484d758326dc35d036d1e69d947c7ef44648f17392dbde017161709d6fe04",
         "affectsGlobalScope": false
       },
       "../src/module/tenant/business/business-contract/business-contract.module.ts": {
-        "version": "a337c46975a001c12d439922865745da08bd2404d01930ab3556da71d51503de",
+        "version": "b933aedb21318bd7c5aa24d9d1a2d78283e3310dd26eee27186b621640c96163",
         "signature": "612a886899ab42f473109b4100878d3158608dbbc6a447945e188b6c4873f14c",
         "affectsGlobalScope": false
       },
-      "../src/module/tenant/business/business-partner/business-partner.service.ts": {
-        "version": "21afa1dc051195b0c8a68e6f67d8ece1041f605bb7ef4b63909519d47dd581d2",
-        "signature": "041ae4de7d92cb1d8fc46c0699b541f4bc48975d8ac52861ccd5efbbe0b52378",
+      "../src/module/tenant/inventory/business-partner/business-partner.service.ts": {
+        "version": "8f8f10034c8cc7f38216a489e339434296868de76337dcdb5c7d96e05155acdd",
+        "signature": "7d035bb601ab29896af1a755c44a46fc1f2dde1f98310b4f403af6d933a2d023",
         "affectsGlobalScope": false
       },
-      "../src/module/tenant/business/business-partner/dto/filter-get-business-partner.dto.ts": {
+      "../src/module/tenant/inventory/business-partner/dto/filter-get-business-partner.dto.ts": {
         "version": "71f218ab9622025501de78a6f1c56552a302d1637daf903a72a9d6e56f0fc3fc",
         "signature": "3bc3b66b11b6786bc10dd80299dbdc0e2ae3ca59bee0fbf2a11d221c0c1f76fa",
         "affectsGlobalScope": false
       },
-      "../src/module/tenant/business/business-partner/dto/business-partner.dto.ts": {
-        "version": "e7a5e256f2a92b80703aa9a49753c129fc851f6267e0e4f3ee1f6087303bfe34",
+      "../src/module/tenant/inventory/business-partner/dto/business-partner.dto.ts": {
+        "version": "362d024580741fb2c21e4d475a8cda42feb07a9e6f1427ef477b55659a064059",
         "signature": "491fef0cf6a27dda61c546d9766de6aab67d00eede6046ac85bd253e1458daa3",
         "affectsGlobalScope": false
       },
-      "../src/module/tenant/business/business-partner/dto/create-business-partner.dto.ts": {
+      "../src/module/tenant/inventory/business-partner/dto/create-business-partner.dto.ts": {
         "version": "a6e31e54d4a273d3d97ae3ac9b49bdb4f31da8bf4b6d66c2598f4fc19c34ccf0",
         "signature": "183f16be66173e15eea13a3ba1da9bcde859f79b50e0ac715aa5f9bf7a2deb24",
         "affectsGlobalScope": false
       },
-      "../src/module/tenant/business/business-partner/dto/update-business-partner.dto.ts": {
+      "../src/module/tenant/inventory/business-partner/dto/update-business-partner.dto.ts": {
         "version": "827164ab5ddf6febd60bff33758c2fa3af59a2b3ff801c944276323e20381023",
         "signature": "e39fffe00b5a7f62d139d57425844763ee38a2a590d8402701ada08b99aff4fb",
         "affectsGlobalScope": false
       },
-      "../src/module/tenant/business/business-partner/business-partner.controller.ts": {
+      "../src/module/tenant/inventory/business-partner/business-partner.controller.ts": {
         "version": "c968e6c0078cf8d40dee898269117e01259a470a15a517f4ed115a91917542f2",
         "signature": "23b3d8e7f655dfb418c9df035ed9be9742782b6609c5c1c040c68fd85960384b",
         "affectsGlobalScope": false
       },
-      "../src/module/tenant/business/business-partner/business-partner.module.ts": {
+      "../src/module/tenant/inventory/business-partner/business-partner.module.ts": {
         "version": "dd173e95a9707e058462df315766ca865b3269bdebc2968a5772e29b03683b64",
         "signature": "07b01eeff1b52f2404e124459a38a92f67f1b00b1973d4b9d32500e9f8a54311",
         "affectsGlobalScope": false
@@ -4697,12 +4697,12 @@
         "affectsGlobalScope": false
       },
       "../src/module/tenant/business/order/order.controller.ts": {
-        "version": "5e5c3a2365ef5f3597d3831e5726757100b6e1ffff3ab6a11fe4c09ea8c32903",
-        "signature": "a6770c1dbdda2ab26774fe509c95fac8361d79a04cf9d6ff95feba63972eaa16",
+        "version": "c4808abdc1f8b2bde3a1fcb1ecd215122c860dafd0860331c46f0911f6e341c1",
+        "signature": "90baeea4c109decf1ffdad46b8dc6d6d2aa5f9e27dab2ed8a38c65e34b0ede7f",
         "affectsGlobalScope": false
       },
       "../src/module/tenant/business/order/order.module.ts": {
-        "version": "e44d20cc98b171bb4ea799b8b08b3fd994ea29bf62056afc704155345c13d7e3",
+        "version": "ac7ebef2cf2698ae42bf4d0e65d19959d632afbbef0cb711d6216bd7b47e00c1",
         "signature": "9b2b198dbfcb909c95538f26f07ecfed022ca48dd8f81d8acacb0ba38aecc202",
         "affectsGlobalScope": false
       },
@@ -4747,7 +4747,7 @@
         "affectsGlobalScope": false
       },
       "../src/module/tenant/business/business.module.ts": {
-        "version": "4926d8ec23e6c4e277cd8673239dce6156f566b78c7b26a113e23289e976b13b",
+        "version": "607ecbd86df09c4e67c84efa183b6947159b223ab3a08d08d80436293f65c690",
         "signature": "4c8b7028d7746232907f210471cfc9907821a99464da7163cd3d04aafb73f597",
         "affectsGlobalScope": false
       },
@@ -5252,73 +5252,8 @@
         "affectsGlobalScope": false
       },
       "../src/module/tenant/inventory/inventory.module.ts": {
-        "version": "930d9bcdec1da0c4fcaaf4f3ef91f72d5beb1e90bf67949e8dd30e45adec3e8d",
+        "version": "025c7589a309371a052ae9c75932e5d862d08ee21ba692d4b2842c1d81d59684",
         "signature": "6d2936ccd7d11bed091f6823dccea4d1f2930706a8bcae839c908594d914a3f8",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.controller.ts": {
-        "version": "dabccd7cef320e29c4d09a4b065524e70e37023a415452425e3e7bec7219bd94",
-        "signature": "15b3edcf93d472306681ac96c11d3cabd22dcd494977f4bf6d51db1979eb9819",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.service.ts": {
-        "version": "5372ef23f32f8c9d89aa91da68aaaf97d1644dab254bc3da8ad5682bd223f29b",
-        "signature": "84fdac2dac2f89536137abd0fbb35bc8d9e31eb20f693e4088695757c02c92aa",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.module.ts": {
-        "version": "95dd2ebc13787711eb89406118a06dc65492e5ca04d441f436c0c3eb2367d0b6",
-        "signature": "3dd7b9c18bd7bb4f456698aecf5ba27e9c33255e9a977de05f11f8f34d6870f0",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.controller.ts": {
-        "version": "3e577423d39e04e0880f5cc8d52d39f5da96bd1c349ff269aca41c024ab216ab",
-        "signature": "2e1e5f3218575753a55d191c35ab260721a9322faaa53932e1ca18648456da13",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.service.ts": {
-        "version": "9142fc9993c215d8134b2f298480ccc28e624a54c5070fa3fad673f083bd0812",
-        "signature": "0c80448321b4196ab985ea9561ba508eb82375c35bf4cde4dd4320e83094bb4d",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.module.ts": {
-        "version": "4a6d32608dd496e8894df6f3aee736d10d42dad97d8144d2eea7a8cbf8d91c66",
-        "signature": "97f7857a0317b35721f767955cad5e4cf0c144f3a5aa27fa22c5e758ee8198c9",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.controller.ts": {
-        "version": "a2d459e6c2509f6a1b222485a4ca56b238d06edbc3fb3222a09991eaa899b54f",
-        "signature": "71c21d3176a91190f7d804e3b2c5050ee437a0f903e12c904d22fd1014c0874e",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.service.ts": {
-        "version": "3b5d49ada05d699d53e8ae851041991a5a2a30cd1f1dce9f5fa96eb792f81a16",
-        "signature": "b17abf33107eb88ec267eb0c0c10f724b5e54af9c621ddb7f555c590101e1884",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.module.ts": {
-        "version": "2cf5726f215939ec7008cfbd9c978e1832c335cab5f0e30ea51415fd44a8f8a1",
-        "signature": "b5ba8b2f0a71b0b37a690f3c7ac83dbb8395c42e0934c331b769ac59532ec0e9",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.controller.ts": {
-        "version": "89ef9e6d13ae50f936cb1e9e67646fb091c055b83969eb6952121c53a2e6e9de",
-        "signature": "a73f276465283e11b5bf14b22519ea157527d37b6309389a28d0bad5438a6ea3",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.service.ts": {
-        "version": "8adf01114b6b766186b77fd2f8af3cb5438e231560709c10343e079ca64f1352",
-        "signature": "08dd17ab9ff0423fbbf7ef5270d8f4c2cf12d3fcdee6d56eb31d6de23fa7bb38",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.module.ts": {
-        "version": "69dac5ed9a22e73767989c038663adeeee8f337a697aac905505cf40c2b1b277",
-        "signature": "6d2936ccd7d11bed091f6823dccea4d1f2930706a8bcae839c908594d914a3f8",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/selling-and-sourcing.module.ts": {
-        "version": "dc0b69c111a813eec45143c89897840a39556e9db485e0c17f21469b34563f1d",
-        "signature": "8a1ca5adc8d4e3308f76cc64270ba6d5e7ce65c482004e835360fc7b3e2a8734",
         "affectsGlobalScope": false
       },
       "../src/middleware/logger.middleware.ts": {
@@ -5416,66 +5351,6 @@
         "signature": "2c33785b2bc9d19870f2ce51188d179b3a19793a0d546fb42f865c6a1fda5912",
         "affectsGlobalScope": false
       },
-      "../src/module/tenant/cash-flow/cogs/cogs.controller.ts": {
-        "version": "4bf3f1dcf8e64ad84f68232b908d0ea59437acfb8703d85121d993694ac9358c",
-        "signature": "07c5a44574043c36390a0b917ba28289101dc89e5c2be084b86f69ba3f7395a8",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/cogs/cogs.service.ts": {
-        "version": "e14b94a195a1d7f0ad876ce56f7d29e47151c4ded50d4468ff59585d9cf41227",
-        "signature": "6335f313efe0a580084377b18ab24d003710e57529a4b85a097ef9ab736224a3",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/cogs/cogs.module.ts": {
-        "version": "f555afef27a9594402cb8e1d067cbf49be991f2db6de0d171f49aa3e96da7715",
-        "signature": "c0e3078b5739ac0bb595d04f29178f2d2d2fefb700644010d446d43917f9793b",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/commission/commission.controller.ts": {
-        "version": "2518f987a15fe260b435439e72a3f0c5cda39922756b7105feaa24babdf0cf89",
-        "signature": "8051763d76a82dbcf4a1b5eaf0d87918e89e65c27066af30c6a606f168f85f03",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/commission/commission.service.ts": {
-        "version": "76eea8eba034c35f7f240baa78e4c35abaed61dcd12eb21c8150999a2aea80cc",
-        "signature": "02c2b781a4811368f3ba5ae10150173a9e85f5e09436a5270f5255e9627674e8",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/commission/commission.module.ts": {
-        "version": "38ef3a680377429bc303f457c390328bd9186a56ac05cbf8295533dfac60bca0",
-        "signature": "dcadd570862e65856eeeb93aa0868a489ef0204e490ea0fced8c7b60b2771503",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/profit/profit.controller.ts": {
-        "version": "f10fb6ede28ef335edaaa76a4377c922fc8636e16d1acbc8c377120d505d7d1e",
-        "signature": "f4c6b58750c511c0f1567a158b3a413c96d6091c1a8aa38b6d3f21eb933ae4bf",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/profit/profit.service.ts": {
-        "version": "e57ab44a63121495903eea9c7412c9e23ef92d2844eda5c88dc73ec78aea6ec8",
-        "signature": "7b037a4ed1ec27f1397a1e96224a75ffbdd87e6ea45b5fb258ba13b0d02afe73",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/profit/profit.module.ts": {
-        "version": "0805d2d69382eeb27063510491a24113b98a2f8b21c4eb5f157c73eef5be6118",
-        "signature": "e138f92c202d83babaa7e9a13b27fb772fdbe4b3a360b128579a17b4713453f6",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/revenue/revenue.controller.ts": {
-        "version": "7525d153bc56fd50f05bbf2bb7663e4de1d9d7df764b4ee06a2409e04fa73ee5",
-        "signature": "70d60676095b0e26e5290229eb8af854d0a91d5a1c1b82b3e726a166b4b0051a",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/revenue/revenue.service.ts": {
-        "version": "1a9870953d893586551238da2b96af7c8043fcb6a2f8daeace44040a66056571",
-        "signature": "736d5bcba520eff3f17a0bd7abd48e0f80592275f64bee98a796960b0c1f5661",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/revenue/revenue.module.ts": {
-        "version": "90b1e09d8d04dd305222ad4390f7cbe4d50789c3c42ded90b32f55ee9ceeaafa",
-        "signature": "f5e4630b3aa0aede77512c348f6b09bcc36283939bc05868a1ccd50b84bb6462",
-        "affectsGlobalScope": false
-      },
       "../src/module/tenant/cash-flow/other-income/other-income.controller.ts": {
         "version": "b7f420e97d54f5f342cfe3712ac97582848d764cec39b95645871302b56f609b",
         "signature": "0701d99234edfc50710703e64c5691f6e04aa324f369e228d2a20580d4691604",
@@ -5492,7 +5367,7 @@
         "affectsGlobalScope": false
       },
       "../src/module/tenant/cash-flow/cash-flow.module.ts": {
-        "version": "ad688a0858594affb46c26b1db293c9a7b6987b906d4cd2ee252e15b12576ce7",
+        "version": "79619694c2a1f1cb1323bfc8a4e633aeb55f695ff682870bb0f21829f2336db3",
         "signature": "9d7511f9a4888fa4ec8c7ae23259de11b3a68bf426cea375cffc579690b32fd7",
         "affectsGlobalScope": false
       },
@@ -5502,7 +5377,7 @@
         "affectsGlobalScope": false
       },
       "../src/app.module.ts": {
-        "version": "aab36d751a7e6fac1d1295544a64e41d449aa0fbb3e5ef0e9a23e1a411df1914",
+        "version": "f5867a641e66e46d8e57ef6e660859662ceec42bd2ea3115516e43bfef01d063",
         "signature": "9e55d69c2879e4c1f6039d177c0daf79a72435ac51ec7d4f46fc72e8b0c503d6",
         "affectsGlobalScope": false
       },
@@ -5606,14 +5481,19 @@
         "signature": "9e75512a3c0d6cbd347904b6c939d6eb1b7b1aeeae5cd1a4fddc949eaac203a5",
         "affectsGlobalScope": false
       },
-      "../src/migrations/public/1609234904029-initDb.ts": {
-        "version": "74ec22d4410b2a920a95876d89a5196056cb1d0da65e2eec710eaf99e5c81d7f",
-        "signature": "e0a817c342faa763e4144eec8df107f0f5117e2340bbf67646a974a42166b672",
+      "../src/migrations/public/1609309493106-initDb.ts": {
+        "version": "3ce055efdf941dd7ce06a6f018807b5db28241ee3e7ccc398ea085b28ddca0ad",
+        "signature": "3427f0752517f7cc81b589ab0f802222d79fc41827518469b2119b8af8a029e2",
         "affectsGlobalScope": false
       },
-      "../src/migrations/public/1609234915009-seed.ts": {
-        "version": "68d66150f403a18d40bd187b4d1fdac5c7670b8badc4aad9f33ec47dc3321763",
-        "signature": "5585818a9c300ca167cb5e8a7d340a58f47da9641b3400dd7d08fae884885b10",
+      "../src/migrations/public/1609309523043-seed.ts": {
+        "version": "27ea983c0007ae0d670b2e503b85b350868d965dbe139af4e8e674e4469efa36",
+        "signature": "fc915c48907c3745b180bfe7d413b5c18264f589503536d77937f143e0bd79dd",
+        "affectsGlobalScope": false
+      },
+      "../src/migrations/tenant/1609309575122-initDb.ts": {
+        "version": "b6d93829f8b11063b1aa108f70d935ac7a6e5fced148bef8e2258db995e8f358",
+        "signature": "dc2fc3d44b6d305089cef6c561f6199b4cd716e3d05d028a7c99f5303fa82371",
         "affectsGlobalScope": false
       },
       "../src/module/public/authentication/user/dto/check-permission.dto.ts": {
@@ -5622,16 +5502,6 @@
         "affectsGlobalScope": false
       },
       "../src/module/tenant/cash-flow/adm-expense/adm-expense.repository.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/cogs/cogs.repository.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/commission/commission.repository.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
@@ -5656,42 +5526,12 @@
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
       },
-      "../src/module/tenant/cash-flow/profit/profit.repository.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/cash-flow/revenue/revenue.repository.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
       "../src/module/tenant/cash-flow/selling-expense/selling-expense.repository.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
       },
       "../src/module/tenant/cash-flow/tax-expense/tax-expense.repository.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.repository.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.repository.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.repository.ts": {
-        "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "affectsGlobalScope": false
-      },
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.repository.ts": {
         "version": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "signature": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "affectsGlobalScope": false
@@ -9216,7 +9056,6 @@
         "../src/module/tenant/business/business.module.ts",
         "../src/module/tenant/cash-flow/cash-flow.module.ts",
         "../src/module/tenant/inventory/inventory.module.ts",
-        "../src/module/tenant/selling-and-sourcing/selling-and-sourcing.module.ts",
         "../src/module/tenant/tenant.module.ts",
         "../src/module/tenant/warehouse-feat/warehouse-feat.module.ts",
         "../src/search/search.module.ts"
@@ -9287,17 +9126,9 @@
       "../src/entities/tenant/business/business-contract.entity.ts": [
         "../node_modules/nestjsx-automapper/dist/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/entities/tenant/business/business-partner.entity.ts",
         "../src/entities/tenant/business/order.entity.ts",
-        "../src/entities/tenant/business/product-contract.entity.ts"
-      ],
-      "../src/entities/tenant/business/business-partner.entity.ts": [
-        "../node_modules/nestjsx-automapper/dist/index.d.ts",
-        "../node_modules/typeorm/index.d.ts",
-        "../src/entities/tenant/business/business-contract.entity.ts",
-        "../src/module/tenant/business/enum/bp-category.enum.ts",
-        "../src/module/tenant/business/enum/bp-function.enum.ts",
-        "../src/module/tenant/business/enum/bp-status.enum.ts"
+        "../src/entities/tenant/business/product-contract.entity.ts",
+        "../src/entities/tenant/inventory/business-partner.entity.ts"
       ],
       "../src/entities/tenant/business/order.entity.ts": [
         "../node_modules/nestjsx-automapper/dist/index.d.ts",
@@ -9331,6 +9162,14 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/entities/tenant/business/order.entity.ts",
         "../src/module/tenant/business/enum/shipment-status.enum.ts"
+      ],
+      "../src/entities/tenant/inventory/business-partner.entity.ts": [
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/tenant/business/business-contract.entity.ts",
+        "../src/module/tenant/business/enum/bp-category.enum.ts",
+        "../src/module/tenant/business/enum/bp-function.enum.ts",
+        "../src/module/tenant/business/enum/bp-status.enum.ts"
       ],
       "../src/entities/tenant/inventory/handling-unit.entity.ts": [
         "../node_modules/nestjsx-automapper/dist/index.d.ts",
@@ -9424,12 +9263,16 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/express/index.d.ts"
       ],
-      "../src/migrations/public/1609234904029-initDb.ts": [
+      "../src/migrations/public/1609309493106-initDb.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
-      "../src/migrations/public/1609234915009-seed.ts": [
+      "../src/migrations/public/1609309523043-seed.ts": [
         "../node_modules/@types/bcrypt/index.d.ts",
         "../node_modules/@types/uuid/index.d.ts",
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/migrations/tenant/1609309575122-initDb.ts": [
+        "../node_modules/typeorm/driver/postgres/PostgresConnectionOptions.d.ts",
         "../node_modules/typeorm/index.d.ts"
       ],
       "../src/module/public/authentication/auth/auth.controller.ts": [
@@ -9774,7 +9617,7 @@
         "../src/module/tenant/business/business-contract/business-contract.controller.ts",
         "../src/module/tenant/business/business-contract/business-contract.repository.ts",
         "../src/module/tenant/business/business-contract/business-contract.service.ts",
-        "../src/module/tenant/business/business-partner/business-partner.repository.ts"
+        "../src/module/tenant/inventory/business-partner/business-partner.repository.ts"
       ],
       "../src/module/tenant/business/business-contract/business-contract.repository.ts": [
         "../node_modules/typeorm/index.d.ts",
@@ -9801,68 +9644,10 @@
       "../src/module/tenant/business/business-contract/dto/update-business-contract.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts"
       ],
-      "../src/module/tenant/business/business-partner/business-partner.controller.ts": [
-        "../node_modules/@nartc/automapper/dist/index.d.ts",
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@types/uuid/index.d.ts",
-        "../node_modules/typeorm/index.d.ts",
-        "../src/interfaces/delete-result.interface.ts",
-        "../src/module/tenant/business/business-partner/business-partner.service.ts",
-        "../src/module/tenant/business/business-partner/dto/business-partner.dto.ts",
-        "../src/module/tenant/business/business-partner/dto/create-business-partner.dto.ts",
-        "../src/module/tenant/business/business-partner/dto/filter-get-business-partner.dto.ts",
-        "../src/module/tenant/business/business-partner/dto/update-business-partner.dto.ts"
-      ],
-      "../src/module/tenant/business/business-partner/business-partner.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/module/tenant/business/business-partner/business-partner.controller.ts",
-        "../src/module/tenant/business/business-partner/business-partner.repository.ts",
-        "../src/module/tenant/business/business-partner/business-partner.service.ts"
-      ],
-      "../src/module/tenant/business/business-partner/business-partner.repository.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../src/entities/tenant/business/business-partner.entity.ts"
-      ],
-      "../src/module/tenant/business/business-partner/business-partner.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/base/base.service.ts",
-        "../src/entities/tenant/business/business-partner.entity.ts",
-        "../src/module/tenant/business/business-partner/business-partner.repository.ts"
-      ],
-      "../src/module/tenant/business/business-partner/dto/business-partner.dto.ts": [
-        "../node_modules/@nartc/automapper/dist/index.d.ts",
-        "../node_modules/class-validator/types/index.d.ts",
-        "../node_modules/nestjsx-automapper/dist/index.d.ts",
-        "../src/entities/tenant/business/business-partner.entity.ts",
-        "../src/module/tenant/business/enum/bp-category.enum.ts",
-        "../src/module/tenant/business/enum/bp-function.enum.ts",
-        "../src/module/tenant/business/enum/bp-status.enum.ts"
-      ],
-      "../src/module/tenant/business/business-partner/dto/create-business-partner.dto.ts": [
-        "../node_modules/class-validator/types/index.d.ts",
-        "../node_modules/nestjsx-automapper/dist/index.d.ts",
-        "../src/module/tenant/business/enum/bp-category.enum.ts",
-        "../src/module/tenant/business/enum/bp-function.enum.ts",
-        "../src/module/tenant/business/enum/bp-status.enum.ts"
-      ],
-      "../src/module/tenant/business/business-partner/dto/filter-get-business-partner.dto.ts": [
-        "../node_modules/class-validator/types/index.d.ts",
-        "../src/module/tenant/business/enum/bp-category.enum.ts",
-        "../src/module/tenant/business/enum/bp-function.enum.ts",
-        "../src/module/tenant/business/enum/bp-status.enum.ts"
-      ],
-      "../src/module/tenant/business/business-partner/dto/update-business-partner.dto.ts": [
-        "../node_modules/class-validator/types/index.d.ts",
-        "../node_modules/nestjsx-automapper/dist/index.d.ts",
-        "../src/module/tenant/business/enum/bp-category.enum.ts",
-        "../src/module/tenant/business/enum/bp-function.enum.ts",
-        "../src/module/tenant/business/enum/bp-status.enum.ts"
-      ],
       "../src/module/tenant/business/business.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/module/tenant/business/adding-service/adding-service.module.ts",
         "../src/module/tenant/business/business-contract/business-contract.module.ts",
-        "../src/module/tenant/business/business-partner/business-partner.module.ts",
         "../src/module/tenant/business/order/order.module.ts",
         "../src/module/tenant/business/payment/payment.module.ts",
         "../src/module/tenant/business/product-contract/product-contract.module.ts",
@@ -9896,7 +9681,6 @@
         "../src/interfaces/delete-result.interface.ts",
         "../src/module/tenant/business/adding-service/adding-service.service.ts",
         "../src/module/tenant/business/business-contract/business-contract.service.ts",
-        "../src/module/tenant/business/business-partner/business-partner.service.ts",
         "../src/module/tenant/business/enum/payment-status.enum.ts",
         "../src/module/tenant/business/enum/shipment-status.enum.ts",
         "../src/module/tenant/business/order/dto/create-order.dto.ts",
@@ -9907,19 +9691,20 @@
         "../src/module/tenant/business/payment/payment.service.ts",
         "../src/module/tenant/business/product-order/product-order.service.ts",
         "../src/module/tenant/business/shipment/shipment.service.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.service.ts",
         "../src/module/tenant/inventory/sku/sku.service.ts"
       ],
       "../src/module/tenant/business/order/order.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/module/tenant/business/adding-service/adding-service.module.ts",
         "../src/module/tenant/business/business-contract/business-contract.module.ts",
-        "../src/module/tenant/business/business-partner/business-partner.module.ts",
         "../src/module/tenant/business/order/order.controller.ts",
         "../src/module/tenant/business/order/order.repository.ts",
         "../src/module/tenant/business/order/order.service.ts",
         "../src/module/tenant/business/payment/payment.module.ts",
         "../src/module/tenant/business/product-order/product-order.module.ts",
         "../src/module/tenant/business/shipment/shipment.module.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.module.ts",
         "../src/module/tenant/inventory/sku/sku.module.ts"
       ],
       "../src/module/tenant/business/order/order.repository.ts": [
@@ -10131,38 +9916,12 @@
       "../src/module/tenant/cash-flow/cash-flow.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/module/tenant/cash-flow/adm-expense/adm-expense.module.ts",
-        "../src/module/tenant/cash-flow/cogs/cogs.module.ts",
-        "../src/module/tenant/cash-flow/commission/commission.module.ts",
         "../src/module/tenant/cash-flow/da-expense/da-expense.module.ts",
         "../src/module/tenant/cash-flow/other-expense/other-expense.module.ts",
         "../src/module/tenant/cash-flow/other-income/other-income.module.ts",
         "../src/module/tenant/cash-flow/payroll/payroll.module.ts",
-        "../src/module/tenant/cash-flow/profit/profit.module.ts",
-        "../src/module/tenant/cash-flow/revenue/revenue.module.ts",
         "../src/module/tenant/cash-flow/selling-expense/selling-expense.module.ts",
         "../src/module/tenant/cash-flow/tax-expense/tax-expense.module.ts"
-      ],
-      "../src/module/tenant/cash-flow/cogs/cogs.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/cash-flow/cogs/cogs.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/module/tenant/cash-flow/cogs/cogs.controller.ts",
-        "../src/module/tenant/cash-flow/cogs/cogs.service.ts"
-      ],
-      "../src/module/tenant/cash-flow/cogs/cogs.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/cash-flow/commission/commission.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/cash-flow/commission/commission.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/module/tenant/cash-flow/commission/commission.controller.ts",
-        "../src/module/tenant/cash-flow/commission/commission.service.ts"
-      ],
-      "../src/module/tenant/cash-flow/commission/commission.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
       ],
       "../src/module/tenant/cash-flow/da-expense/da-expense.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
@@ -10208,28 +9967,6 @@
       "../src/module/tenant/cash-flow/payroll/payroll.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
-      "../src/module/tenant/cash-flow/profit/profit.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/cash-flow/profit/profit.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/module/tenant/cash-flow/profit/profit.controller.ts",
-        "../src/module/tenant/cash-flow/profit/profit.service.ts"
-      ],
-      "../src/module/tenant/cash-flow/profit/profit.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/cash-flow/revenue/revenue.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/cash-flow/revenue/revenue.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/module/tenant/cash-flow/revenue/revenue.controller.ts",
-        "../src/module/tenant/cash-flow/revenue/revenue.service.ts"
-      ],
-      "../src/module/tenant/cash-flow/revenue/revenue.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
       "../src/module/tenant/cash-flow/selling-expense/selling-expense.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
       ],
@@ -10251,6 +9988,63 @@
       ],
       "../src/module/tenant/cash-flow/tax-expense/tax-expense.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/business-partner.controller.ts": [
+        "../node_modules/@nartc/automapper/dist/index.d.ts",
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@types/uuid/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/interfaces/delete-result.interface.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.service.ts",
+        "../src/module/tenant/inventory/business-partner/dto/business-partner.dto.ts",
+        "../src/module/tenant/inventory/business-partner/dto/create-business-partner.dto.ts",
+        "../src/module/tenant/inventory/business-partner/dto/filter-get-business-partner.dto.ts",
+        "../src/module/tenant/inventory/business-partner/dto/update-business-partner.dto.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/business-partner.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.controller.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.repository.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.service.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/business-partner.repository.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/tenant/inventory/business-partner.entity.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/business-partner.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/base/base.service.ts",
+        "../src/entities/tenant/inventory/business-partner.entity.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.repository.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/dto/business-partner.dto.ts": [
+        "../node_modules/@nartc/automapper/dist/index.d.ts",
+        "../node_modules/class-validator/types/index.d.ts",
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../src/entities/tenant/inventory/business-partner.entity.ts",
+        "../src/module/tenant/business/enum/bp-category.enum.ts",
+        "../src/module/tenant/business/enum/bp-function.enum.ts",
+        "../src/module/tenant/business/enum/bp-status.enum.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/dto/create-business-partner.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts",
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../src/module/tenant/business/enum/bp-category.enum.ts",
+        "../src/module/tenant/business/enum/bp-function.enum.ts",
+        "../src/module/tenant/business/enum/bp-status.enum.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/dto/filter-get-business-partner.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts",
+        "../src/module/tenant/business/enum/bp-category.enum.ts",
+        "../src/module/tenant/business/enum/bp-function.enum.ts",
+        "../src/module/tenant/business/enum/bp-status.enum.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/dto/update-business-partner.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts",
+        "../node_modules/nestjsx-automapper/dist/index.d.ts",
+        "../src/module/tenant/business/enum/bp-category.enum.ts",
+        "../src/module/tenant/business/enum/bp-function.enum.ts",
+        "../src/module/tenant/business/enum/bp-status.enum.ts"
       ],
       "../src/module/tenant/inventory/handling-unit/dto/create-handling-unit.dto.ts": [
         "../node_modules/class-validator/types/index.d.ts",
@@ -10305,6 +10099,7 @@
       ],
       "../src/module/tenant/inventory/inventory.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.module.ts",
         "../src/module/tenant/inventory/handling-unit/handling-unit.module.ts",
         "../src/module/tenant/inventory/package-specification/package-specification.module.ts",
         "../src/module/tenant/inventory/packging-material/packging-material.module.ts",
@@ -10503,57 +10298,6 @@
         "../src/base/base.service.ts",
         "../src/entities/tenant/inventory/sku.entity.ts",
         "../src/module/tenant/inventory/sku/sku.repository.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.controller.ts",
-        "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.service.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.controller.ts",
-        "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.service.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.controller.ts",
-        "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.service.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.controller.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/module/tenant/selling-and-sourcing/inventory/inventory.controller.ts",
-        "../src/module/tenant/selling-and-sourcing/inventory/inventory.service.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts"
-      ],
-      "../src/module/tenant/selling-and-sourcing/selling-and-sourcing.module.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.module.ts",
-        "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.module.ts",
-        "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.module.ts",
-        "../src/module/tenant/selling-and-sourcing/inventory/inventory.module.ts"
       ],
       "../src/module/tenant/tenant.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
@@ -14088,16 +13832,9 @@
       ],
       "../src/entities/tenant/business/business-contract.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
-        "../src/entities/tenant/business/business-partner.entity.ts",
         "../src/entities/tenant/business/order.entity.ts",
-        "../src/entities/tenant/business/product-contract.entity.ts"
-      ],
-      "../src/entities/tenant/business/business-partner.entity.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../src/entities/tenant/business/business-contract.entity.ts",
-        "../src/module/tenant/business/enum/bp-category.enum.ts",
-        "../src/module/tenant/business/enum/bp-function.enum.ts",
-        "../src/module/tenant/business/enum/bp-status.enum.ts"
+        "../src/entities/tenant/business/product-contract.entity.ts",
+        "../src/entities/tenant/inventory/business-partner.entity.ts"
       ],
       "../src/entities/tenant/business/order.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
@@ -14126,6 +13863,13 @@
         "../node_modules/typeorm/index.d.ts",
         "../src/entities/tenant/business/order.entity.ts",
         "../src/module/tenant/business/enum/shipment-status.enum.ts"
+      ],
+      "../src/entities/tenant/inventory/business-partner.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/tenant/business/business-contract.entity.ts",
+        "../src/module/tenant/business/enum/bp-category.enum.ts",
+        "../src/module/tenant/business/enum/bp-function.enum.ts",
+        "../src/module/tenant/business/enum/bp-status.enum.ts"
       ],
       "../src/entities/tenant/inventory/handling-unit.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
@@ -14200,10 +13944,13 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@types/express/index.d.ts"
       ],
-      "../src/migrations/public/1609234904029-initDb.ts": [
+      "../src/migrations/public/1609309493106-initDb.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
-      "../src/migrations/public/1609234915009-seed.ts": [
+      "../src/migrations/public/1609309523043-seed.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/migrations/tenant/1609309575122-initDb.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
       "../src/module/public/authentication/auth/auth.controller.ts": [
@@ -14371,44 +14118,6 @@
         "../src/entities/tenant/business/business-contract.entity.ts",
         "../src/module/tenant/business/business-contract/business-contract.repository.ts"
       ],
-      "../src/module/tenant/business/business-partner/business-partner.controller.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../src/interfaces/delete-result.interface.ts",
-        "../src/module/tenant/business/business-partner/business-partner.service.ts",
-        "../src/module/tenant/business/business-partner/dto/business-partner.dto.ts",
-        "../src/module/tenant/business/business-partner/dto/create-business-partner.dto.ts",
-        "../src/module/tenant/business/business-partner/dto/filter-get-business-partner.dto.ts",
-        "../src/module/tenant/business/business-partner/dto/update-business-partner.dto.ts"
-      ],
-      "../src/module/tenant/business/business-partner/business-partner.repository.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../src/entities/tenant/business/business-partner.entity.ts"
-      ],
-      "../src/module/tenant/business/business-partner/business-partner.service.ts": [
-        "../src/base/base.service.ts",
-        "../src/entities/tenant/business/business-partner.entity.ts",
-        "../src/module/tenant/business/business-partner/business-partner.repository.ts"
-      ],
-      "../src/module/tenant/business/business-partner/dto/business-partner.dto.ts": [
-        "../src/module/tenant/business/enum/bp-category.enum.ts",
-        "../src/module/tenant/business/enum/bp-function.enum.ts",
-        "../src/module/tenant/business/enum/bp-status.enum.ts"
-      ],
-      "../src/module/tenant/business/business-partner/dto/create-business-partner.dto.ts": [
-        "../src/module/tenant/business/enum/bp-category.enum.ts",
-        "../src/module/tenant/business/enum/bp-function.enum.ts",
-        "../src/module/tenant/business/enum/bp-status.enum.ts"
-      ],
-      "../src/module/tenant/business/business-partner/dto/filter-get-business-partner.dto.ts": [
-        "../src/module/tenant/business/enum/bp-category.enum.ts",
-        "../src/module/tenant/business/enum/bp-function.enum.ts",
-        "../src/module/tenant/business/enum/bp-status.enum.ts"
-      ],
-      "../src/module/tenant/business/business-partner/dto/update-business-partner.dto.ts": [
-        "../src/module/tenant/business/enum/bp-category.enum.ts",
-        "../src/module/tenant/business/enum/bp-function.enum.ts",
-        "../src/module/tenant/business/enum/bp-status.enum.ts"
-      ],
       "../src/module/tenant/business/order/dto/order.dto.ts": [
         "../src/module/tenant/business/enum/payment-status.enum.ts",
         "../src/module/tenant/business/enum/shipment-status.enum.ts"
@@ -14418,7 +14127,6 @@
         "../src/interfaces/delete-result.interface.ts",
         "../src/module/tenant/business/adding-service/adding-service.service.ts",
         "../src/module/tenant/business/business-contract/business-contract.service.ts",
-        "../src/module/tenant/business/business-partner/business-partner.service.ts",
         "../src/module/tenant/business/enum/payment-status.enum.ts",
         "../src/module/tenant/business/enum/shipment-status.enum.ts",
         "../src/module/tenant/business/order/dto/create-order.dto.ts",
@@ -14429,6 +14137,7 @@
         "../src/module/tenant/business/payment/payment.service.ts",
         "../src/module/tenant/business/product-order/product-order.service.ts",
         "../src/module/tenant/business/shipment/shipment.service.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.service.ts",
         "../src/module/tenant/inventory/sku/sku.service.ts"
       ],
       "../src/module/tenant/business/order/order.repository.ts": [
@@ -14535,6 +14244,44 @@
         "../src/base/base.service.ts",
         "../src/entities/tenant/business/shipment.entity.ts",
         "../src/module/tenant/business/shipment/shipment.repository.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/business-partner.controller.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/interfaces/delete-result.interface.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.service.ts",
+        "../src/module/tenant/inventory/business-partner/dto/business-partner.dto.ts",
+        "../src/module/tenant/inventory/business-partner/dto/create-business-partner.dto.ts",
+        "../src/module/tenant/inventory/business-partner/dto/filter-get-business-partner.dto.ts",
+        "../src/module/tenant/inventory/business-partner/dto/update-business-partner.dto.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/business-partner.repository.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/entities/tenant/inventory/business-partner.entity.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/business-partner.service.ts": [
+        "../src/base/base.service.ts",
+        "../src/entities/tenant/inventory/business-partner.entity.ts",
+        "../src/module/tenant/inventory/business-partner/business-partner.repository.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/dto/business-partner.dto.ts": [
+        "../src/module/tenant/business/enum/bp-category.enum.ts",
+        "../src/module/tenant/business/enum/bp-function.enum.ts",
+        "../src/module/tenant/business/enum/bp-status.enum.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/dto/create-business-partner.dto.ts": [
+        "../src/module/tenant/business/enum/bp-category.enum.ts",
+        "../src/module/tenant/business/enum/bp-function.enum.ts",
+        "../src/module/tenant/business/enum/bp-status.enum.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/dto/filter-get-business-partner.dto.ts": [
+        "../src/module/tenant/business/enum/bp-category.enum.ts",
+        "../src/module/tenant/business/enum/bp-function.enum.ts",
+        "../src/module/tenant/business/enum/bp-status.enum.ts"
+      ],
+      "../src/module/tenant/inventory/business-partner/dto/update-business-partner.dto.ts": [
+        "../src/module/tenant/business/enum/bp-category.enum.ts",
+        "../src/module/tenant/business/enum/bp-function.enum.ts",
+        "../src/module/tenant/business/enum/bp-status.enum.ts"
       ],
       "../src/module/tenant/inventory/handling-unit/dto/create-handling-unit.dto.ts": [
         "../src/module/tenant/inventory/enum/hu-status.enum.ts",
@@ -15697,7 +15444,6 @@
       "../src/entities/public/authentication/user.entity.ts",
       "../src/entities/tenant/business/adding-service.entity.ts",
       "../src/entities/tenant/business/business-contract.entity.ts",
-      "../src/entities/tenant/business/business-partner.entity.ts",
       "../src/entities/tenant/business/order.entity.ts",
       "../src/entities/tenant/business/payment.entity.ts",
       "../src/entities/tenant/business/product-contract.entity.ts",
@@ -15714,6 +15460,7 @@
       "../src/entities/tenant/cash-flow/revenue.entity.ts",
       "../src/entities/tenant/cash-flow/selling-expense.entity.ts",
       "../src/entities/tenant/cash-flow/tax-expense.entity.ts",
+      "../src/entities/tenant/inventory/business-partner.entity.ts",
       "../src/entities/tenant/inventory/handling-unit.entity.ts",
       "../src/entities/tenant/inventory/package-specification.entity.ts",
       "../src/entities/tenant/inventory/packging-material.entity.ts",
@@ -15736,8 +15483,9 @@
       "../src/interfaces/result.interface.ts",
       "../src/main.ts",
       "../src/middleware/logger.middleware.ts",
-      "../src/migrations/public/1609234904029-initDb.ts",
-      "../src/migrations/public/1609234915009-seed.ts",
+      "../src/migrations/public/1609309493106-initDb.ts",
+      "../src/migrations/public/1609309523043-seed.ts",
+      "../src/migrations/tenant/1609309575122-initDb.ts",
       "../src/module/public/authentication/auth/auth.controller.ts",
       "../src/module/public/authentication/auth/auth.module.ts",
       "../src/module/public/authentication/auth/auth.service.ts",
@@ -15800,14 +15548,6 @@
       "../src/module/tenant/business/business-contract/dto/create-business-contract.dto.ts",
       "../src/module/tenant/business/business-contract/dto/filter-get-business-contract.dto.ts",
       "../src/module/tenant/business/business-contract/dto/update-business-contract.dto.ts",
-      "../src/module/tenant/business/business-partner/business-partner.controller.ts",
-      "../src/module/tenant/business/business-partner/business-partner.module.ts",
-      "../src/module/tenant/business/business-partner/business-partner.repository.ts",
-      "../src/module/tenant/business/business-partner/business-partner.service.ts",
-      "../src/module/tenant/business/business-partner/dto/business-partner.dto.ts",
-      "../src/module/tenant/business/business-partner/dto/create-business-partner.dto.ts",
-      "../src/module/tenant/business/business-partner/dto/filter-get-business-partner.dto.ts",
-      "../src/module/tenant/business/business-partner/dto/update-business-partner.dto.ts",
       "../src/module/tenant/business/business.module.ts",
       "../src/module/tenant/business/enum/adding-service.enum.ts",
       "../src/module/tenant/business/enum/bp-category.enum.ts",
@@ -15860,14 +15600,6 @@
       "../src/module/tenant/cash-flow/adm-expense/adm-expense.repository.ts",
       "../src/module/tenant/cash-flow/adm-expense/adm-expense.service.ts",
       "../src/module/tenant/cash-flow/cash-flow.module.ts",
-      "../src/module/tenant/cash-flow/cogs/cogs.controller.ts",
-      "../src/module/tenant/cash-flow/cogs/cogs.module.ts",
-      "../src/module/tenant/cash-flow/cogs/cogs.repository.ts",
-      "../src/module/tenant/cash-flow/cogs/cogs.service.ts",
-      "../src/module/tenant/cash-flow/commission/commission.controller.ts",
-      "../src/module/tenant/cash-flow/commission/commission.module.ts",
-      "../src/module/tenant/cash-flow/commission/commission.repository.ts",
-      "../src/module/tenant/cash-flow/commission/commission.service.ts",
       "../src/module/tenant/cash-flow/da-expense/da-expense.controller.ts",
       "../src/module/tenant/cash-flow/da-expense/da-expense.module.ts",
       "../src/module/tenant/cash-flow/da-expense/da-expense.repository.ts",
@@ -15884,14 +15616,6 @@
       "../src/module/tenant/cash-flow/payroll/payroll.module.ts",
       "../src/module/tenant/cash-flow/payroll/payroll.repository.ts",
       "../src/module/tenant/cash-flow/payroll/payroll.service.ts",
-      "../src/module/tenant/cash-flow/profit/profit.controller.ts",
-      "../src/module/tenant/cash-flow/profit/profit.module.ts",
-      "../src/module/tenant/cash-flow/profit/profit.repository.ts",
-      "../src/module/tenant/cash-flow/profit/profit.service.ts",
-      "../src/module/tenant/cash-flow/revenue/revenue.controller.ts",
-      "../src/module/tenant/cash-flow/revenue/revenue.module.ts",
-      "../src/module/tenant/cash-flow/revenue/revenue.repository.ts",
-      "../src/module/tenant/cash-flow/revenue/revenue.service.ts",
       "../src/module/tenant/cash-flow/selling-expense/selling-expense.controller.ts",
       "../src/module/tenant/cash-flow/selling-expense/selling-expense.module.ts",
       "../src/module/tenant/cash-flow/selling-expense/selling-expense.repository.ts",
@@ -15900,6 +15624,14 @@
       "../src/module/tenant/cash-flow/tax-expense/tax-expense.module.ts",
       "../src/module/tenant/cash-flow/tax-expense/tax-expense.repository.ts",
       "../src/module/tenant/cash-flow/tax-expense/tax-expense.service.ts",
+      "../src/module/tenant/inventory/business-partner/business-partner.controller.ts",
+      "../src/module/tenant/inventory/business-partner/business-partner.module.ts",
+      "../src/module/tenant/inventory/business-partner/business-partner.repository.ts",
+      "../src/module/tenant/inventory/business-partner/business-partner.service.ts",
+      "../src/module/tenant/inventory/business-partner/dto/business-partner.dto.ts",
+      "../src/module/tenant/inventory/business-partner/dto/create-business-partner.dto.ts",
+      "../src/module/tenant/inventory/business-partner/dto/filter-get-business-partner.dto.ts",
+      "../src/module/tenant/inventory/business-partner/dto/update-business-partner.dto.ts",
       "../src/module/tenant/inventory/enum/hu-status.enum.ts",
       "../src/module/tenant/inventory/enum/hu-type.enum.ts",
       "../src/module/tenant/inventory/enum/pm-category.enum.ts",
@@ -15945,23 +15677,6 @@
       "../src/module/tenant/inventory/sku/sku.module.ts",
       "../src/module/tenant/inventory/sku/sku.repository.ts",
       "../src/module/tenant/inventory/sku/sku.service.ts",
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.controller.ts",
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.module.ts",
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.repository.ts",
-      "../src/module/tenant/selling-and-sourcing/account-payable/account-payable.service.ts",
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.controller.ts",
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.module.ts",
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.repository.ts",
-      "../src/module/tenant/selling-and-sourcing/account-receivable/account-receivable.service.ts",
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.controller.ts",
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.module.ts",
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.repository.ts",
-      "../src/module/tenant/selling-and-sourcing/bill-invoice/bill-invoice.service.ts",
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.controller.ts",
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.module.ts",
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.repository.ts",
-      "../src/module/tenant/selling-and-sourcing/inventory/inventory.service.ts",
-      "../src/module/tenant/selling-and-sourcing/selling-and-sourcing.module.ts",
       "../src/module/tenant/tenant.module.ts",
       "../src/module/tenant/warehouse-feat/activity-area/activity-area.controller.ts",
       "../src/module/tenant/warehouse-feat/activity-area/activity-area.module.ts",

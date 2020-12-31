@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.seed1609234915009 = void 0;
+exports.seed1609309523043 = void 0;
 const uuid_1 = require("uuid");
 const bcrypt = require("bcrypt");
-class seed1609234915009 {
+class seed1609309523043 {
     async up(queryRunner) {
         const permissionRepo = queryRunner.connection.getRepository('permission');
         const p1 = uuid_1.v4();
@@ -57,5 +57,5 @@ class seed1609234915009 {
     async down(queryRunner) {
     }
 }
-exports.seed1609234915009 = seed1609234915009;
-//# sourceMappingURL=1609234915009-seed.js.map
+exports.seed1609309523043 = seed1609309523043;
+//# sourceMappingURL=1609309523043-seed.js.map

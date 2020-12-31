@@ -5,6 +5,8 @@ import { HandlingUnitEntity } from "./handling-unit.entity";
 import { ProductEntity } from "./product.entity";
 import { ProductSourcingContractEntity } from "../sourcing/product-sourcing-contract.entity";
 import { ProductSourcingOrderEntity } from "../sourcing/product-sourcing-order.entity";
+import { ProductSellingOrderEntity } from "../selling/product-selling-order.entity";
+import { ProductSellingContractEntity } from "../selling/product-selling-contract.entity";
 
 @Entity('sku')
 export class SkuEntity extends BaseEntity {
@@ -59,4 +61,13 @@ export class SkuEntity extends BaseEntity {
     @AutoMap(()=>ProductSourcingOrderEntity)
     @OneToMany(type => ProductSourcingOrderEntity, productSourcingOrder => productSourcingOrder.sku)
     productSourcingOrders: ProductSourcingOrderEntity[];
+
+    @AutoMap(()=>ProductSellingContractEntity)
+    @OneToMany(type => ProductSellingContractEntity, productSellingContract => productSellingContract.sku)
+    productSellingContracts: ProductSellingContractEntity[];
+
+
+    @AutoMap(()=>ProductSellingOrderEntity)
+    @OneToMany(type => ProductSellingOrderEntity, productSellingOrder => productSellingOrder.sku)
+    productSellingOrders: ProductSellingOrderEntity[];
 }

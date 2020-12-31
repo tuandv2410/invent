@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.BusinessContractEntity = void 0;
 const typeorm_1 = require("typeorm");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
-const business_partner_entity_1 = require("./business-partner.entity");
+const business_partner_entity_1 = require("../inventory/business-partner.entity");
 const order_entity_1 = require("./order.entity");
 const product_contract_entity_1 = require("./product-contract.entity");
 let BusinessContractEntity = class BusinessContractEntity extends typeorm_1.BaseEntity {

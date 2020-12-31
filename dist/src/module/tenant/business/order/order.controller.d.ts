@@ -8,7 +8,7 @@ import { DeleteResultInterface } from 'src/interfaces/delete-result.interface';
 import { ShipmentService } from '../shipment/shipment.service';
 import { PaymentService } from '../payment/payment.service';
 import { BusinessContractService } from '../business-contract/business-contract.service';
-import { BusinessPartnerService } from '../business-partner/business-partner.service';
+import { BusinessPartnerService } from '../../inventory/business-partner/business-partner.service';
 import { AddingServiceService } from '../adding-service/adding-service.service';
 import { PaymentStatus } from '../enum/payment-status.enum';
 import { SkuService } from 'src/module/tenant/inventory/sku/sku.service';

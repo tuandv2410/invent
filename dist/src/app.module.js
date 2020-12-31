@@ -17,7 +17,6 @@ const typeorm_config_1 = require("./config/typeorm.config");
 const business_module_1 = require("./module/tenant/business/business.module");
 const warehouse_feat_module_1 = require("./module/tenant/warehouse-feat/warehouse-feat.module");
 const inventory_module_1 = require("./module/tenant/inventory/inventory.module");
-const selling_and_sourcing_module_1 = require("./module/tenant/selling-and-sourcing/selling-and-sourcing.module");
 const logger_middleware_1 = require("./middleware/logger.middleware");
 const cash_flow_module_1 = require("./module/tenant/cash-flow/cash-flow.module");
 const search_module_1 = require("./search/search.module");
@@ -38,7 +37,6 @@ AppModule = __decorate([
             business_module_1.BusinessModule,
             warehouse_feat_module_1.WarehouseFeatModule,
             inventory_module_1.InventoryModule,
-            selling_and_sourcing_module_1.SellingAndSourcingModule,
             cash_flow_module_1.CashFlowModule,
             search_module_1.SearchModule,
             tenant_module_1.TenantModule
