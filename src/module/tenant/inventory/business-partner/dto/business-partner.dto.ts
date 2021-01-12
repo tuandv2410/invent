@@ -27,39 +27,51 @@ class SourcingBusinessContract {
 Mapper.createMap(SourcingBusinessContractEntity, SourcingBusinessContract)
 
 export class BusinessPartnerDto {
+  @AutoMap()
   @IsNotEmpty()
   id: string;
 
+  @AutoMap()
   @IsOptional()
   fullName: string;
 
+  @AutoMap()
   @IsOptional()
   address: string;
 
+  @AutoMap()
   @IsOptional()
   taxInfo: string;
 
+  @AutoMap()
   @IsOptional()
   phone: string;
 
+  @AutoMap()
   @IsOptional()
   email: string;
 
+  @AutoMap()
   @IsOptional()
   discount: number;
 
+  @AutoMap()
   @IsOptional()
   category: BpCategory;
 
+  @AutoMap()
   @IsOptional()
   function: BpFunction;
 
+  @AutoMap()
   @IsNotEmpty()
   status: BpStatus;
 
+  @AutoMap()
   @IsOptional()
   sellingBusinessContracts: SellingBusinessContract[];
 
+  @AutoMap()
   @IsOptional()
   sourcingBusinessContracts: SourcingBusinessContract[];
 

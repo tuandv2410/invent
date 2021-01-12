@@ -4377,7 +4377,7 @@
         "affectsGlobalScope": false
       },
       "../src/entities/tenant/inventory/business-partner.entity.ts": {
-        "version": "a6ae0f2dbac0b756219d1c07071a8bbd739b6134b22fc91653992c9bd79d9fef",
+        "version": "4a49464d33eb65d3465623abe47065e56e92c56d267bed2ae3472f3bdc50eac7",
         "signature": "2957de5ad55a35e8b197b416d495f327289220fa51e97de617687b5873b5eb6a",
         "affectsGlobalScope": false
       },
@@ -4677,7 +4677,7 @@
         "affectsGlobalScope": false
       },
       "../src/module/tenant/inventory/business-partner/dto/business-partner.dto.ts": {
-        "version": "ae7dfcc3c09b97cb5dfe1dfff75c79e7a05b64117348cc1f33426b364fb745d3",
+        "version": "a405a36e2cd595755a973a51277f6006664dcd0ee1f5fa8e18c958938ce949d6",
         "signature": "16115242220e317ad19558c5ccaa1d68edf47804998be0d4a832c9414671ff6e",
         "affectsGlobalScope": false
       },

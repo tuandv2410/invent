@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BusinessPartnerDto = void 0;
+const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
 const bp_category_enum_1 = require("../../../../../enum/bp-category.enum");
 const bp_function_enum_1 = require("../../../../../enum/bp-function.enum");
@@ -27,50 +28,62 @@ automapper_1.Mapper.createMap(sourcing_business_contract_entity_1.SourcingBusine
 class BusinessPartnerDto {
 }
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
 ], BusinessPartnerDto.prototype, "id", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], BusinessPartnerDto.prototype, "fullName", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], BusinessPartnerDto.prototype, "address", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], BusinessPartnerDto.prototype, "taxInfo", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], BusinessPartnerDto.prototype, "phone", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], BusinessPartnerDto.prototype, "email", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", Number)
 ], BusinessPartnerDto.prototype, "discount", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], BusinessPartnerDto.prototype, "category", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", String)
 ], BusinessPartnerDto.prototype, "function", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsNotEmpty(),
     __metadata("design:type", String)
 ], BusinessPartnerDto.prototype, "status", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", Array)
 ], BusinessPartnerDto.prototype, "sellingBusinessContracts", void 0);
 __decorate([
+    nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", Array)
 ], BusinessPartnerDto.prototype, "sourcingBusinessContracts", void 0);
