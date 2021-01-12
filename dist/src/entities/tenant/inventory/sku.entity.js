@@ -15,8 +15,10 @@ const nestjsx_automapper_1 = require("nestjsx-automapper");
 const storage_bin_entity_1 = require("../warehouse-feat/storage-bin.entity");
 const handling_unit_entity_1 = require("./handling-unit.entity");
 const product_entity_1 = require("./product.entity");
-const product_contract_entity_1 = require("../business/product-contract.entity");
-const product_order_entity_1 = require("../business/product-order.entity");
+const product_sourcing_contract_entity_1 = require("../sourcing/product-sourcing-contract.entity");
+const product_sourcing_order_entity_1 = require("../sourcing/product-sourcing-order.entity");
+const product_selling_order_entity_1 = require("../selling/product-selling-order.entity");
+const product_selling_contract_entity_1 = require("../selling/product-selling-contract.entity");
 let SkuEntity = class SkuEntity extends typeorm_1.BaseEntity {
 };
 __decorate([
@@ -73,15 +75,25 @@ __decorate([
     __metadata("design:type", product_entity_1.ProductEntity)
 ], SkuEntity.prototype, "product", void 0);
 __decorate([
-    nestjsx_automapper_1.AutoMap(() => product_contract_entity_1.ProductContractEntity),
-    typeorm_1.OneToMany(type => product_contract_entity_1.ProductContractEntity, productContract => productContract.sku),
+    nestjsx_automapper_1.AutoMap(() => product_sourcing_contract_entity_1.ProductSourcingContractEntity),
+    typeorm_1.OneToMany(type => product_sourcing_contract_entity_1.ProductSourcingContractEntity, productSourcingContract => productSourcingContract.sku),
     __metadata("design:type", Array)
-], SkuEntity.prototype, "productContracts", void 0);
+], SkuEntity.prototype, "productSourcingContracts", void 0);
 __decorate([
-    nestjsx_automapper_1.AutoMap(() => product_order_entity_1.ProductOrderEntity),
-    typeorm_1.OneToMany(type => product_order_entity_1.ProductOrderEntity, productOrder => productOrder.sku),
+    nestjsx_automapper_1.AutoMap(() => product_sourcing_order_entity_1.ProductSourcingOrderEntity),
+    typeorm_1.OneToMany(type => product_sourcing_order_entity_1.ProductSourcingOrderEntity, productSourcingOrder => productSourcingOrder.sku),
     __metadata("design:type", Array)
-], SkuEntity.prototype, "productOrders", void 0);
+], SkuEntity.prototype, "productSourcingOrders", void 0);
+__decorate([
+    nestjsx_automapper_1.AutoMap(() => product_selling_contract_entity_1.ProductSellingContractEntity),
+    typeorm_1.OneToMany(type => product_selling_contract_entity_1.ProductSellingContractEntity, productSellingContract => productSellingContract.sku),
+    __metadata("design:type", Array)
+], SkuEntity.prototype, "productSellingContracts", void 0);
+__decorate([
+    nestjsx_automapper_1.AutoMap(() => product_selling_order_entity_1.ProductSellingOrderEntity),
+    typeorm_1.OneToMany(type => product_selling_order_entity_1.ProductSellingOrderEntity, productSellingOrder => productSellingOrder.sku),
+    __metadata("design:type", Array)
+], SkuEntity.prototype, "productSellingOrders", void 0);
 SkuEntity = __decorate([
     typeorm_1.Entity('sku')
 ], SkuEntity);

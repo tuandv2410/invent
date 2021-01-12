@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ActivityAreaEntity = void 0;
 const typeorm_1 = require("typeorm");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
-const activity_area_enum_1 = require("../../../module/tenant/warehouse-feat/enum/activity-area.enum");
+const activity_area_enum_1 = require("../../../enum/activity-area.enum");
 const warehouse_entity_1 = require("./warehouse.entity");
 const storage_bin_entity_1 = require("./storage-bin.entity");
 let ActivityAreaEntity = class ActivityAreaEntity extends typeorm_1.BaseEntity {

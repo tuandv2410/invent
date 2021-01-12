@@ -7,36 +7,35 @@ import { SellingPaymentEntity } from "./selling-payment.entity";
 
 @Entity('selling-order')
 export class SellingOrderEntity extends BaseEntity {
-    @AutoMap()
     @PrimaryColumn()
     id: string;
 
-    @AutoMap()
     @Column({
         nullable: false,
     })
     createdDate: string;
 
-    @AutoMap()
     @Column({
         nullable: true,
     })
-    addingServiceId: string;
+    value: number;
+
+    @Column({
+        nullable: true,
+    })
+    addingServiceType: string;
     
     @ManyToOne(type => SellingBusinessContractEntity, sellingBusinessContract => sellingBusinessContract.sellingOrders, {
         cascade: true
     })
     sellingBusinessContract: SellingBusinessContractEntity;
 
-    @AutoMap(()=>ProductSellingOrderEntity)
     @OneToMany(type => ProductSellingOrderEntity, productSellingOrder => productSellingOrder.sellingOrder)
     productSellingOrders: ProductSellingOrderEntity[];
 
-    @AutoMap(()=>SellingShipmentEntity)
     @OneToOne(type => SellingShipmentEntity, sellingShipment => sellingShipment.sellingOrder)
     sellingShipment: SellingShipmentEntity;
 
-    @AutoMap(()=>SellingPaymentEntity)
     @OneToMany(type => SellingPaymentEntity, sellingpayment => sellingpayment.sellingOrder)
     sellingpayments: SellingPaymentEntity[];
     

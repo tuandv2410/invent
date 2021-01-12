@@ -15,11 +15,12 @@ const other_expense_module_1 = require("./other-expense/other-expense.module");
 const tax_expense_module_1 = require("./tax-expense/tax-expense.module");
 const payroll_module_1 = require("./payroll/payroll.module");
 const other_income_module_1 = require("./other-income/other-income.module");
+const capital_module_1 = require("./capital/capital.module");
 let CashFlowModule = class CashFlowModule {
 };
 CashFlowModule = __decorate([
     common_1.Module({
-        imports: [selling_expense_module_1.SellingExpenseModule, adm_expense_module_1.AdmExpenseModule, da_expense_module_1.DaExpenseModule, other_expense_module_1.OtherExpenseModule, tax_expense_module_1.TaxExpenseModule, payroll_module_1.PayrollModule, other_income_module_1.OtherIncomeModule]
+        imports: [selling_expense_module_1.SellingExpenseModule, adm_expense_module_1.AdmExpenseModule, da_expense_module_1.DaExpenseModule, other_expense_module_1.OtherExpenseModule, tax_expense_module_1.TaxExpenseModule, payroll_module_1.PayrollModule, other_income_module_1.OtherIncomeModule, capital_module_1.CapitalModule]
     })
 ], CashFlowModule);
 exports.CashFlowModule = CashFlowModule;

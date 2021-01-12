@@ -1,21 +1,15 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import * as cookieParser from 'cookie-parser';
-import * as session from 'express-session';
 import { AppModule } from './app.module';
 import { AllExceptionsFilter } from './filter/exceptions.filter';
+import { migration_schema } from './schema/migration_schema';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
   // app.useGlobalFilters(new AllExceptionsFilter());
-  app.use(session({
-    secret: 'my-secret',
-    resave: false,
-    saveUninitialized: false,
-  }))
-
-  app.use(cookieParser())
+  migration_schema();
   await app.listen(3000);
+  
 }
 bootstrap();

@@ -11,8 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdatePackgingMaterialDto = void 0;
 const class_validator_1 = require("class-validator");
-const pm_category_enum_1 = require("../../enum/pm-category.enum");
-const pm_type_enum_1 = require("../../enum/pm-type.enum");
+const pm_category_enum_1 = require("../../../../../enum/pm-category.enum");
+const pm_type_enum_1 = require("../../../../../enum/pm-type.enum");
 class UpdatePackgingMaterialDto {
 }
 __decorate([

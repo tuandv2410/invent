@@ -11,9 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateBusinessPartnerDto = void 0;
 const class_validator_1 = require("class-validator");
-const bp_category_enum_1 = require("../../../business/enum/bp-category.enum");
-const bp_function_enum_1 = require("../../../business/enum/bp-function.enum");
-const bp_status_enum_1 = require("../../../business/enum/bp-status.enum");
+const bp_category_enum_1 = require("../../../../../enum/bp-category.enum");
+const bp_function_enum_1 = require("../../../../../enum/bp-function.enum");
+const bp_status_enum_1 = require("../../../../../enum/bp-status.enum");
 class UpdateBusinessPartnerDto {
 }
 __decorate([

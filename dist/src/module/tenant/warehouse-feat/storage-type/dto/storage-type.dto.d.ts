@@ -1,5 +1,5 @@
-import { StoType } from 'src/module/tenant/warehouse-feat/enum/sto-type.enum';
-import { BinType } from 'src/module/tenant/warehouse-feat/enum/bin-type.enum';
+import { StoType } from 'src/enum/sto-type.enum';
+import { BinType } from 'src/enum/bin-type.enum';
 declare class StorageBin {
     id: string;
     name: string;

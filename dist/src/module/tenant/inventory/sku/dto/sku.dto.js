@@ -14,10 +14,14 @@ const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
 const sku_entity_1 = require("../../../../../entities/tenant/inventory/sku.entity");
 const class_validator_1 = require("class-validator");
-class ProductContract {
+const product_sourcing_contract_entity_1 = require("../../../../../entities/tenant/sourcing/product-sourcing-contract.entity");
+const product_sourcing_order_entity_1 = require("../../../../../entities/tenant/sourcing/product-sourcing-order.entity");
+class ProductSourcingContract {
 }
-class productOrder {
+automapper_1.Mapper.createMap(product_sourcing_contract_entity_1.ProductSourcingContractEntity, ProductSourcingContract);
+class ProductSourcingOrder {
 }
+automapper_1.Mapper.createMap(product_sourcing_order_entity_1.ProductSourcingOrderEntity, ProductSourcingOrder);
 class SkuDto {
 }
 __decorate([
@@ -56,16 +60,15 @@ __decorate([
     __metadata("design:type", Number)
 ], SkuDto.prototype, "quantity", void 0);
 __decorate([
-    nestjsx_automapper_1.AutoMap(() => ProductContract),
+    nestjsx_automapper_1.AutoMap(() => ProductSourcingContract),
     class_validator_1.IsOptional(),
     __metadata("design:type", Array)
-], SkuDto.prototype, "productContracts", void 0);
+], SkuDto.prototype, "productSourcingContracts", void 0);
 __decorate([
     nestjsx_automapper_1.AutoMap(),
     class_validator_1.IsOptional(),
     __metadata("design:type", Array)
-], SkuDto.prototype, "productOrders", void 0);
+], SkuDto.prototype, "productSourcingOrders", void 0);
 exports.SkuDto = SkuDto;
-automapper_1.Mapper.createMap(sku_entity_1.SkuEntity, SkuDto)
-    .forMember(d => d.productContracts, automapper_1.mapFrom(s => s.productContracts)).forMember(d => d.productOrders, automapper_1.mapFrom(s => s.productOrders));
+automapper_1.Mapper.createMap(sku_entity_1.SkuEntity, SkuDto);
 //# sourceMappingURL=sku.dto.js.map

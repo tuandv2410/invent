@@ -9,7 +9,7 @@ export const typeOrmConfig: TypeOrmModuleOptions ={
     username: process.env.POSTGRES_USER,
     password: process.env.POSTGRES_PASSWORD,
     database: process.env.POSTGRES_DB,
-    migrationsRun: false,
+    migrationsRun: true,
     entities: [
         'dist/src/entities/public/**/*.entity{.ts,.js}'
     ],

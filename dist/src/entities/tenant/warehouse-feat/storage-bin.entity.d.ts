@@ -1,5 +1,5 @@
 import { BaseEntity } from "typeorm";
-import { BinType } from "src/module/tenant/warehouse-feat/enum/bin-type.enum";
+import { BinType } from "src/enum/bin-type.enum";
 import { StorageTypeEntity } from "./storage-type.entity";
 import { StorageSectionEntity } from "./storage-section.entity";
 import { ActivityAreaEntity } from "./activity-area.entity";

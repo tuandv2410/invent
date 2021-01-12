@@ -1,18 +1,12 @@
 import { AutoMap } from 'nestjsx-automapper';
-import { mapFrom, Mapper } from '@nartc/automapper'
+import { Mapper } from '@nartc/automapper'
 import { SkuEntity } from 'src/entities/tenant/inventory/sku.entity';
 import { IsNotEmpty, IsOptional } from 'class-validator';
+import { ProductSourcingContractEntity } from 'src/entities/tenant/sourcing/product-sourcing-contract.entity';
+import { ProductSourcingOrderEntity } from 'src/entities/tenant/sourcing/product-sourcing-order.entity';
 
 
-class ProductContract {
-  id: string;
-  quantity: number;
-  totalPrice: number;
-  discount: number;
-  currency: string;
-}
-
-class productOrder {
+class ProductSourcingContract {
   id: string;
 
   quantity: number;
@@ -23,6 +17,20 @@ class productOrder {
 
   currency: string;
 }
+Mapper.createMap(ProductSourcingContractEntity, ProductSourcingContract)
+
+class ProductSourcingOrder {
+  id: string;
+
+  quantity: number;
+
+  totalPrice: number;
+
+  discount: number;
+
+  currency: string;
+}
+Mapper.createMap(ProductSourcingOrderEntity, ProductSourcingOrder)
 
 export class SkuDto{
   @AutoMap()
@@ -53,20 +61,13 @@ export class SkuDto{
   @IsNotEmpty()
   quantity: number;
 
-  @AutoMap(()=> ProductContract)
+  @AutoMap(()=> ProductSourcingContract)
   @IsOptional()
-  productContracts: ProductContract[];
+  productSourcingContracts: ProductSourcingContract[];
 
   @AutoMap()
   @IsOptional()
-  productOrders: productOrder[];
+  productSourcingOrders: ProductSourcingOrder[];
 }
 
 Mapper.createMap(SkuEntity, SkuDto)
-.forMember(
-  d=>d.productContracts,
-  mapFrom(s=>s.productContracts)
-).forMember(
-  d=>d.productOrders,
-  mapFrom(s=>s.productOrders)
-)

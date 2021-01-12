@@ -9,9 +9,8 @@ import { AccountReceivableModule } from './account-receivable/account-receivable
 import { CommissionModule } from './commission/commission.module';
 import { RevenueModule } from './revenue/revenue.module';
 import { SellingBusinessContractModule } from './selling-business-contract/selling-business-contract.module';
-import { AddingServiceModule } from './adding-service/adding-service.module';
 
 @Module({
-  imports: [SellingShipmentModule, SellingPaymentModule, ProductSellingOrderModule, ProductSellingContractModule, SellingOrderModule, ReceiptModule, AccountReceivableModule, CommissionModule, RevenueModule, SellingBusinessContractModule, AddingServiceModule],
+  imports: [SellingShipmentModule, SellingPaymentModule, ProductSellingOrderModule, ProductSellingContractModule, SellingOrderModule, ReceiptModule, AccountReceivableModule, CommissionModule, RevenueModule, SellingBusinessContractModule],
 })
 export class SellingModule {}

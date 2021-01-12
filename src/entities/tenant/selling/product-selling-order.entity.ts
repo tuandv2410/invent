@@ -18,7 +18,7 @@ export class ProductSellingOrderEntity extends BaseEntity {
     @Column({
         nullable: false,
     })
-    totalPricr: number;
+    totalPrice: number;
     @AutoMap()
     @Column({
         nullable: false,

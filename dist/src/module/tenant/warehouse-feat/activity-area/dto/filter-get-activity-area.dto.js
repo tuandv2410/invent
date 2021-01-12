@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FilterGetActivityAreaDto = void 0;
 const class_validator_1 = require("class-validator");
-const activity_area_enum_1 = require("../../enum/activity-area.enum");
+const activity_area_enum_1 = require("../../../../../enum/activity-area.enum");
 class FilterGetActivityAreaDto {
 }
 __decorate([

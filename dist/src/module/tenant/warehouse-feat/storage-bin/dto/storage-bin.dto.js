@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.StorageBinDto = void 0;
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
-const bin_type_enum_1 = require("../../enum/bin-type.enum");
+const bin_type_enum_1 = require("../../../../../enum/bin-type.enum");
 const storage_bin_entity_1 = require("../../../../../entities/tenant/warehouse-feat/storage-bin.entity");
 const class_validator_1 = require("class-validator");
 class Sku {

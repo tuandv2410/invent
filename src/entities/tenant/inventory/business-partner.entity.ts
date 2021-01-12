@@ -8,71 +8,58 @@ import { SellingBusinessContractEntity } from "../selling/selling-business-contr
 
 @Entity('business-partner')
 export class BusinessPartnerEntity extends BaseEntity {
-    @AutoMap()
     @PrimaryColumn()
     id: string;
 
-    @AutoMap()
     @Column({
         nullable: false,
         unique: true
     })
     fullName: string;
 
-    @AutoMap()
     @Column({
         nullable: true,
     })
     address: string;
 
-    @AutoMap()
     @Column({
         nullable: true,
     })
     taxInfo: string;
 
-    @AutoMap()
     @Column({
         nullable: true,
     })
     phone: string;
 
-    @AutoMap()
     @Column({
         nullable: true,
     })
     email: string;
 
-    @AutoMap()
     @Column({
         nullable: true,
     })
     discount: number;
 
-    @AutoMap()
     @Column({
         nullable: true,
     })
     category: BpCategory;
 
-    @AutoMap()
     @Column({
         nullable: true,
     })
     function: BpFunction;
 
-    @AutoMap()
     @Column({
         nullable: false,
     })
     status: BpStatus;
 
-    @AutoMap(()=>SourcingBusinessContractEntity)
     @OneToMany(type => SourcingBusinessContractEntity, sourcingBusinessContract => sourcingBusinessContract.businessPartner)
     sourcingBusinessContracts: SourcingBusinessContractEntity[];
 
-
-    @AutoMap(()=>SellingBusinessContractEntity)
     @OneToMany(type => SellingBusinessContractEntity, sellingBusinessContract => sellingBusinessContract.businessPartner)
     sellingBusinessContracts: SellingBusinessContractEntity[];
 }

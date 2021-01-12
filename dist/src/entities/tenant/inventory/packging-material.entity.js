@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PackgingMaterialEntity = void 0;
 const typeorm_1 = require("typeorm");
 const nestjsx_automapper_1 = require("nestjsx-automapper");
-const pm_type_enum_1 = require("../../../module/tenant/inventory/enum/pm-type.enum");
-const pm_category_enum_1 = require("../../../module/tenant/inventory/enum/pm-category.enum");
+const pm_type_enum_1 = require("../../../enum/pm-type.enum");
+const pm_category_enum_1 = require("../../../enum/pm-category.enum");
 const handling_unit_entity_1 = require("./handling-unit.entity");
 const package_specification_entity_1 = require("./package-specification.entity");
 let PackgingMaterialEntity = class PackgingMaterialEntity extends typeorm_1.BaseEntity {

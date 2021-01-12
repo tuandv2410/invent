@@ -1,4 +1,4 @@
-import { BinType } from 'src/module/tenant/warehouse-feat/enum/bin-type.enum';
+import { BinType } from 'src/enum/bin-type.enum';
 declare class Sku {
     id: string;
     productName: string;

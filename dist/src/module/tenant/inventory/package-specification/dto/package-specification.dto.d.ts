@@ -1,5 +1,5 @@
-import { HuStatus } from 'src/module/tenant/inventory/enum/hu-status.enum';
-import { HuType } from 'src/module/tenant/inventory/enum/hu-type.enum';
+import { HuStatus } from 'src/enum/hu-status.enum';
+import { HuType } from 'src/enum/hu-type.enum';
 declare class HandlingUnit {
     id: string;
     type: HuType;

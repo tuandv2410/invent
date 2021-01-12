@@ -14,13 +14,14 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const authentication_module_1 = require("./module/public/authentication/authentication.module");
 const typeorm_config_1 = require("./config/typeorm.config");
-const business_module_1 = require("./module/tenant/business/business.module");
 const warehouse_feat_module_1 = require("./module/tenant/warehouse-feat/warehouse-feat.module");
 const inventory_module_1 = require("./module/tenant/inventory/inventory.module");
 const logger_middleware_1 = require("./middleware/logger.middleware");
 const cash_flow_module_1 = require("./module/tenant/cash-flow/cash-flow.module");
 const search_module_1 = require("./search/search.module");
 const tenant_module_1 = require("./module/tenant/tenant.module");
+const selling_module_1 = require("./module/tenant/selling/selling.module");
+const sourcing_module_1 = require("./module/tenant/sourcing/sourcing.module");
 let AppModule = class AppModule {
     configure(consumer) {
         consumer
@@ -34,11 +35,12 @@ AppModule = __decorate([
             nestjsx_automapper_1.AutomapperModule.withMapper(),
             typeorm_1.TypeOrmModule.forRoot(typeorm_config_1.typeOrmConfig),
             authentication_module_1.AuthenticationModule,
-            business_module_1.BusinessModule,
             warehouse_feat_module_1.WarehouseFeatModule,
             inventory_module_1.InventoryModule,
             cash_flow_module_1.CashFlowModule,
             search_module_1.SearchModule,
+            selling_module_1.SellingModule,
+            sourcing_module_1.SourcingModule,
             tenant_module_1.TenantModule
         ],
         controllers: [app_controller_1.AppController],

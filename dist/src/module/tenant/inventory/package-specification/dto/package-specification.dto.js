@@ -13,8 +13,8 @@ exports.PackageSpecificationDto = void 0;
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
 const package_specification_entity_1 = require("../../../../../entities/tenant/inventory/package-specification.entity");
-const hu_status_enum_1 = require("../../enum/hu-status.enum");
-const hu_type_enum_1 = require("../../enum/hu-type.enum");
+const hu_status_enum_1 = require("../../../../../enum/hu-status.enum");
+const hu_type_enum_1 = require("../../../../../enum/hu-type.enum");
 const class_validator_1 = require("class-validator");
 class HandlingUnit {
 }

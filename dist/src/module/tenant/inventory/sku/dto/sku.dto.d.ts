@@ -1,11 +1,11 @@
-declare class ProductContract {
+declare class ProductSourcingContract {
     id: string;
     quantity: number;
     totalPrice: number;
     discount: number;
     currency: string;
 }
-declare class productOrder {
+declare class ProductSourcingOrder {
     id: string;
     quantity: number;
     totalPrice: number;
@@ -20,7 +20,7 @@ export declare class SkuDto {
     unitPrice: number;
     currency: string;
     quantity: number;
-    productContracts: ProductContract[];
-    productOrders: productOrder[];
+    productSourcingContracts: ProductSourcingContract[];
+    productSourcingOrders: ProductSourcingOrder[];
 }
 export {};

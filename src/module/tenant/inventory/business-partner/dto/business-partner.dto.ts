@@ -9,13 +9,10 @@ import { SellingBusinessContractEntity } from 'src/entities/tenant/selling/selli
 import { SourcingBusinessContractEntity } from 'src/entities/tenant/sourcing/sourcing-business-contract.entity';
 
 class SellingBusinessContract {
-  @AutoMap()
   id: string;
 
-  @AutoMap()
   createDate: string;
 
-  @AutoMap()
   moneyValue: number;
 }
 Mapper.createMap(SellingBusinessContractEntity, SellingBusinessContract)
@@ -30,51 +27,39 @@ class SourcingBusinessContract {
 Mapper.createMap(SourcingBusinessContractEntity, SourcingBusinessContract)
 
 export class BusinessPartnerDto {
-  @AutoMap()
   @IsNotEmpty()
   id: string;
 
-  @AutoMap()
   @IsOptional()
   fullName: string;
 
-  @AutoMap()
   @IsOptional()
   address: string;
 
-  @AutoMap()
   @IsOptional()
   taxInfo: string;
 
-  @AutoMap()
   @IsOptional()
   phone: string;
 
-  @AutoMap()
   @IsOptional()
   email: string;
 
-  @AutoMap()
   @IsOptional()
   discount: number;
 
-  @AutoMap()
   @IsOptional()
   category: BpCategory;
 
-  @AutoMap()
   @IsOptional()
   function: BpFunction;
 
-  @AutoMap()
   @IsNotEmpty()
   status: BpStatus;
 
-  @AutoMap(()=> SellingBusinessContract)
   @IsOptional()
   sellingBusinessContracts: SellingBusinessContract[];
 
-  @AutoMap(()=> SourcingBusinessContract)
   @IsOptional()
   sourcingBusinessContracts: SourcingBusinessContract[];
 

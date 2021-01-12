@@ -52,7 +52,7 @@ TenantModule = __decorate([
     common_1.Global(),
     common_1.Module({
         providers: [connectionFactory],
-        exports: ['CONNECTION']
+        exports: ['CONNECTION'],
     })
 ], TenantModule);
 exports.TenantModule = TenantModule;

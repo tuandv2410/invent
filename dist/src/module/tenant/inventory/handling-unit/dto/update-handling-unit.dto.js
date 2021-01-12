@@ -11,8 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.UpdateHandlingUnitDto = void 0;
 const class_validator_1 = require("class-validator");
-const hu_status_enum_1 = require("../../enum/hu-status.enum");
-const hu_type_enum_1 = require("../../enum/hu-type.enum");
+const hu_status_enum_1 = require("../../../../../enum/hu-status.enum");
+const hu_type_enum_1 = require("../../../../../enum/hu-type.enum");
 class UpdateHandlingUnitDto {
 }
 __decorate([

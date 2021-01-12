@@ -13,8 +13,8 @@ exports.WarehouseDto = void 0;
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
 const warehouse_entity_1 = require("../../../../../entities/tenant/warehouse-feat/warehouse.entity");
-const sto_type_enum_1 = require("../../enum/sto-type.enum");
-const activity_area_enum_1 = require("../../enum/activity-area.enum");
+const sto_type_enum_1 = require("../../../../../enum/sto-type.enum");
+const activity_area_enum_1 = require("../../../../../enum/activity-area.enum");
 const class_validator_1 = require("class-validator");
 class StorageType {
 }

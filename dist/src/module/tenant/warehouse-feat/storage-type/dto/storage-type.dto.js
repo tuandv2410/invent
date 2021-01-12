@@ -13,8 +13,8 @@ exports.StorageTypeDto = void 0;
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
 const storage_type_entity_1 = require("../../../../../entities/tenant/warehouse-feat/storage-type.entity");
-const sto_type_enum_1 = require("../../enum/sto-type.enum");
-const bin_type_enum_1 = require("../../enum/bin-type.enum");
+const sto_type_enum_1 = require("../../../../../enum/sto-type.enum");
+const bin_type_enum_1 = require("../../../../../enum/bin-type.enum");
 class StorageBin {
 }
 class StorageSection {

@@ -29,7 +29,6 @@ services:
       context: ./
       dockerfile: Dockerfile
     command: ["npm", "run","start:dev"]
-    restart: on-failure
     networks:
       - backend
 

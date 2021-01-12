@@ -1,8 +1,9 @@
 import { BaseEntity } from "typeorm";
-import { BpCategory } from "src/module/tenant/business/enum/bp-category.enum";
-import { BpFunction } from "src/module/tenant/business/enum/bp-function.enum";
-import { BpStatus } from "src/module/tenant/business/enum/bp-status.enum";
-import { BusinessContractEntity } from "../business/business-contract.entity";
+import { BpCategory } from "src/enum/bp-category.enum";
+import { BpFunction } from "src/enum/bp-function.enum";
+import { BpStatus } from "src/enum/bp-status.enum";
+import { SourcingBusinessContractEntity } from "../sourcing/sourcing-business-contract.entity";
+import { SellingBusinessContractEntity } from "../selling/selling-business-contract.entity";
 export declare class BusinessPartnerEntity extends BaseEntity {
     id: string;
     fullName: string;
@@ -14,5 +15,6 @@ export declare class BusinessPartnerEntity extends BaseEntity {
     category: BpCategory;
     function: BpFunction;
     status: BpStatus;
-    businessContracts: BusinessContractEntity[];
+    sourcingBusinessContracts: SourcingBusinessContractEntity[];
+    sellingBusinessContracts: SellingBusinessContractEntity[];
 }

@@ -12,12 +12,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PackgingMaterialDto = void 0;
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
-const pm_category_enum_1 = require("../../enum/pm-category.enum");
-const pm_type_enum_1 = require("../../enum/pm-type.enum");
+const pm_category_enum_1 = require("../../../../../enum/pm-category.enum");
+const pm_type_enum_1 = require("../../../../../enum/pm-type.enum");
 const packging_material_entity_1 = require("../../../../../entities/tenant/inventory/packging-material.entity");
 const class_validator_1 = require("class-validator");
-const hu_type_enum_1 = require("../../enum/hu-type.enum");
-const hu_status_enum_1 = require("../../enum/hu-status.enum");
+const hu_type_enum_1 = require("../../../../../enum/hu-type.enum");
+const hu_status_enum_1 = require("../../../../../enum/hu-status.enum");
 class HandlingUnit {
 }
 class PackageSpecification {

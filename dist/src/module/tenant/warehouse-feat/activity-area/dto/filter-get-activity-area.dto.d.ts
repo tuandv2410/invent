@@ -1,4 +1,4 @@
-import { ActArea } from 'src/module/tenant/warehouse-feat/enum/activity-area.enum';
+import { ActArea } from 'src/enum/activity-area.enum';
 export declare class FilterGetActivityAreaDto {
     id: string;
     name: string;

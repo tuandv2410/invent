@@ -1,5 +1,5 @@
-import { HuType } from '../../enum/hu-type.enum';
-import { HuStatus } from '../../enum/hu-status.enum';
+import { HuType } from '../../../../../enum/hu-type.enum';
+import { HuStatus } from '../../../../../enum/hu-status.enum';
 declare class Sku {
     id: string;
     expireDate: string;

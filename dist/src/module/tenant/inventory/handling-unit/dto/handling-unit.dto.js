@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.HandlingUnitDto = void 0;
 const nestjsx_automapper_1 = require("nestjsx-automapper");
 const automapper_1 = require("@nartc/automapper");
-const hu_type_enum_1 = require("../../enum/hu-type.enum");
-const hu_status_enum_1 = require("../../enum/hu-status.enum");
+const hu_type_enum_1 = require("../../../../../enum/hu-type.enum");
+const hu_status_enum_1 = require("../../../../../enum/hu-status.enum");
 const handling_unit_entity_1 = require("../../../../../entities/tenant/inventory/handling-unit.entity");
 const class_validator_1 = require("class-validator");
 class Sku {
